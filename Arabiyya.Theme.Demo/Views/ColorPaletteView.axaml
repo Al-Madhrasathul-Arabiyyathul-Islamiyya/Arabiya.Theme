@@ -4,7 +4,6 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:theme="using:Arabiyya.Theme"
   xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
   d:DesignHeight="600"
   d:DesignWidth="800"
@@ -27,7 +26,8 @@
       <TextBlock TextWrapping="Wrap">
         This theme uses a carefully selected color system with primary, secondary, and accent colors,
         complemented by status indicators and neutral surfaces. Each color has light and dark variants
-        for different emphasis levels and interactions.
+        for different emphasis levels and interactions. The palette automatically adjusts between light
+        and dark themes for optimal readability and aesthetics.
       </TextBlock>
     </Border>
 
@@ -38,82 +38,73 @@
         Classes="h3"
         Text="Primary Colors" />
 
-      <Grid
-        Margin="0,0,0,20"
-        ColumnDefinitions="*,*,*"
-        RowDefinitions="100,Auto,Auto">
-        <!--  Primary  -->
+      <Grid ColumnDefinitions="*,*,*">
+        <!--  Primary colors row  -->
         <Border
-          Grid.Column="0"
-          Height="100"
+          Height="80"
           Background="{DynamicResource PrimaryBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnPrimaryBrush}"
-            Text="Primary" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="Primary"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="#0072B5"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Primary Light  -->
         <Border
           Grid.Column="1"
-          Height="100"
+          Height="80"
           Margin="10,0"
           Background="{DynamicResource PrimaryLightBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnPrimaryBrush}"
-            Text="Primary Light" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="Primary Light"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="#3A95D0"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Primary Dark  -->
         <Border
           Grid.Column="2"
-          Height="100"
+          Height="80"
           Background="{DynamicResource PrimaryDarkBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnPrimaryBrush}"
-            Text="Primary Dark" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="Primary Dark"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="#005A91"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
-
-        <!--  Color codes  -->
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#0072B5" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#3A95D0" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="2"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#005A91" />
-
-        <!--  Usage description  -->
-        <TextBlock
-          Grid.Row="2"
-          Grid.Column="0"
-          Grid.ColumnSpan="3"
-          Margin="0,15,0,0"
-          Text="Primary colors are used for main actions, key UI elements, and to establish the brand identity across the interface."
-          TextWrapping="Wrap" />
       </Grid>
+
+      <!--  Usage description  -->
+      <TextBlock
+        Margin="0,10,0,0"
+        Text="Primary colors are used for main actions, key UI elements, and to establish the brand identity across the interface."
+        TextWrapping="Wrap" />
     </StackPanel>
 
     <!--  Secondary Colors  -->
@@ -123,82 +114,73 @@
         Classes="h3"
         Text="Secondary Colors" />
 
-      <Grid
-        Margin="0,0,0,20"
-        ColumnDefinitions="*,*,*"
-        RowDefinitions="100,Auto,Auto">
+      <Grid ColumnDefinitions="*,*,*">
         <!--  Secondary  -->
         <Border
-          Grid.Column="0"
-          Height="100"
+          Height="80"
           Background="{DynamicResource SecondaryBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnSecondaryBrush}"
-            Text="Secondary" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="Secondary"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="#7D3C98"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Secondary Light  -->
         <Border
           Grid.Column="1"
-          Height="100"
+          Height="80"
           Margin="10,0"
           Background="{DynamicResource SecondaryLightBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnSecondaryBrush}"
-            Text="Secondary Light" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="Secondary Light"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="#9B59B6"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Secondary Dark  -->
         <Border
           Grid.Column="2"
-          Height="100"
+          Height="80"
           Background="{DynamicResource SecondaryDarkBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnSecondaryBrush}"
-            Text="Secondary Dark" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="Secondary Dark"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="#5B2C6F"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
-
-        <!--  Color codes  -->
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#7D3C98" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#9B59B6" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="2"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#5B2C6F" />
-
-        <!--  Usage description  -->
-        <TextBlock
-          Grid.Row="2"
-          Grid.Column="0"
-          Grid.ColumnSpan="3"
-          Margin="0,15,0,0"
-          Text="Secondary colors provide contrast with the primary palette and are used for less prominent UI elements, supporting actions, and visual balance."
-          TextWrapping="Wrap" />
       </Grid>
+
+      <!--  Usage description  -->
+      <TextBlock
+        Margin="0,10,0,0"
+        Text="Secondary colors provide contrast with the primary palette and are used for less prominent UI elements, supporting actions, and visual balance."
+        TextWrapping="Wrap" />
     </StackPanel>
 
     <!--  Accent Colors  -->
@@ -208,82 +190,73 @@
         Classes="h3"
         Text="Accent Colors" />
 
-      <Grid
-        Margin="0,0,0,20"
-        ColumnDefinitions="*,*,*"
-        RowDefinitions="100,Auto,Auto">
+      <Grid ColumnDefinitions="*,*,*">
         <!--  Accent  -->
         <Border
-          Grid.Column="0"
-          Height="100"
+          Height="80"
           Background="{DynamicResource AccentBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnAccentBrush}"
-            Text="Accent" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="Accent"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="#FF9800"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Accent Light  -->
         <Border
           Grid.Column="1"
-          Height="100"
+          Height="80"
           Margin="10,0"
           Background="{DynamicResource AccentLightBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnAccentBrush}"
-            Text="Accent Light" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="Accent Light"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="#FFB74D"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <!--  Accent Dark  -->
         <Border
           Grid.Column="2"
-          Height="100"
+          Height="80"
           Background="{DynamicResource AccentDarkBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="{DynamicResource TextOnAccentBrush}"
-            Text="Accent Dark" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="Accent Dark"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="#F57C00"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
-
-        <!--  Color codes  -->
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#FF9800" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#FFB74D" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="2"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#F57C00" />
-
-        <!--  Usage description  -->
-        <TextBlock
-          Grid.Row="2"
-          Grid.Column="0"
-          Grid.ColumnSpan="3"
-          Margin="0,15,0,0"
-          Text="Accent colors draw attention to specific elements, highlight important information, and can be used sparingly to create focal points in the UI."
-          TextWrapping="Wrap" />
       </Grid>
+
+      <!--  Usage description  -->
+      <TextBlock
+        Margin="0,10,0,0"
+        Text="Accent colors draw attention to specific elements, highlight important information, and can be used sparingly to create focal points in the UI."
+        TextWrapping="Wrap" />
     </StackPanel>
 
     <!--  Status Colors  -->
@@ -293,92 +266,88 @@
         Classes="h3"
         Text="Status Colors" />
 
-      <Grid
-        Margin="0,0,0,20"
-        ColumnDefinitions="*,*,*,*"
-        RowDefinitions="100,Auto">
+      <Grid ColumnDefinitions="*,*,*,*">
         <Border
-          Grid.Column="0"
-          Height="100"
+          Height="80"
           Background="{DynamicResource SuccessBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="White"
-            Text="Success" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Success"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="White"
+              Text="Success"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <Border
           Grid.Column="1"
-          Height="100"
-          Margin="10,0,10,0"
+          Height="80"
+          Margin="8,0"
           Background="{DynamicResource ErrorBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="White"
-            Text="Error" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Error"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="White"
+              Text="Error"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <Border
           Grid.Column="2"
-          Height="100"
-          Margin="0,0,10,0"
+          Height="80"
+          Margin="0,0,8,0"
           Background="{DynamicResource WarningBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="Black"
-            Text="Warning" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="Black"
+              Text="Warning"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="Black"
+              Text="Warning"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <Border
           Grid.Column="3"
-          Height="100"
+          Height="80"
           Background="{DynamicResource InfoBrush}"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Foreground="White"
-            Text="Info" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Info"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Foreground="White"
+              Text="Info"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
-
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#2E7D32" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#C62828" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="2"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#F57C00" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="3"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#1565C0" />
       </Grid>
 
       <!--  Status colors usage  -->
       <Border
+        Margin="0,15,0,0"
         Padding="15"
         Background="{DynamicResource SurfaceElevated1Brush}"
         BorderBrush="{DynamicResource DividerBrush}"
@@ -401,61 +370,94 @@
         Classes="h3"
         Text="Background &amp; Surface Colors" />
 
-      <Grid
-        Margin="0,0,0,20"
-        ColumnDefinitions="*,*"
-        RowDefinitions="100,Auto,Auto">
+      <Grid ColumnDefinitions="*,*" RowDefinitions="80,Auto,80,Auto">
         <Border
-          Grid.Column="0"
-          Height="100"
+          Height="80"
           Background="{DynamicResource BackgroundBrush}"
           BorderBrush="{DynamicResource DividerBrush}"
           BorderThickness="1"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Text="Background" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Background"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Background"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
         <Border
           Grid.Column="1"
-          Height="100"
+          Height="80"
           Margin="10,0"
           Background="{DynamicResource SurfaceBrush}"
           BorderBrush="{DynamicResource DividerBrush}"
           BorderThickness="1"
           CornerRadius="4">
-          <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontWeight="SemiBold"
-            Text="Surface" />
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Surface"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Surface"
+              TextAlignment="Center" />
+          </StackPanel>
         </Border>
 
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#F8FDFA" />
-        <TextBlock
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,8,0,0"
-          HorizontalAlignment="Center"
-          Text="#FFFFFF" />
-
-        <!--  Usage description  -->
-        <TextBlock
+        <!--  Elevated Surfaces  -->
+        <Border
           Grid.Row="2"
           Grid.Column="0"
-          Grid.ColumnSpan="2"
+          Height="80"
           Margin="0,15,0,0"
-          Text="Background colors are used for the app backdrop, while Surface colors define content containers, cards, and other UI elements that sit on top of the background."
-          TextWrapping="Wrap" />
+          Background="{DynamicResource SurfaceElevated1Brush}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="4">
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Surface Elevated 1"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Surface Elevated 1"
+              TextAlignment="Center" />
+          </StackPanel>
+        </Border>
+
+        <Border
+          Grid.Row="2"
+          Grid.Column="1"
+          Height="80"
+          Margin="10,15,0,0"
+          Background="{DynamicResource SurfaceElevated2Brush}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="4">
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Surface Elevated 2"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Surface Elevated 2"
+              TextAlignment="Center" />
+          </StackPanel>
+        </Border>
       </Grid>
+
+      <!--  Usage description  -->
+      <TextBlock
+        Margin="0,15,0,0"
+        Text="Background colors are used for the app backdrop, while Surface colors define content containers, cards, and other UI elements that sit on top of the background. Elevated surfaces create visual hierarchy through subtle differences."
+        TextWrapping="Wrap" />
     </StackPanel>
 
     <!--  Text Colors  -->
@@ -472,7 +474,7 @@
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">
-          <Grid ColumnDefinitions="200,*" RowDefinitions="Auto,Auto,Auto">
+          <Grid ColumnDefinitions="200,*">
             <TextBlock
               Grid.Row="0"
               Grid.Column="0"
@@ -482,29 +484,46 @@
             <TextBlock
               Grid.Row="0"
               Grid.Column="1"
-              Text="#212121" />
+              Text="Main content text for high emphasis" />
+          </Grid>
 
+          <Grid ColumnDefinitions="200,*">
             <TextBlock
-              Grid.Row="1"
+              Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
               Foreground="{DynamicResource TextSecondaryBrush}"
               Text="Secondary Text" />
             <TextBlock
-              Grid.Row="1"
+              Grid.Row="0"
               Grid.Column="1"
-              Text="#424242" />
+              Text="Less important or supporting text" />
+          </Grid>
 
+          <Grid ColumnDefinitions="200,*">
             <TextBlock
-              Grid.Row="2"
+              Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
               Foreground="{DynamicResource TextDisabledBrush}"
               Text="Disabled Text" />
             <TextBlock
-              Grid.Row="2"
+              Grid.Row="0"
               Grid.Column="1"
-              Text="#9E9E9E" />
+              Text="Text for disabled UI elements" />
+          </Grid>
+
+          <Grid ColumnDefinitions="200,*">
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="0"
+              FontSize="16"
+              Foreground="{DynamicResource TextColorMutedBrush}"
+              Text="Muted Text" />
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="1"
+              Text="Hints, captions, and complementary information" />
           </Grid>
 
           <Border
@@ -520,7 +539,7 @@
               <TextBlock
                 Grid.Column="1"
                 Foreground="{DynamicResource TextOnPrimaryBrush}"
-                Text="#FFFFFF" />
+                Text="Used for text on primary-colored backgrounds" />
             </Grid>
           </Border>
 
@@ -536,7 +555,7 @@
               <TextBlock
                 Grid.Column="1"
                 Foreground="{DynamicResource TextOnSecondaryBrush}"
-                Text="#FFFFFF" />
+                Text="Used for text on secondary-colored backgrounds" />
             </Grid>
           </Border>
 
@@ -552,11 +571,64 @@
               <TextBlock
                 Grid.Column="1"
                 Foreground="{DynamicResource TextOnAccentBrush}"
-                Text="#000000" />
+                Text="Used for text on accent-colored backgrounds" />
             </Grid>
           </Border>
         </StackPanel>
       </Border>
+    </StackPanel>
+
+    <!--  Border & Outline Colors  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Border &amp; Outline Colors" />
+
+      <Grid ColumnDefinitions="*,*">
+        <Border
+          Height="80"
+          Background="{DynamicResource SurfaceBrush}"
+          BorderBrush="{DynamicResource OutlineBrush}"
+          BorderThickness="4"
+          CornerRadius="4">
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Outline"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Outline"
+              TextAlignment="Center" />
+          </StackPanel>
+        </Border>
+
+        <Border
+          Grid.Column="1"
+          Height="80"
+          Margin="10,0"
+          Background="{DynamicResource SurfaceBrush}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="4"
+          CornerRadius="4">
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Text="Divider"
+              TextAlignment="Center" />
+            <TextBlock
+              FontSize="12"
+              Text="Divider"
+              TextAlignment="Center" />
+          </StackPanel>
+        </Border>
+      </Grid>
+
+      <TextBlock
+        Margin="0,10,0,0"
+        Text="Dividers are used to separate content sections, while outlines define boundaries around components and interactive elements."
+        TextWrapping="Wrap" />
     </StackPanel>
 
     <!--  Color System Guidelines  -->
@@ -572,10 +644,11 @@
         BorderBrush="{DynamicResource DividerBrush}"
         BorderThickness="1"
         CornerRadius="8">
-        <StackPanel Spacing="10">
+        <StackPanel Spacing="15">
           <TextBlock Classes="h5" Text="Accessibility Considerations" />
           <TextBlock TextWrapping="Wrap">
             All color combinations maintain appropriate contrast ratios (4.5:1 for normal text, 3:1 for large text) to ensure readability for all users.
+            The theme automatically adapts between light and dark modes to optimize contrast in different lighting conditions.
           </TextBlock>
 
           <TextBlock
@@ -588,6 +661,7 @@
             <TextBlock Text="• Use accent colors sparingly for emphasis and focus" />
             <TextBlock Text="• Status colors should be used consistently for their semantic meaning" />
             <TextBlock Text="• Maintain consistent color application across the application" />
+            <TextBlock Text="• Surfaces with elevation should have subtle color differences" />
           </StackPanel>
 
           <TextBlock
@@ -595,7 +669,7 @@
             Classes="h5"
             Text="Dark Mode Adaptation" />
           <TextBlock TextWrapping="Wrap">
-            In dark mode, colors are optimized for reduced eye strain while maintaining brand identity. Brightness and saturation levels are adjusted for comfortable viewing in low-light environments.
+            In dark mode, colors are optimized for reduced eye strain while maintaining brand identity. Brightness and saturation levels are adjusted for comfortable viewing in low-light environments. Surface colors become darker, and text colors become lighter to maintain readability.
           </TextBlock>
         </StackPanel>
       </Border>

@@ -141,6 +141,89 @@
         <GradientStop Offset="1" Color="#0CFFFFFF" />
       </LinearGradientBrush>
 
+      <!--  Brand Color Gradients  -->
+      <LinearGradientBrush x:Key="PrimaryGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource PrimaryColor}" />
+        <GradientStop Offset="1" Color="{StaticResource PrimaryLightColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="PrimaryVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource PrimaryColor}" />
+        <GradientStop Offset="1" Color="{StaticResource PrimaryLightColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="SecondaryGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource SecondaryColor}" />
+        <GradientStop Offset="1" Color="{StaticResource SecondaryLightColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="SecondaryVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource SecondaryColor}" />
+        <GradientStop Offset="1" Color="{StaticResource SecondaryLightColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="AccentGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource AccentColor}" />
+        <GradientStop Offset="1" Color="{StaticResource AccentLightColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="AccentVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource AccentColor}" />
+        <GradientStop Offset="1" Color="{StaticResource AccentLightColor}" />
+      </LinearGradientBrush>
+
+      <!--  Status Gradients  -->
+      <LinearGradientBrush x:Key="SuccessGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource SuccessDarkColor}" />
+        <GradientStop Offset="1" Color="{StaticResource SuccessColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="ErrorGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource ErrorDarkColor}" />
+        <GradientStop Offset="1" Color="{StaticResource ErrorColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="WarningGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource WarningDarkColor}" />
+        <GradientStop Offset="1" Color="{StaticResource WarningColor}" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="InfoGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource InfoDarkColor}" />
+        <GradientStop Offset="1" Color="{StaticResource InfoColor}" />
+      </LinearGradientBrush>
+
+      <!--  Special Effect Gradients  -->
+      <LinearGradientBrush x:Key="CalmWaterGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="#3494E6" />
+        <GradientStop Offset="1" Color="#EC6EAD" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="SunriseGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="#FF512F" />
+        <GradientStop Offset="1" Color="#F09819" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="PurpleDreamGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="#8E2DE2" />
+        <GradientStop Offset="1" Color="#4A00E0" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="OceanViewGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="#4AC29A" />
+        <GradientStop Offset="1" Color="#BDFFF3" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="SunsetGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="#FF416C" />
+        <GradientStop Offset="1" Color="#FF4B2B" />
+      </LinearGradientBrush>
+
+      <LinearGradientBrush x:Key="MainBackgroundGradient" StartPoint="0%,0%" EndPoint="100%,100%">
+        <GradientStop Offset="0" Color="#11998e" />
+        <GradientStop Offset="1" Color="#38ef7d" />
+      </LinearGradientBrush>
+
       <!--  Glass Button Values  -->
       <Color x:Key="GlassButtonBorderColor">#40FFFFFF</Color>
       <Color x:Key="GlassButtonHoverBorderColor">#60FFFFFF</Color>

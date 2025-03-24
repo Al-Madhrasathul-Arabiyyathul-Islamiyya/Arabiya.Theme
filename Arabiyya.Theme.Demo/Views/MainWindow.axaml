@@ -46,6 +46,7 @@
               <ListBoxItem Content="Buttons" />
               <ListBoxItem Content="Glass Panels" />
               <ListBoxItem Content="Text Inputs" />
+              <ListBoxItem Content="Other Inputs" />
               <ListBoxItem Content="Gradients" />
             </ListBox>
           </StackPanel>

@@ -23,7 +23,8 @@ public partial class MainViewModel : ObservableObject
             { 2, new ButtonsViewModel() },
             { 3, new GlassPanelsViewModel() },
             { 4, new TextInputsViewModel() },
-            { 5, new GradientsViewModel() },
+            { 5, new InputsViewModel() },
+            { 6, new GradientsViewModel() },
         }!;
 
         SelectedNavIndex = 0;
