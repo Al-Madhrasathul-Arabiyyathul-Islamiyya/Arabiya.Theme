@@ -27,15 +27,7 @@
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Remove="D:\Stuff\projects\desktop\Arabiyya.BellSystem\Arabiyya.Theme\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="D:\Stuff\projects\desktop\Arabiyya.BellSystem\Arabiyya.Theme\.editorconfig" />
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
+	</ItemGroup>
 </Project>
