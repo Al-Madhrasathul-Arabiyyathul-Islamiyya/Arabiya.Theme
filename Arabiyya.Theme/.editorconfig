@@ -1,0 +1,2 @@
+[*.{xaml,axaml}]
+xaml_designer_extensibility = disabled

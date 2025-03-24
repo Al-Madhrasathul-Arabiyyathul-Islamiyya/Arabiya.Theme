@@ -1,0 +1,251 @@
+<UserControl
+  x:Class="Arabiyya.Theme.Demo.Views.ButtonsView"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
+  d:DesignHeight="768"
+  d:DesignWidth="1366"
+  mc:Ignorable="d">
+  <Design.DataContext>
+    <vm:ButtonsViewModel />
+  </Design.DataContext>
+
+
+  <StackPanel Margin="10" Spacing="30">
+    <TextBlock Classes="h2" Text="Buttons" />
+
+    <!--  Primary Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Primary Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Primary BaseButton" Content="Primary Button" />
+        <Button
+          Classes="Primary BaseButton"
+          Content="Disabled"
+          IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Secondary Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Secondary Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Secondary BaseButton" Content="Secondary Button" />
+        <Button
+          Classes="Secondary BaseButton"
+          Content="Disabled"
+          IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Status Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Status Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Success BaseButton" Content="Success" />
+        <Button Classes="Warning BaseButton" Content="Warning" />
+        <Button Classes="Alert BaseButton" Content="Alert" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Outline Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Outline Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Outline BaseButton" Content="Outline Button" />
+        <Button Classes="OutlineSecondary BaseButton" Content="Outline Secondary" />
+        <Button
+          Classes="Outline BaseButton"
+          Content="Disabled"
+          IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Text Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Text Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Text BaseButton" Content="Text Button" />
+        <Button
+          Classes="Text BaseButton"
+          Content="Disabled"
+          IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Icon Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Icon Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button Classes="Icon" Content="&#xE46A;" />
+        <Button Classes="Icon" Content="&#xE182;" />
+        <Button Classes="Icon" Content="&#xE2A8;" />
+        <Button
+          Classes="Icon"
+          Content="&#xE0F2;"
+          IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Icon-Text Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Icon-Text Buttons" />
+
+      <StackPanel Orientation="Horizontal" Spacing="15">
+        <Button
+          Classes="IconText"
+          Content="Save"
+          Tag="&#xE248;" />
+        <Button
+          Classes="IconText"
+          Content="Delete"
+          Tag="&#xE0AE;" />
+        <Button
+          Classes="IconTextSecondary"
+          Content="Upload"
+          Tag="&#xE1AE;" />
+        <Button
+          Classes="IconText"
+          Content="Disabled"
+          IsEnabled="False"
+          Tag="&#xE4E0;" />
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Glass Buttons  -->
+    <Border
+      Padding="15"
+      Background="{StaticResource MainBackgroundGradient}"
+      CornerRadius="8">
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Foreground="White"
+          Text="Glass Buttons" />
+
+        <StackPanel Orientation="Horizontal" Spacing="15">
+          <Button Classes="Glass" Content="Glass Button" />
+          <Button
+            Classes="Glass"
+            Content="Glass Button"
+            IsEnabled="False" />
+        </StackPanel>
+      </StackPanel>
+    </Border>
+
+    <!--  Glass Icon-Text Buttons  -->
+    <Border
+      Padding="15"
+      Background="{StaticResource MainBackgroundGradient}"
+      CornerRadius="8">
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Foreground="White"
+          Text="Glass Icon-Text Buttons" />
+
+        <StackPanel Orientation="Horizontal" Spacing="15">
+          <Button
+            Classes="IconTextGlass"
+            Content="Save"
+            Tag="&#xE248;" />
+          <Button
+            Classes="IconTextGlass"
+            Content="Delete"
+            Tag="&#xE0AE;" />
+          <Button
+            Classes="IconTextGlass"
+            Content="Disabled"
+            IsEnabled="False"
+            Tag="&#xE4E0;" />
+        </StackPanel>
+      </StackPanel>
+    </Border>
+
+    <!--  Sample Usage  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Sample Usage" />
+
+      <Border
+        Padding="20"
+        Background="{DynamicResource SurfaceBrush}"
+        BorderBrush="{DynamicResource DividerBrush}"
+        BorderThickness="1"
+        CornerRadius="4">
+        <StackPanel Spacing="20">
+          <TextBlock Classes="h4" Text="Form Actions Example" />
+
+          <StackPanel
+            HorizontalAlignment="Right"
+            Orientation="Horizontal"
+            Spacing="10">
+            <Button Classes="Text BaseButton" Content="Cancel" />
+            <Button Classes="Primary BaseButton" Content="Save" />
+          </StackPanel>
+        </StackPanel>
+      </Border>
+    </StackPanel>
+
+    <!--  Code Example  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,10"
+        Classes="h3"
+        Text="Usage Code Example" />
+
+      <Border
+        Padding="20"
+        Background="#2D2D2D"
+        CornerRadius="4">
+        <StackPanel Spacing="10">
+          <TextBlock
+            FontFamily="Consolas"
+            Foreground="White"
+            Text="&lt;Button Classes=&quot;Primary BaseButton&quot; Content=&quot;Primary&quot;/&gt;" />
+          <TextBlock
+            FontFamily="Consolas"
+            Foreground="White"
+            Text="&lt;Button Classes=&quot;IconText&quot; Content=&quot;Save&quot; Tag=&quot;💾&quot;/&gt;" />
+          <TextBlock
+            FontFamily="Consolas"
+            Foreground="White"
+            Text="&lt;Button Classes=&quot;Glass&quot; Content=&quot;Glass Button&quot;/&gt;" />
+        </StackPanel>
+      </Border>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

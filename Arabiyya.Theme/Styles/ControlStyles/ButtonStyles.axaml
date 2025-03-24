@@ -1,0 +1,505 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!--  Common Button Base Style (shared properties)  -->
+  <Style Selector="Button.BaseButton">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+    <Setter Property="Padding" Value="16 8" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1" />
+          <BrushTransition Property="Background" Duration="0:0:0.15" />
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!--  ============== Primary Button ==============  -->
+  <Style Selector="Button.Primary">
+    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Primary:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Primary:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Primary:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Secondary Button ==============  -->
+  <Style Selector="Button.Secondary">
+    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnSecondaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Secondary:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SecondaryDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Secondary:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SecondaryDarkBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Secondary:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Success Button ==============  -->
+  <Style Selector="Button.Success">
+    <Setter Property="Background" Value="{DynamicResource SuccessBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SuccessBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Success:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SuccessDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SuccessDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Success:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SuccessDarkBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Success:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SuccessBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Warning Button ==============  -->
+  <Style Selector="Button.Warning">
+    <Setter Property="Background" Value="{DynamicResource WarningBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource WarningBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Warning:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource WarningDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource WarningDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Warning:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource WarningDarkBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Warning:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource WarningBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Alert (Error) Button ==============  -->
+  <Style Selector="Button.Alert">
+    <Setter Property="Background" Value="{DynamicResource ErrorBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Alert:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource ErrorDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource ErrorDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Alert:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource ErrorDarkBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Alert:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource ErrorBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Outline Button ==============  -->
+  <Style Selector="Button.Outline">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.Outline:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="#15000000" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Outline:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="#25000000" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Outline:disabled /template/ ContentPresenter">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  Outline variants  -->
+  <Style Selector="Button.OutlineSecondary">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="RenderTransform" Value="none" />
+  </Style>
+
+  <Style Selector="Button.OutlineSecondary:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="#15000000" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryDarkBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource SecondaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.OutlineSecondary:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="#25000000" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.OutlineSecondary:disabled /template/ ContentPresenter">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Icon Button ==============  -->
+  <Style Selector="Button.Icon">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    <Setter Property="FontFamily" Value="{DynamicResource PhosphorFontFamily}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="{DynamicResource DividerBrush}" />
+    <Setter Property="Width" Value="40" />
+    <Setter Property="Height" Value="40" />
+    <Setter Property="CornerRadius" Value="20" />
+    <Setter Property="Padding" Value="8" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="RenderTransform" Value="none" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1" />
+          <BrushTransition Property="Background" Duration="0:0:0.15" />
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.Icon:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+  </Style>
+
+  <Style Selector="Button.Icon:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource SurfaceElevated2Brush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.95)" />
+  </Style>
+
+  <Style Selector="Button.Icon:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource TextDisabledBrush}" />
+    <Setter Property="Opacity" Value="0.8" />
+  </Style>
+
+  <!--  ============== Icon-Text Button ==============  -->
+  <!--  Custom Control Template for Icon + Text buttons  -->
+  <Style Selector="Button.IconText">
+    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="Padding" Value="12 8" />
+    <Setter Property="RenderTransform" Value="none" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border
+          Name="PART_ButtonBackground"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          CornerRadius="{TemplateBinding CornerRadius}">
+          <StackPanel
+            Margin="{TemplateBinding Padding}"
+            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+            Orientation="Horizontal"
+            Spacing="8">
+            <TextBlock
+              Name="PART_IconPresenter"
+              Margin="0,1,0,0"
+              VerticalAlignment="Center"
+              FontFamily="{StaticResource PhosphorFontFamily}"
+              Foreground="{TemplateBinding Foreground}"
+              Text="{TemplateBinding Tag}" />
+            <TextBlock
+              Name="PART_TextPresenter"
+              Margin="0,0,0,1"
+              VerticalAlignment="Center"
+              Background="Transparent"
+              FontFamily="{TemplateBinding FontFamily}"
+              FontSize="{TemplateBinding FontSize}"
+              FontWeight="{TemplateBinding FontWeight}"
+              Foreground="{TemplateBinding Foreground}"
+              Text="{TemplateBinding Content}" />
+          </StackPanel>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.IconText:pointerover /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconText:pressed">
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.IconText:pressed /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconText:disabled /template/ Border#PART_ButtonBackground">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  IconText Secondary variant  -->
+  <Style Selector="Button.IconTextSecondary">
+    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnSecondaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="Padding" Value="12 8" />
+    <Setter Property="RenderTransform" Value="none" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border
+          Name="PART_ButtonBackground"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          CornerRadius="{TemplateBinding CornerRadius}">
+          <StackPanel
+            Margin="{TemplateBinding Padding}"
+            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+            Orientation="Horizontal"
+            Spacing="8">
+            <TextBlock
+              Name="PART_IconPresenter"
+              Margin="0,1,0,0"
+              VerticalAlignment="Center"
+              FontFamily="{StaticResource PhosphorFontFamily}"
+              Foreground="{TemplateBinding Foreground}"
+              Text="{TemplateBinding Tag}" />
+            <TextBlock
+              Name="PART_TextPresenter"
+              Margin="0,0,0,1"
+              VerticalAlignment="Center"
+              Background="Transparent"
+              FontFamily="{TemplateBinding FontFamily}"
+              FontSize="{TemplateBinding FontSize}"
+              FontWeight="{TemplateBinding FontWeight}"
+              Foreground="{TemplateBinding Foreground}"
+              Text="{TemplateBinding Content}" />
+          </StackPanel>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.IconTextSecondary:pointerover /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource SecondaryDarkBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconTextSecondary:pressed">
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.IconTextSecondary:pressed /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource SecondaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconTextSecondary:disabled /template/ Border#PART_ButtonBackground">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Text Button ==============  -->
+  <Style Selector="Button.Text">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Padding" Value="8 4" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="RenderTransform" Value="none" />
+    <Setter Property="Cursor" Value="Hand" />
+  </Style>
+
+  <Style Selector="Button.Text:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryDarkBrush}" />
+  </Style>
+
+  <Style Selector="Button.Text:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="RenderTransform" Value="scale(0.98)" />
+  </Style>
+
+  <Style Selector="Button.Text:disabled /template/ ContentPresenter">
+    <Setter Property="Foreground" Value="{DynamicResource TextDisabledBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ============== Glass Button ==============  -->
+  <Style Selector="Button.Glass">
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonBorderBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+    <Setter Property="Padding" Value="16 8" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.1" />
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.15" />
+          <BrushTransition Property="Background" Duration="0:0:0.15" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.Glass /template/ ContentPresenter">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonBorderBrush}" />
+  </Style>
+
+  <Style Selector="Button.Glass:pointerover /template/ ContentPresenter">
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonHoverBorderBrush}" />
+  </Style>
+
+  <Style Selector="Button.Glass:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource GlassButtonPressedBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonPressedBorderBrush}" />
+    <Setter Property="RenderTransform" Value="scale(0.97)" />
+  </Style>
+
+  <Style Selector="Button.Glass:disabled /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource GlassButtonDisabledBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonDisabledBorderBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  Glass IconText Button  -->
+  <Style Selector="Button.IconTextGlass">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonBorderBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="6" />
+    <Setter Property="Padding" Value="12 8" />
+    <Setter Property="RenderTransform" Value="none" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border
+          Name="PART_ButtonBackground"
+          Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}"
+          CornerRadius="{TemplateBinding CornerRadius}">
+          <StackPanel
+            Margin="{TemplateBinding Padding}"
+            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+            Orientation="Horizontal"
+            Spacing="8">
+            <TextBlock
+              Name="PART_IconPresenter"
+              Margin="0,1,0,0"
+              VerticalAlignment="Center"
+              FontFamily="{StaticResource PhosphorFontFamily}"
+              Text="{TemplateBinding Tag}" />
+            <TextBlock
+              Name="PART_TextPresenter"
+              Margin="0,0,0,1"
+              VerticalAlignment="Center"
+              Background="Transparent"
+              FontFamily="{TemplateBinding FontFamily}"
+              FontSize="{TemplateBinding FontSize}"
+              FontWeight="{TemplateBinding FontWeight}"
+              Foreground="{TemplateBinding Foreground}"
+              Text="{TemplateBinding Content}" />
+          </StackPanel>
+        </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+  <Style Selector="Button.IconTextGlass:pointerover /template/ Border#PART_ButtonBackground">
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonHoverBorderBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconTextGlass:pressed">
+    <Setter Property="RenderTransform" Value="scale(0.97)" />
+  </Style>
+
+  <Style Selector="Button.IconTextGlass:pressed /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource GlassButtonPressedBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonPressedBorderBrush}" />
+  </Style>
+
+  <Style Selector="Button.IconTextGlass:disabled /template/ Border#PART_ButtonBackground">
+    <Setter Property="Background" Value="{DynamicResource GlassButtonDisabledBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource GlassButtonDisabledBorderBrush}" />
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+</Styles>

@@ -1,0 +1,63 @@
+<UserControl
+  x:Class="Arabiyya.Theme.ThemeSwitcher"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  d:DesignHeight="40"
+  d:DesignWidth="200"
+  x:CompileBindings="False"
+  mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <x:String x:Key="LightIcon">&#xE472;</x:String>
+    <x:String x:Key="DarkIcon">&#xE330;</x:String>
+  </UserControl.Resources>
+
+  <Grid>
+    <!--  Default Toggle Switch  -->
+    <ToggleSwitch
+      x:Name="DefaultToggle"
+      HorizontalAlignment="Stretch"
+      IsChecked="{Binding IsDarkTheme, Mode=TwoWay}"
+      IsVisible="{Binding VariantType, Converter={StaticResource EnumEqualityConverter}, ConverterParameter=Toggle}"
+      OffContent="Light Theme"
+      OnContent="Dark Theme" />
+
+    <!--  Icon Toggle Switch  -->
+    <ToggleSwitch
+      x:Name="IconToggle"
+      IsChecked="{Binding IsDarkTheme, Mode=TwoWay}"
+      IsVisible="{Binding VariantType, Converter={StaticResource EnumEqualityConverter}, ConverterParameter=IconToggle}">
+      <ToggleSwitch.OffContent>
+        <TextBlock FontFamily="{StaticResource PhosphorFontFamily}" Text="{StaticResource LightIcon}" />
+      </ToggleSwitch.OffContent>
+      <ToggleSwitch.OnContent>
+        <TextBlock FontFamily="{StaticResource PhosphorFontFamily}" Text="{StaticResource DarkIcon}" />
+      </ToggleSwitch.OnContent>
+    </ToggleSwitch>
+
+    <!--  ComboBox Style  -->
+    <ComboBox
+      x:Name="ThemeComboBox"
+      Width="120"
+      HorizontalAlignment="Stretch"
+      IsVisible="{Binding VariantType, Converter={StaticResource EnumEqualityConverter}, ConverterParameter=ComboBox}"
+      SelectedIndex="{Binding IsDarkTheme, Converter={StaticResource BoolToIndexConverter}}">
+      <ComboBoxItem>Light</ComboBoxItem>
+      <ComboBoxItem>Dark</ComboBoxItem>
+    </ComboBox>
+
+    <!--  Icon Button Style  -->
+    <Button
+      x:Name="ThemeButton"
+      Width="40"
+      Height="40"
+      HorizontalAlignment="Stretch"
+      Classes="Icon"
+      Command="{Binding ToggleThemeCommand}"
+      IsVisible="{Binding VariantType, Converter={StaticResource EnumEqualityConverter}, ConverterParameter=IconButton}">
+      <TextBlock FontFamily="{StaticResource PhosphorFontFamily}" Text="{Binding IsDarkTheme, Converter={StaticResource ThemeIconConverter}}" />
+    </Button>
+  </Grid>
+</UserControl>

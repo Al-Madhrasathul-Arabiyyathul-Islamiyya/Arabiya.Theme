@@ -1,0 +1,222 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--  Base TextBox Style  -->
+  <Style Selector="TextBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="CaretBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="SelectionBrush" Value="{DynamicResource PrimaryLightBrush}" />
+    <Setter Property="SelectionForegroundBrush" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="MinHeight" Value="36" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />
+          <BrushTransition Property="Background" Duration="0:0:0.2" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <!--  Focus States  -->
+  <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <!--  Pointer Over State  -->
+  <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+  </Style>
+
+  <!--  Error States  -->
+  <Style Selector="TextBox.error">
+    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}" />
+  </Style>
+
+  <Style Selector="TextBox.error:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="TextBox.error:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}" />
+  </Style>
+
+  <!--  Success States  -->
+  <Style Selector="TextBox.success">
+    <Setter Property="BorderBrush" Value="{DynamicResource SuccessBrush}" />
+  </Style>
+
+  <Style Selector="TextBox.success:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource SuccessBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="TextBox.success:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource SuccessBrush}" />
+  </Style>
+
+  <!--  Disabled State  -->
+  <Style Selector="TextBox:disabled">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ReadOnly State  -->
+  <Style Selector="TextBox:readonly">
+    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Color}" />
+  </Style>
+
+  <!--  Watermark Text Style  -->
+  <Style Selector="TextBox /template/ TextBlock#PART_Watermark">
+    <Setter Property="Foreground" Value="{DynamicResource TextColorMuted}" />
+    <Setter Property="FontStyle" Value="Italic" />
+    <Setter Property="Opacity" Value="0.8" />
+  </Style>
+
+  <!--  TextBox Size Variants  -->
+  <Style Selector="TextBox.small">
+    <Setter Property="FontSize" Value="{DynamicResource FontSizeSmall}" />
+    <Setter Property="MinHeight" Value="30" />
+    <Setter Property="Padding" Value="10,6" />
+  </Style>
+
+  <Style Selector="TextBox.large">
+    <Setter Property="FontSize" Value="{DynamicResource FontSizeH6}" />
+    <Setter Property="MinHeight" Value="44" />
+    <Setter Property="Padding" Value="16,10" />
+  </Style>
+
+  <!--  Multiline TextBox  -->
+  <Style Selector="TextBox.multiline">
+    <Setter Property="AcceptsReturn" Value="True" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="MinHeight" Value="100" />
+    <Setter Property="VerticalContentAlignment" Value="Top" />
+    <Setter Property="Padding" Value="12" />
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+  </Style>
+
+  <!--  NumericUpDown Styles  -->
+  <Style Selector="NumericUpDown">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="MinHeight" Value="36" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="ButtonSpinnerLocation" Value="Right" />
+    <Setter Property="ShowButtonSpinner" Value="True" />
+    <Setter Property="ClipValueToMinMax" Value="True" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />
+          <BrushTransition Property="Background" Duration="0:0:0.2" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="NumericUpDown:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="NumericUpDown:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+  </Style>
+
+  <Style Selector="NumericUpDown:disabled">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  ComboBox Styles  -->
+  <Style Selector="ComboBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="MinHeight" Value="36" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="Transitions">
+      <Setter.Value>
+        <Transitions>
+          <BrushTransition Property="BorderBrush" Duration="0:0:0.2" />
+          <BrushTransition Property="Background" Duration="0:0:0.2" />
+        </Transitions>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style Selector="ComboBox:focus /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="ComboBox:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+  </Style>
+
+  <Style Selector="ComboBox:disabled">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!--  Dropdown Item Styles  -->
+  <Style Selector="ComboBox > ComboBoxItem">
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+  </Style>
+
+  <Style Selector="ComboBox > ComboBoxItem:selected">
+    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+  </Style>
+
+  <Style Selector="ComboBox > ComboBoxItem:pointerover /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+  </Style>
+
+  <!--  Focused but not selected  -->
+  <Style Selector="ComboBox > ComboBoxItem:focus:not(:selected) /template/ ContentPresenter">
+    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
+    <Setter Property="Opacity" Value="0.7" />
+  </Style>
+
+  <!--  AutoCompleteBox Styles  -->
+  <Style Selector="AutoCompleteBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="12,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="MinHeight" Value="36" />
+  </Style>
+
+  <Style Selector="AutoCompleteBox:focus /template/ Border">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="AutoCompleteBox:pointerover /template/ Border">
+    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+  </Style>
+</Styles>

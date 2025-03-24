@@ -1,0 +1,33 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--  Include Avalonia's built-in theme  -->
+  <StyleInclude Source="avares://Avalonia.Themes.Fluent/FluentTheme.xaml" />
+
+  <!--  Include AvaGlass library  -->
+  <StyleInclude Source="avares://AvaGlass/Themes/Default.axaml" />
+
+  <!--  Include our resource dictionaries  -->
+  <Styles.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <!--  Shared resources that don't change with theme  -->
+        <ResourceInclude Source="/Styles/SharedResources.axaml" />
+
+        <!--  Theme-specific resources - will be selected by ThemeVariant  -->
+        <ResourceInclude Source="/Styles/LightThemeResources.axaml" />
+        <ResourceInclude Source="/Styles/DarkThemeResources.axaml" />
+
+        <ResourceInclude Source="/Converters/Converters.axaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+
+  <!--  Base styles for controls  -->
+  <StyleInclude Source="/Styles/BaseStyles.axaml" />
+
+  <!--  Control-specific styles  -->
+  <StyleInclude Source="/Styles/ControlStyles/ButtonStyles.axaml" />
+  <StyleInclude Source="/Styles/ControlStyles/TextBlockStyles.axaml" />
+  <StyleInclude Source="/Styles/ControlStyles/CustomPanels.axaml" />
+  <StyleInclude Source="/Styles/ControlStyles/TextInputStyles.axaml" />
+  <StyleInclude Source="/Styles/ControlStyles/InputStyles.axaml" />
+</Styles>

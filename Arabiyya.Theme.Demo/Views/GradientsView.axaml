@@ -1,0 +1,743 @@
+<UserControl
+  x:Class="Arabiyya.Theme.Demo.Views.GradientsView"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:avaglass="using:AvaGlass.Controls"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
+  d:DesignHeight="650"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+
+  <Design.DataContext>
+    <vm:GradientsViewModel />
+  </Design.DataContext>
+
+  <StackPanel Margin="20" Spacing="30">
+    <TextBlock Classes="h2" Text="Gradients" />
+
+    <!--  Introduction  -->
+    <Border
+      Padding="15"
+      Background="{DynamicResource SurfaceBrush}"
+      BorderBrush="{DynamicResource DividerBrush}"
+      BorderThickness="1"
+      CornerRadius="8">
+      <TextBlock TextWrapping="Wrap">
+        Gradients add depth, dimension, and visual interest to your application.
+        Our design system provides a variety of gradients that can be used for backgrounds,
+        buttons, cards, and other UI components. Each gradient has been carefully crafted
+        to complement our color palette and support both light and dark themes.
+      </TextBlock>
+    </Border>
+
+    <!--  Theme Background Gradients  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Theme Background Gradients" />
+
+      <Grid ColumnDefinitions="*,*" RowDefinitions="200,Auto">
+        <!--  Light Theme Gradient  -->
+        <Border
+          Grid.Column="0"
+          Height="200"
+          Margin="0,0,8,0"
+          Background="{DynamicResource LightThemeGradient}"
+          CornerRadius="8">
+          <StackPanel
+            Margin="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBlock
+              HorizontalAlignment="Center"
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Light Theme Gradient" />
+            <TextBlock
+              Margin="0,8,0,0"
+              HorizontalAlignment="Center"
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="#11998e → #38ef7d" />
+          </StackPanel>
+        </Border>
+
+        <!--  Dark Theme Gradient  -->
+        <Border
+          Grid.Column="1"
+          Height="200"
+          Margin="8,0,0,0"
+          Background="{DynamicResource DarkThemeGradient}"
+          CornerRadius="8">
+          <StackPanel
+            Margin="15"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBlock
+              HorizontalAlignment="Center"
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Dark Theme Gradient" />
+            <TextBlock
+              Margin="0,8,0,0"
+              HorizontalAlignment="Center"
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="#000000 → #166d3b" />
+          </StackPanel>
+        </Border>
+
+        <!--  Description  -->
+        <TextBlock
+          Grid.Row="1"
+          Grid.Column="0"
+          Grid.ColumnSpan="2"
+          Margin="0,10,0,0"
+          TextWrapping="Wrap">
+          Theme background gradients define the app's primary background. The light theme uses vibrant green tones,
+          while the dark theme uses a subtle dark-to-green gradient for reduced eye strain.
+        </TextBlock>
+      </Grid>
+    </StackPanel>
+
+    <!--  Brand Color Gradients  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Brand Color Gradients" />
+
+      <Grid
+        Margin="0,0,0,15"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,Auto,Auto,Auto">
+        <!--  Primary Horizontal Gradient  -->
+        <Border
+          Grid.Row="0"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource PrimaryGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="Primary Horizontal" />
+          </StackPanel>
+        </Border>
+
+        <!--  Primary Vertical Gradient  -->
+        <Border
+          Grid.Row="0"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          Background="{DynamicResource PrimaryVerticalGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Text="Primary Vertical" />
+          </StackPanel>
+        </Border>
+
+        <!--  Secondary Horizontal Gradient  -->
+        <Border
+          Grid.Row="1"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource SecondaryGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="Secondary Horizontal" />
+          </StackPanel>
+        </Border>
+
+        <!--  Secondary Vertical Gradient  -->
+        <Border
+          Grid.Row="1"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          Background="{DynamicResource SecondaryVerticalGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Text="Secondary Vertical" />
+          </StackPanel>
+        </Border>
+
+        <!--  Accent Horizontal Gradient  -->
+        <Border
+          Grid.Row="2"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,0"
+          Background="{DynamicResource AccentGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="Accent Horizontal" />
+          </StackPanel>
+        </Border>
+
+        <!--  Accent Vertical Gradient  -->
+        <Border
+          Grid.Row="2"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,0"
+          Background="{DynamicResource AccentVerticalGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="{DynamicResource TextOnAccentBrush}"
+              Text="Accent Vertical" />
+          </StackPanel>
+        </Border>
+      </Grid>
+
+      <!--  Description  -->
+      <Border
+        Padding="15"
+        Background="{DynamicResource SurfaceElevated1Brush}"
+        BorderBrush="{DynamicResource DividerBrush}"
+        BorderThickness="1"
+        CornerRadius="6">
+        <StackPanel Spacing="10">
+          <TextBlock FontWeight="SemiBold" Text="Usage Guidelines:" />
+          <TextBlock Text="• Use horizontal gradients for side-to-side elements like headers and cards" />
+          <TextBlock Text="• Use vertical gradients for top-to-bottom elements like sidebar menus" />
+          <TextBlock Text="• Primary gradients work well for primary action components" />
+          <TextBlock Text="• Secondary gradients are ideal for supporting elements and section backgrounds" />
+          <TextBlock Text="• Accent gradients should be used sparingly to draw attention to specific elements" />
+        </StackPanel>
+      </Border>
+    </StackPanel>
+
+    <!--  Status Gradients  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Status Gradients" />
+
+      <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="90,Auto">
+        <!--  Success Gradient  -->
+        <Border
+          Grid.Column="0"
+          Height="90"
+          Margin="0,0,6,0"
+          Background="{DynamicResource SuccessGradient}"
+          CornerRadius="8">
+          <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="SemiBold"
+            Foreground="White"
+            Text="Success" />
+        </Border>
+
+        <!--  Error Gradient  -->
+        <Border
+          Grid.Column="1"
+          Height="90"
+          Margin="6,0,6,0"
+          Background="{DynamicResource ErrorGradient}"
+          CornerRadius="8">
+          <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="SemiBold"
+            Foreground="White"
+            Text="Error" />
+        </Border>
+
+        <!--  Warning Gradient  -->
+        <Border
+          Grid.Column="2"
+          Height="90"
+          Margin="6,0,6,0"
+          Background="{DynamicResource WarningGradient}"
+          CornerRadius="8">
+          <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="SemiBold"
+            Foreground="Black"
+            Text="Warning" />
+        </Border>
+
+        <!--  Info Gradient  -->
+        <Border
+          Grid.Column="3"
+          Height="90"
+          Margin="6,0,0,0"
+          Background="{DynamicResource InfoGradient}"
+          CornerRadius="8">
+          <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontWeight="SemiBold"
+            Foreground="White"
+            Text="Info" />
+        </Border>
+
+        <!--  Description  -->
+        <TextBlock
+          Grid.Row="1"
+          Grid.Column="0"
+          Grid.ColumnSpan="4"
+          Margin="0,10,0,0"
+          TextWrapping="Wrap">
+          Status gradients enhance status indicators with visual depth. Use these gradients for alerts,
+          banners, and notification elements to reinforce their meaning while maintaining consistent visual language.
+        </TextBlock>
+      </Grid>
+    </StackPanel>
+
+    <!--  Special Effect Gradients  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Special Effect Gradients" />
+
+      <Grid
+        Margin="0,0,0,15"
+        ColumnDefinitions="*,*"
+        RowDefinitions="100,100,100,100,100">
+        <!--  Calm Water Gradient  -->
+        <Border
+          Grid.Row="0"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource CalmWaterGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Calm Water" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#3494E6 → #EC6EAD" />
+          </StackPanel>
+        </Border>
+
+        <!--  Sunrise Gradient  -->
+        <Border
+          Grid.Row="0"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          Background="{DynamicResource SunriseGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Sunrise" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#FF512F → #F09819" />
+          </StackPanel>
+        </Border>
+
+        <!--  Purple Dream Gradient  -->
+        <Border
+          Grid.Row="1"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource PurpleDreamGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Purple Dream" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#8E2DE2 → #4A00E0" />
+          </StackPanel>
+        </Border>
+
+        <!--  Ocean View Gradient  -->
+        <Border
+          Grid.Row="1"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          Background="{DynamicResource OceanViewGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="Black"
+              Text="Ocean View" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="Black"
+              Text="#4AC29A → #BDFFF3" />
+          </StackPanel>
+        </Border>
+
+        <!--  Sunset Gradient  -->
+        <Border
+          Grid.Row="2"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource SunsetGradient}"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Sunset" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#FF416C → #FF4B2B" />
+          </StackPanel>
+        </Border>
+
+        <!--  Glass Gradient Light  -->
+        <Border
+          Grid.Row="2"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          Background="{DynamicResource LightGlassGradient}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock FontWeight="SemiBold" Text="Light Glass" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Text="#19FFFFFF → #0CFFFFFF" />
+          </StackPanel>
+        </Border>
+
+        <!--  Glass Gradient Dark  -->
+        <Border
+          Grid.Row="3"
+          Grid.Column="0"
+          Height="100"
+          Margin="0,0,8,16"
+          Background="{DynamicResource DarkGlassGradient}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock FontWeight="SemiBold" Text="Dark Glass" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Text="#19000000 → #0C000000" />
+          </StackPanel>
+        </Border>
+
+        <!--  Custom Diagonal Gradient  -->
+        <Border
+          Grid.Row="3"
+          Grid.Column="1"
+          Height="100"
+          Margin="8,0,0,16"
+          CornerRadius="8">
+          <Border.Background>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+              <GradientStop Offset="0" Color="#6441A5" />
+              <GradientStop Offset="1" Color="#2a0845" />
+            </LinearGradientBrush>
+          </Border.Background>
+          <StackPanel Margin="15,0" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Deep Purple" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#6441A5 → #2a0845" />
+          </StackPanel>
+        </Border>
+
+        <!--  Radial Gradient Example  -->
+        <Border
+          Grid.Row="4"
+          Grid.Column="0"
+          Grid.ColumnSpan="2"
+          Height="100"
+          CornerRadius="8">
+          <Border.Background>
+            <RadialGradientBrush Center="50%,50%" GradientOrigin="50%,50%" RadiusX="55%" RadiusY="55%">
+              <GradientStop Offset="0" Color="#16A085" />
+              <GradientStop Offset="1" Color="#2980B9" />
+            </RadialGradientBrush>
+          </Border.Background>
+          <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Radial Gradient" />
+            <TextBlock
+              Margin="0,4,0,0"
+              FontFamily="Consolas"
+              FontSize="12"
+              Foreground="White"
+              Text="#16A085 → #2980B9" />
+          </StackPanel>
+        </Border>
+      </Grid>
+
+      <!--  Description  -->
+      <Border
+        Padding="15"
+        Background="{DynamicResource SurfaceElevated1Brush}"
+        BorderBrush="{DynamicResource DividerBrush}"
+        BorderThickness="1"
+        CornerRadius="6">
+        <StackPanel Spacing="10">
+          <TextBlock FontWeight="SemiBold" Text="Special Gradient Usage:" />
+          <TextBlock TextWrapping="Wrap">
+            Special effect gradients can be used for hero sections, feature highlights,
+            promotional banners, and other areas where you want to create visual impact.
+            Glass gradients are specifically designed for use with the glassmorphic panels
+            to create subtle transparency effects.
+          </TextBlock>
+        </StackPanel>
+      </Border>
+    </StackPanel>
+
+    <!--  Gradient Panels  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Gradient Panels" />
+
+      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+        <!--  Glass Panel  -->
+        <avaglass:GlassmorphicPanel
+          Grid.Column="0"
+          MinHeight="180"
+          Margin="0,0,8,16"
+          Classes="GlassPanel">
+          <StackPanel Margin="15">
+            <TextBlock FontWeight="SemiBold" Text="Glass Panel" />
+            <TextBlock TextWrapping="Wrap">
+              This panel uses glassmorphism effect with a
+              white tint and high blur radius. Perfect for
+              light themes or over colorful backgrounds.
+            </TextBlock>
+            <Button
+              Margin="0,15,0,0"
+              Classes="Glass"
+              Content="Glass Button" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Acrylic Panel  -->
+        <avaglass:GlassmorphicPanel
+          Grid.Column="1"
+          MinHeight="180"
+          Margin="8,0,0,16"
+          Classes="AcrylicPanel">
+          <StackPanel Margin="15">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Acrylic Panel" />
+            <TextBlock Foreground="White" TextWrapping="Wrap">
+              This panel uses the acrylic effect with a
+              black tint. It's perfect for dark themes or
+              when you want content to stand out with a
+              darker background.
+            </TextBlock>
+            <Button
+              Margin="0,15,0,0"
+              Classes="Glass"
+              Content="Glass Button" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Description  -->
+        <Border
+          Grid.Row="1"
+          Grid.Column="0"
+          Grid.ColumnSpan="2"
+          Padding="15"
+          Background="{DynamicResource SurfaceElevated1Brush}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="6">
+          <StackPanel Spacing="10">
+            <TextBlock FontWeight="SemiBold" Text="Using Gradient Panels:" />
+            <TextBlock TextWrapping="Wrap">
+              Glass and Acrylic panels use special gradients to create depth and visual hierarchy.
+              Use Glass panels in light themes as they have a white tint that works well on colorful
+              backgrounds. Acrylic panels are ideal for dark themes with their darker tint that helps
+              content stand out while maintaining a clean, modern aesthetic.
+            </TextBlock>
+          </StackPanel>
+        </Border>
+      </Grid>
+    </StackPanel>
+
+    <!--  Gradient Buttons  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Gradient Buttons" />
+
+      <StackPanel Spacing="20">
+        <!--  Button with Primary Gradient  -->
+        <Border
+          Padding="15"
+          Background="{DynamicResource SurfaceBrush}"
+          BorderBrush="{DynamicResource DividerBrush}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock FontWeight="SemiBold" Text="Primary Gradient Button" />
+
+            <Border
+              Height="40"
+              Padding="0,0,0,0"
+              Background="{DynamicResource PrimaryGradient}"
+              CornerRadius="6">
+              <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="SemiBold"
+                Foreground="{DynamicResource TextOnPrimaryBrush}"
+                Text="Primary Action" />
+            </Border>
+
+            <TextBlock Classes="caption" TextWrapping="Wrap">
+              Gradient buttons can provide visual emphasis for primary actions.
+              They're particularly effective for call-to-action buttons that need to stand out.
+            </TextBlock>
+          </StackPanel>
+        </Border>
+
+        <!--  Glass Button on Dark Background  -->
+        <Border Padding="20" CornerRadius="8">
+          <Border.Background>
+            <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+              <GradientStop Offset="0" Color="#232526" />
+              <GradientStop Offset="1" Color="#414345" />
+            </LinearGradientBrush>
+          </Border.Background>
+
+          <StackPanel Spacing="15">
+            <TextBlock
+              FontWeight="SemiBold"
+              Foreground="White"
+              Text="Glass Button on Gradient Background" />
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+              <Button Classes="Glass" Content="Glass Button" />
+              <Button Classes="Glass" Content="Action" />
+              <Button Classes="Glass" Content="Submit" />
+            </StackPanel>
+
+            <TextBlock
+              Classes="caption"
+              Foreground="#CCFFFFFF"
+              TextWrapping="Wrap">
+              Glass buttons with subtle gradients work especially well on top of dark gradient backgrounds,
+              creating a sleek, modern interface with depth and visual hierarchy.
+            </TextBlock>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </StackPanel>
+
+    <!--  Guidelines  -->
+    <StackPanel>
+      <TextBlock
+        Margin="0,0,0,15"
+        Classes="h3"
+        Text="Gradient Guidelines" />
+
+      <Border
+        Padding="20"
+        Background="{DynamicResource SurfaceElevated1Brush}"
+        BorderBrush="{DynamicResource DividerBrush}"
+        BorderThickness="1"
+        CornerRadius="8">
+        <StackPanel Spacing="15">
+          <TextBlock Classes="h5" Text="Best Practices" />
+          <StackPanel Margin="10,0,0,0" Spacing="8">
+            <TextBlock Text="• Use gradients purposefully to create depth and visual hierarchy" />
+            <TextBlock Text="• Maintain adequate contrast between gradient colors and any text overlay" />
+            <TextBlock Text="• Ensure gradients remain subtle in content-heavy areas" />
+            <TextBlock Text="• Use primary theme gradients for main backgrounds" />
+            <TextBlock Text="• Reserve special effect gradients for hero sections or feature highlights" />
+            <TextBlock Text="• Coordinate gradient directions for visual harmony (horizontal, vertical, diagonal)" />
+            <TextBlock Text="• Use glass panel gradients with the appropriate panel type (light/dark)" />
+          </StackPanel>
+
+          <TextBlock
+            Margin="0,5,0,0"
+            Classes="h5"
+            Text="Theme Adaptability" />
+          <TextBlock TextWrapping="Wrap">
+            Gradients should adapt gracefully between light and dark themes. When switching to dark mode,
+            ensure that gradients maintain adequate contrast and visibility while reducing intensity to
+            prevent eye strain. Use the Glass gradients with light themes and Acrylic gradients with dark themes.
+          </TextBlock>
+
+          <TextBlock
+            Margin="0,5,0,0"
+            Classes="h5"
+            Text="Accessibility Considerations" />
+          <TextBlock TextWrapping="Wrap">
+            Ensure text placed on gradient backgrounds has sufficient contrast.
+            Test gradient backgrounds with both light and dark text to verify readability.
+            For users with visual impairments, avoid gradients that are too subtle or low-contrast
+            as they may not be perceived as intended.
+          </TextBlock>
+        </StackPanel>
+      </Border>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

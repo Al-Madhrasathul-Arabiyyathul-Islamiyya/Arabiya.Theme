@@ -1,0 +1,23 @@
+<Styles
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:avaglass="using:AvaGlass.Controls">
+
+  <!--  GlassPanel Control - Light glassmorphism effect  -->
+  <Style Selector="avaglass|GlassmorphicPanel.GlassPanel">
+    <Setter Property="BlurRadius" Value="20" />
+    <Setter Property="Mode" Value="Glassmorphism" />
+    <Setter Property="TintColor" Value="White" />
+    <Setter Property="TintOpacity" Value="0.1" />
+    <Setter Property="CornerRadius" Value="12" />
+  </Style>
+
+  <!--  AcrylicPanel Control - Dark acrylic effect  -->
+  <Style Selector="avaglass|GlassmorphicPanel.AcrylicPanel">
+    <Setter Property="BlurRadius" Value="20" />
+    <Setter Property="Mode" Value="Acrylic" />
+    <Setter Property="TintColor" Value="Black" />
+    <Setter Property="TintOpacity" Value="0.4" />
+    <Setter Property="CornerRadius" Value="12" />
+  </Style>
+</Styles>

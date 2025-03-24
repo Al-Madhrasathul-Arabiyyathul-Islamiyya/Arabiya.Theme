@@ -1,0 +1,162 @@
+<UserControl
+  x:Class="Arabiyya.Theme.Demo.Views.GlassPanelsView"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:avaglass="using:AvaGlass.Controls"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+
+  <StackPanel Margin="10" Spacing="30">
+    <TextBlock
+      Classes="h2"
+      Foreground="White"
+      Text="Glass Effects" />
+
+    <Grid
+      Margin="0,20"
+      ColumnDefinitions="*,*"
+      RowDefinitions="Auto,Auto,Auto">
+      <StackPanel
+        Grid.Row="0"
+        Grid.Column="0"
+        Spacing="15">
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Foreground="White"
+          Text="Glass Panel" />
+
+        <!--  Glass Panel Example  -->
+        <avaglass:GlassmorphicPanel
+          Width="350"
+          Height="200"
+          Classes="GlassPanel">
+          <StackPanel Margin="15">
+            <TextBlock
+              Margin="0,0,0,10"
+              Classes="h4"
+              Text="Glass Panel" />
+            <TextBlock Text="This panel uses glassmorphism effect with a white tint and high blur radius. Perfect for light themes or over colorful backgrounds." TextWrapping="Wrap" />
+            <Button
+              Margin="0,20,0,0"
+              Classes="Glass"
+              Content="Glass Button" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Usage Code Example  -->
+        <Border
+          Margin="0,10,0,0"
+          Padding="15"
+          Background="#30000000"
+          CornerRadius="4">
+          <TextBlock
+            FontFamily="Consolas"
+            Foreground="White"
+            TextWrapping="Wrap">
+            <![CDATA[<avaglass:GlassmorphicPanel Classes="GlassPanel">
+    <StackPanel>
+        <TextBlock Text="Content here"/>
+    </StackPanel>
+</avaglass:GlassmorphicPanel>]]>
+          </TextBlock>
+        </Border>
+      </StackPanel>
+
+      <StackPanel
+        Grid.Row="0"
+        Grid.Column="1"
+        Spacing="15">
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Foreground="White"
+          Text="Acrylic Panel" />
+
+        <!--  Acrylic Panel Example  -->
+        <avaglass:GlassmorphicPanel
+          Width="350"
+          Height="200"
+          Classes="AcrylicPanel">
+          <StackPanel Margin="15">
+            <TextBlock
+              Margin="0,0,0,10"
+              Classes="h4"
+              Foreground="White"
+              Text="Acrylic Panel" />
+            <TextBlock
+              Foreground="White"
+              Text="This panel uses the acrylic effect with a black tint. It's perfect for dark themes or when you want content to stand out with a darker background."
+              TextWrapping="Wrap" />
+            <Button
+              Margin="0,20,0,0"
+              Classes="Glass"
+              Content="Glass Button" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Usage Code Example  -->
+        <Border
+          Margin="0,10,0,0"
+          Padding="15"
+          Background="#30000000"
+          CornerRadius="4">
+          <TextBlock
+            FontFamily="Consolas"
+            Foreground="White"
+            TextWrapping="Wrap">
+            <![CDATA[<avaglass:GlassmorphicPanel Classes="AcrylicPanel">
+    <StackPanel>
+        <TextBlock Text="Content here" Foreground="White"/>
+    </StackPanel>
+</avaglass:GlassmorphicPanel>]]>
+          </TextBlock>
+        </Border>
+      </StackPanel>
+
+      <!--  Glass Button Examples  -->
+      <StackPanel
+        Grid.Row="1"
+        Grid.Column="0"
+        Grid.ColumnSpan="2"
+        Margin="0,30,0,0">
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Glass Button" />
+
+        <Border
+          Padding="20"
+          Background="#30000000"
+          CornerRadius="8">
+          <StackPanel Spacing="20">
+            <StackPanel Orientation="Horizontal" Spacing="15">
+              <Button Classes="Glass" Content="Glass Button" />
+              <Button Classes="Glass" Content="Hover Me" />
+              <Button Classes="Glass" Content="Click Me" />
+              <Button
+                Classes="Glass"
+                Content="Disabled"
+                IsEnabled="False" />
+            </StackPanel>
+
+            <!--  Usage Code Example  -->
+            <Border
+              Margin="0,10,0,0"
+              Padding="15"
+              Background="#20000000"
+              CornerRadius="4">
+              <TextBlock FontFamily="Consolas" Foreground="White">
+                <![CDATA[<Button Classes="Glass" Content="Glass Button"/>]]>
+              </TextBlock>
+            </Border>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </Grid>
+  </StackPanel>
+</UserControl>

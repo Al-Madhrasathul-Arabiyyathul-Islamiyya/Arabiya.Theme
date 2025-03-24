@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Avalonia">
+    <AvaloniaUseCompiledBindingsByDefault>True</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Avalonia" />
+	  <PackageReference Include="Avalonia.Themes.Fluent" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="**\*.xaml" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\**" />
+
+    <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
+    <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
+    <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\Stuff\projects\desktop\Arabiyya.BellSystem\Arabiyya.Theme\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Stuff\projects\desktop\Arabiyya.BellSystem\Arabiyya.Theme\.editorconfig" />
+  </ItemGroup>
+</Project>

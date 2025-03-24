@@ -1,0 +1,68 @@
+<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <StackPanel Spacing="10">
+        <TextBlock Text="Default text style" />
+        <Button Content="Default button style" />
+        <TextBox Text="Default text input style" />
+      </StackPanel>
+    </Border>
+  </Design.PreviewWith>
+
+  <!--  Base Application Styles  -->
+  <Style Selector="Window">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+  </Style>
+
+  <Style Selector="UserControl">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+  </Style>
+
+  <!--  Base TextBox Styles  -->
+  <Style Selector="TextBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="10,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="{DynamicResource OutlineColor}" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+  </Style>
+
+  <!--  Base Button Styles  -->
+  <Style Selector="Button">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="16,8" />
+    <Setter Property="CornerRadius" Value="4" />
+  </Style>
+
+  <!--  Base ComboBox Styles  -->
+  <Style Selector="ComboBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Padding" Value="10,8" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="Background" Value="{DynamicResource SurfaceColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+  </Style>
+
+  <!--  Base CheckBox Styles  -->
+  <Style Selector="CheckBox">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+  </Style>
+
+  <!--  Base RadioButton Styles  -->
+  <Style Selector="RadioButton">
+    <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
+    <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
+    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+  </Style>
+</Styles>
