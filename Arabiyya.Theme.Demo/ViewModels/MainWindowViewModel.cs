@@ -1,6 +1,4 @@
-﻿using Arabiyya.Theme.ThemeServices;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Arabiyya.Theme.Demo.ViewModels;
 
@@ -24,7 +22,8 @@ public partial class MainViewModel : ObservableObject
             { 3, new GlassPanelsViewModel() },
             { 4, new TextInputsViewModel() },
             { 5, new InputsViewModel() },
-            { 6, new GradientsViewModel() },
+            { 6, new TabControlViewModel() },
+            { 7, new GradientsViewModel() },
         }!;
 
         SelectedNavIndex = 0;

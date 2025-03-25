@@ -47,6 +47,7 @@
               <ListBoxItem Content="Glass Panels" />
               <ListBoxItem Content="Text Inputs" />
               <ListBoxItem Content="Other Inputs" />
+              <ListBoxItem Content="Tab Controls" />
               <ListBoxItem Content="Gradients" />
             </ListBox>
           </StackPanel>
@@ -78,8 +79,11 @@
     </Border>
 
     <!--  Content Area  -->
-    <ScrollViewer Grid.Row="1" Grid.Column="2">
-      <ContentControl Margin="20,25,20,20" Content="{Binding CurrentView}" />
+    <ScrollViewer
+      Grid.Row="1"
+      Grid.Column="2"
+      Margin="0,20">
+      <ContentControl Content="{Binding CurrentView}" />
     </ScrollViewer>
   </Grid>
 

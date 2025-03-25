@@ -30,4 +30,5 @@
   <StyleInclude Source="/Styles/ControlStyles/CustomPanels.axaml" />
   <StyleInclude Source="/Styles/ControlStyles/TextInputStyles.axaml" />
   <StyleInclude Source="/Styles/ControlStyles/InputStyles.axaml" />
+  <StyleInclude Source="/Styles/ControlStyles/TabControlStyles.axaml" />
 </Styles>

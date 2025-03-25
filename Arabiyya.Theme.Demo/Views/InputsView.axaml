@@ -444,35 +444,6 @@
         TextWrapping="Wrap" />
     </StackPanel>
 
-    <!--  TabControl  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Tab Control" />
-
-      <TabControl Height="150" Focusable="False">
-        <TabItem Header="First Tab">
-          <TextBlock Margin="10" Text="Content for the first tab" />
-        </TabItem>
-        <TabItem Header="Second Tab">
-          <TextBlock Margin="10" Text="Content for the second tab" />
-        </TabItem>
-        <TabItem Header="Third Tab">
-          <TextBlock Margin="10" Text="Content for the third tab" />
-        </TabItem>
-        <TabItem Header="Disabled Tab" IsEnabled="False">
-          <TextBlock Text="This content won't be accessible" />
-        </TabItem>
-      </TabControl>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,10,0,0"
-        Text="TabControls organize content into separate views that users can switch between. They're useful for settings pages, multi-step processes, and different views of the same data."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
     <!--  Expander Control  -->
     <StackPanel>
       <TextBlock

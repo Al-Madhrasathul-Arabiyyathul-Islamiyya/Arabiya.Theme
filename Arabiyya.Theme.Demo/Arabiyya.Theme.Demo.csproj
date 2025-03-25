@@ -34,4 +34,10 @@
     <ProjectReference Include="..\Arabiyya.Theme\Arabiyya.Theme.csproj" />
     <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\TabControlView.axaml.cs">
+      <DependentUpon>TabControlView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
