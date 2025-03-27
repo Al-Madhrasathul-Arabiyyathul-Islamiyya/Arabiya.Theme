@@ -3,16 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arabiyya.Theme.Demo", "Arabiyya.Theme.Demo\Arabiyya.Theme.Demo.csproj", "{FD553C61-4C48-1C23-828D-A714BB9C80BB}"
-	ProjectSection(ProjectDependencies) = postProject
-		{09C47620-AF22-3217-323E-AB022C059A99} = {09C47620-AF22-3217-323E-AB022C059A99}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arabiyya.Theme", "Arabiyya.Theme\Arabiyya.Theme.csproj", "{BEA76265-6597-AF3C-E6D9-5D6C8103B365}"
-	ProjectSection(ProjectDependencies) = postProject
-		{09C47620-AF22-3217-323E-AB022C059A99} = {09C47620-AF22-3217-323E-AB022C059A99}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -27,24 +17,31 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaGlass", "AvaGlass\AvaGla
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arabiyya.Theme.Demo", "Arabiyya.Theme.Demo\Arabiyya.Theme.Demo.csproj", "{FD553C61-4C48-1C23-828D-A714BB9C80BB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0} = {DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arabiyya.Theme", "Arabiyya.Theme\Arabiyya.Theme.csproj", "{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEA76265-6597-AF3C-E6D9-5D6C8103B365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEA76265-6597-AF3C-E6D9-5D6C8103B365}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEA76265-6597-AF3C-E6D9-5D6C8103B365}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEA76265-6597-AF3C-E6D9-5D6C8103B365}.Release|Any CPU.Build.0 = Release|Any CPU
 		{09C47620-AF22-3217-323E-AB022C059A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09C47620-AF22-3217-323E-AB022C059A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C47620-AF22-3217-323E-AB022C059A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C47620-AF22-3217-323E-AB022C059A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD553C61-4C48-1C23-828D-A714BB9C80BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAEDB48-C9DC-4E0C-83C8-E177E38DBBF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,8 @@ using Avalonia.Styling;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+namespace Arabiyya.Theme.ThemeServices;
+
 public class ThemeService : INotifyPropertyChanged
 {
     private static ThemeService? _instance;

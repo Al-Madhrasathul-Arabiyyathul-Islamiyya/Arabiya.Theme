@@ -1,14 +1,4 @@
 <Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <Design.PreviewWith>
-    <Border Padding="20">
-      <StackPanel Spacing="10">
-        <TextBlock Text="Default text style" />
-        <Button Content="Default button style" />
-        <TextBox Text="Default text input style" />
-      </StackPanel>
-    </Border>
-  </Design.PreviewWith>
-
   <!--  Base Application Styles  -->
   <Style Selector="Window">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />

@@ -5,7 +5,7 @@
   xmlns:avaglass="using:AvaGlass.Controls"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:theme="using:Arabiyya.Theme"
+  xmlns:theme="using:Arabiyya.Theme.Controls"
   xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
   Title="Arabiyya Theme Demo"
   Width="1366"

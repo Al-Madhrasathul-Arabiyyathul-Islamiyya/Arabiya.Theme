@@ -9,25 +9,52 @@
   <PropertyGroup Label="Avalonia">
     <AvaloniaUseCompiledBindingsByDefault>True</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
-
+  
   <ItemGroup>
-	  <PackageReference Include="Avalonia" />
-	  <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="**\*.xaml" />
+    <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
   </ItemGroup>
 
-	<ItemGroup>
-		<AvaloniaResource Include="Assets\**" />
+  <ItemGroup>
+    <AvaloniaResource Include="Theme.axaml" />
 
+    <AvaloniaResource Include="Styles\Core\*.axaml" />
+
+    <AvaloniaResource Include="Styles\Components\**\*.axaml" />
+
+    <AvaloniaResource Include="Converters\*.axaml" />
+    
+    <AvaloniaResource Include="Controls\*" />
+
+    <AvaloniaResource Include="ThemeServices\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Styles\Components\Buttons\" />
+    <Folder Include="Styles\Components\Containers\Dialogs\" />
+    <Folder Include="Styles\Components\Containers\Cards\" />
+    <Folder Include="Styles\Components\Containers\Panels\" />
+    <Folder Include="Styles\Components\Inputs\" />
+    <Folder Include="Styles\Components\Patterns\DataDisplay\" />
+    <Folder Include="Styles\Components\Patterns\Feedback\" />
+    <Folder Include="Styles\Components\Patterns\Forms\" />
+    <Folder Include="Styles\Components\Typography\" />
+    <Folder Include="Styles\Core\" />
+    <Folder Include="ThemeServices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Controls\ThemeSwitcher.axaml" />
     <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
-	</ItemGroup>
+  </ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\AvaGlass\AvaGlass.csproj" />
-	</ItemGroup>
 </Project>

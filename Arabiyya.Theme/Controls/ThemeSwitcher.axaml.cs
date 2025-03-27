@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Windows.Input;
+using Arabiyya.Theme.ThemeServices;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Arabiyya.Theme;
+namespace Arabiyya.Theme.Controls;
 
-public enum ThemeSwitcherVariant
+public enum ThemeSwitcherVariants
 {
     Toggle,
     IconToggle,
@@ -16,7 +17,7 @@ public enum ThemeSwitcherVariant
 public partial class ThemeSwitcher : UserControl, INotifyPropertyChanged
 {
     private bool _isDarkTheme;
-    private ThemeSwitcherVariant _variantType = ThemeSwitcherVariant.Toggle;
+    private ThemeSwitcherVariants _variantType = ThemeSwitcherVariants.Toggle;
 
     public new event PropertyChangedEventHandler? PropertyChanged;
 
@@ -35,7 +36,7 @@ public partial class ThemeSwitcher : UserControl, INotifyPropertyChanged
         }
     }
 
-    public ThemeSwitcherVariant VariantType
+    public ThemeSwitcherVariants VariantType
     {
         get => _variantType;
         set
