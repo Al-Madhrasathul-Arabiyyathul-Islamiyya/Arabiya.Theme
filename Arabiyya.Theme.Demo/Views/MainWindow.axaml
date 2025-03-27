@@ -5,7 +5,7 @@
   xmlns:avaglass="using:AvaGlass.Controls"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-  xmlns:theme="using:Arabiyya.Theme.Controls"
+  xmlns:sw="using:Arabiyya.Theme.Switcher"
   xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
   Title="Arabiyya Theme Demo"
   Width="1366"
@@ -61,16 +61,16 @@
               CornerRadius="6">
               <StackPanel Spacing="10">
                 <!--  Default toggle switch  -->
-                <theme:ThemeSwitcher VariantType="Toggle" />
+                <sw:ThemeSwitcher VariantType="Toggle" />
 
                 <!--  Icon toggle switch  -->
-                <theme:ThemeSwitcher VariantType="IconToggle" />
+                <sw:ThemeSwitcher VariantType="IconToggle" />
 
                 <!--  ComboBox style  -->
-                <theme:ThemeSwitcher VariantType="ComboBox" />
+                <sw:ThemeSwitcher VariantType="ComboBox" />
 
                 <!--  Icon button style  -->
-                <theme:ThemeSwitcher VariantType="IconButton" />
+                <sw:ThemeSwitcher VariantType="IconButton" />
               </StackPanel>
             </Border>
           </StackPanel>

@@ -4,7 +4,7 @@ using Arabiyya.Theme.ThemeServices;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Arabiyya.Theme.Controls;
+namespace Arabiyya.Theme.Switcher;
 
 public enum ThemeSwitcherVariants
 {

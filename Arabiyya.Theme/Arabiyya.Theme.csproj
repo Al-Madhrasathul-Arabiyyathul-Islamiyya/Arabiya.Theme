@@ -28,7 +28,7 @@
 
     <AvaloniaResource Include="Converters\*.axaml" />
     
-    <AvaloniaResource Include="Controls\*" />
+    <AvaloniaResource Include="Switcher\*" />
 
     <AvaloniaResource Include="ThemeServices\*" />
   </ItemGroup>
@@ -51,7 +51,7 @@
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
-    <AvaloniaXaml Remove="Controls\ThemeSwitcher.axaml" />
+    <AvaloniaXaml Remove="Switcher\ThemeSwitcher.axaml" />
     <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
