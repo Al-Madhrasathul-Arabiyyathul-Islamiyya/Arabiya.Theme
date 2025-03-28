@@ -2,242 +2,241 @@
   <ResourceDictionary.ThemeDictionaries>
     <ResourceDictionary x:Key="Light">
       <!--  Light Theme Colors  -->
-      <Color x:Key="PrimaryColor">#0072B5</Color>
+      <Color x:Key="Color.Primary">#0072B5</Color>
 
-      <Color x:Key="PrimaryLightColor">#3A95D0</Color>
+      <Color x:Key="Color.Primary.Light">#3A95D0</Color>
 
-      <Color x:Key="PrimaryDarkColor">#005A91</Color>
+      <Color x:Key="Color.Primary.Dark">#005A91</Color>
 
-      <Color x:Key="SecondaryColor">#7D3C98</Color>
+      <Color x:Key="Color.Secondary">#7D3C98</Color>
 
-      <Color x:Key="SecondaryLightColor">#9B59B6</Color>
+      <Color x:Key="Color.Secondary.Light">#9B59B6</Color>
 
-      <Color x:Key="SecondaryDarkColor">#5B2C6F</Color>
+      <Color x:Key="Color.Secondary.Dark">#5B2C6F</Color>
 
-      <Color x:Key="AccentColor">#FF9800</Color>
+      <Color x:Key="Color.Accent">#FF9800</Color>
 
-      <Color x:Key="AccentLightColor">#FFB74D</Color>
+      <Color x:Key="Color.Accent.Light">#FFB74D</Color>
 
-      <Color x:Key="AccentDarkColor">#F57C00</Color>
+      <Color x:Key="Color.Accent.Dark">#F57C00</Color>
 
       <!--  Status Colors  -->
-      <Color x:Key="SuccessColor">#2E7D32</Color>
+      <Color x:Key="Color.Success">#2E7D32</Color>
 
-      <Color x:Key="SuccessLightColor">#4CAF50</Color>
+      <Color x:Key="Color.Success.Light">#4CAF50</Color>
 
-      <Color x:Key="SuccessDarkColor">#1B5E20</Color>
+      <Color x:Key="Color.Success.Dark">#1B5E20</Color>
 
-      <Color x:Key="ErrorColor">#C62828</Color>
+      <Color x:Key="Color.Error">#C62828</Color>
 
-      <Color x:Key="ErrorLightColor">#EF5350</Color>
+      <Color x:Key="Color.Error.Light">#EF5350</Color>
 
-      <Color x:Key="ErrorDarkColor">#B71C1C</Color>
-      <Color x:Key="LightErrorDarkColor">#B71C1C</Color>
+      <Color x:Key="Color.Error.Dark">#B71C1C</Color>
 
-      <Color x:Key="WarningColor">#F57C00</Color>
+      <Color x:Key="Color.Warning">#F57C00</Color>
 
-      <Color x:Key="WarningLightColor">#FFB74D</Color>
+      <Color x:Key="Color.Warning.Light">#FFB74D</Color>
 
-      <Color x:Key="WarningDarkColor">#E65100</Color>
+      <Color x:Key="Color.Warning.Dark">#E65100</Color>
 
-      <Color x:Key="InfoColor">#1565C0</Color>
+      <Color x:Key="Color.Info">#1565C0</Color>
 
-      <Color x:Key="InfoLightColor">#42A5F5</Color>
+      <Color x:Key="Color.Info.Light">#42A5F5</Color>
 
-      <Color x:Key="InfoDarkColor">#0D47A1</Color>
+      <Color x:Key="Color.Info.Dark">#0D47A1</Color>
 
       <!--  UI Colors  -->
-      <Color x:Key="BackgroundColor">#F8FDFA</Color>
+      <Color x:Key="Color.Background">#F8FDFA</Color>
 
-      <Color x:Key="SurfaceColor">#FFFFFF</Color>
+      <Color x:Key="Color.Surface">#FFFFFF</Color>
 
-      <Color x:Key="SurfaceElevated1Color">#FFFFFF</Color>
+      <Color x:Key="Color.Surface.Elevated1">#FFFFFF</Color>
 
-      <Color x:Key="SurfaceElevated2Color">#FFFFFF</Color>
+      <Color x:Key="Color.Surface.Elevated2">#FFFFFF</Color>
 
       <!--  Text Colors  -->
-      <Color x:Key="TextPrimaryColor">#212121</Color>
+      <Color x:Key="Color.Text.Primary">#212121</Color>
 
-      <Color x:Key="TextSecondaryColor">#424242</Color>
+      <Color x:Key="Color.Text.Secondary">#424242</Color>
 
-      <Color x:Key="TextDisabledColor">#9E9E9E</Color>
+      <Color x:Key="Color.Text.Disabled">#9E9E9E</Color>
 
-      <Color x:Key="TextOnPrimaryColor">#FFFFFF</Color>
+      <Color x:Key="Color.Text.OnPrimary">#FFFFFF</Color>
 
-      <Color x:Key="TextOnSecondaryColor">#FFFFFF</Color>
+      <Color x:Key="Color.Text.OnSecondary">#FFFFFF</Color>
 
-      <Color x:Key="TextOnAccentColor">#000000</Color>
+      <Color x:Key="Color.Text.OnAccent">#000000</Color>
 
-      <Color x:Key="TextColorDark">#020617</Color>
+      <Color x:Key="Color.Text.Dark">#020617</Color>
 
-      <Color x:Key="TextColorLight">#f8fafc</Color>
+      <Color x:Key="Color.Text.Light">#f8fafc</Color>
 
-      <Color x:Key="TextColorMuted">#64748b</Color>
+      <Color x:Key="Color.Text.Muted">#64748b</Color>
 
-      <Color x:Key="TextColorDisabled">#cbd5e1</Color>
+      <Color x:Key="Color.Text.Disabled.Light">#cbd5e1</Color>
 
       <!--  Border Colors  -->
-      <Color x:Key="DividerColor">#E2E8F0</Color>
+      <Color x:Key="Color.Divider">#E2E8F0</Color>
 
-      <Color x:Key="OutlineColor">#F1F5F9</Color>
+      <Color x:Key="Color.Outline">#F1F5F9</Color>
 
       <!--  Background Gradients  -->
-      <LinearGradientBrush x:Key="ThemeBackgroundGradient" StartPoint="0%,0%" EndPoint="100%,100%">
+      <LinearGradientBrush x:Key="Gradient.Theme.Background" StartPoint="0%,0%" EndPoint="100%,100%">
         <GradientStop Offset="0" Color="#11998e" />
         <GradientStop Offset="1" Color="#38ef7d" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="GlassGradient" StartPoint="0%,0%" EndPoint="0%,100%">
+      <LinearGradientBrush x:Key="Gradient.Glass" StartPoint="0%,0%" EndPoint="0%,100%">
         <GradientStop Offset="0" Color="#19FFFFFF" />
         <GradientStop Offset="1" Color="#0CFFFFFF" />
       </LinearGradientBrush>
 
       <!--  Brand Color Gradients  -->
-      <LinearGradientBrush x:Key="PrimaryGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource PrimaryColor}" />
-        <GradientStop Offset="1" Color="{StaticResource PrimaryLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Primary" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Primary}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Primary.Light}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="PrimaryVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
-        <GradientStop Offset="0" Color="{StaticResource PrimaryColor}" />
-        <GradientStop Offset="1" Color="{StaticResource PrimaryLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Primary.Vertical" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Primary}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Primary.Light}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="SecondaryGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource SecondaryColor}" />
-        <GradientStop Offset="1" Color="{StaticResource SecondaryLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Secondary" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Secondary}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Secondary.Light}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="SecondaryVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
-        <GradientStop Offset="0" Color="{StaticResource SecondaryColor}" />
-        <GradientStop Offset="1" Color="{StaticResource SecondaryLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Secondary.Vertical" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Secondary}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Secondary.Light}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="AccentGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource AccentColor}" />
-        <GradientStop Offset="1" Color="{StaticResource AccentLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Accent" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Accent}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Accent.Light}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="AccentVerticalGradient" StartPoint="0%,0%" EndPoint="0%,100%">
-        <GradientStop Offset="0" Color="{StaticResource AccentColor}" />
-        <GradientStop Offset="1" Color="{StaticResource AccentLightColor}" />
+      <LinearGradientBrush x:Key="Gradient.Accent.Vertical" StartPoint="0%,0%" EndPoint="0%,100%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Accent}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Accent.Light}" />
       </LinearGradientBrush>
 
       <!--  Status Gradients  -->
-      <LinearGradientBrush x:Key="SuccessGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource SuccessDarkColor}" />
-        <GradientStop Offset="1" Color="{StaticResource SuccessColor}" />
+      <LinearGradientBrush x:Key="Gradient.Success" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Success.Dark}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Success}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="ErrorGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource ErrorDarkColor}" />
-        <GradientStop Offset="1" Color="{StaticResource ErrorColor}" />
+      <LinearGradientBrush x:Key="Gradient.Error" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Error.Dark}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Error}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="WarningGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource WarningDarkColor}" />
-        <GradientStop Offset="1" Color="{StaticResource WarningColor}" />
+      <LinearGradientBrush x:Key="Gradient.Warning" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Warning.Dark}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Warning}" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="InfoGradient" StartPoint="0%,0%" EndPoint="100%,0%">
-        <GradientStop Offset="0" Color="{StaticResource InfoDarkColor}" />
-        <GradientStop Offset="1" Color="{StaticResource InfoColor}" />
+      <LinearGradientBrush x:Key="Gradient.Info" StartPoint="0%,0%" EndPoint="100%,0%">
+        <GradientStop Offset="0" Color="{StaticResource Color.Info.Dark}" />
+        <GradientStop Offset="1" Color="{StaticResource Color.Info}" />
       </LinearGradientBrush>
 
       <!--  Special Effect Gradients  -->
-      <LinearGradientBrush x:Key="CalmWaterGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+      <LinearGradientBrush x:Key="Gradient.CalmWater" StartPoint="0%,0%" EndPoint="100%,0%">
         <GradientStop Offset="0" Color="#3494E6" />
         <GradientStop Offset="1" Color="#EC6EAD" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="SunriseGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+      <LinearGradientBrush x:Key="Gradient.Sunrise" StartPoint="0%,0%" EndPoint="100%,0%">
         <GradientStop Offset="0" Color="#FF512F" />
         <GradientStop Offset="1" Color="#F09819" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="PurpleDreamGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+      <LinearGradientBrush x:Key="Gradient.PurpleDream" StartPoint="0%,0%" EndPoint="100%,0%">
         <GradientStop Offset="0" Color="#8E2DE2" />
         <GradientStop Offset="1" Color="#4A00E0" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="OceanViewGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+      <LinearGradientBrush x:Key="Gradient.OceanView" StartPoint="0%,0%" EndPoint="100%,0%">
         <GradientStop Offset="0" Color="#4AC29A" />
         <GradientStop Offset="1" Color="#BDFFF3" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="SunsetGradient" StartPoint="0%,0%" EndPoint="100%,0%">
+      <LinearGradientBrush x:Key="Gradient.Sunset" StartPoint="0%,0%" EndPoint="100%,0%">
         <GradientStop Offset="0" Color="#FF416C" />
         <GradientStop Offset="1" Color="#FF4B2B" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="MainBackgroundGradient" StartPoint="0%,0%" EndPoint="100%,100%">
+      <LinearGradientBrush x:Key="Gradient.MainBackground" StartPoint="0%,0%" EndPoint="100%,100%">
         <GradientStop Offset="0" Color="#11998e" />
         <GradientStop Offset="1" Color="#38ef7d" />
       </LinearGradientBrush>
 
       <!--  Glass Button Values  -->
-      <Color x:Key="GlassButtonBorderColor">#40FFFFFF</Color>
-      <Color x:Key="GlassButtonHoverBorderColor">#60FFFFFF</Color>
-      <Color x:Key="GlassButtonPressedBorderColor">#50FFFFFF</Color>
-      <Color x:Key="GlassButtonPressedBackgroundColor">#25FFFFFF</Color>
-      <Color x:Key="GlassButtonDisabledBorderColor">#20FFFFFF</Color>
-      <Color x:Key="GlassButtonDisabledBackgroundColor">#05FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Border">#40FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Border.Hover">#60FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Border.Pressed">#50FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Background.Pressed">#25FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Border.Disabled">#20FFFFFF</Color>
+      <Color x:Key="Color.GlassButton.Background.Disabled">#05FFFFFF</Color>
 
       <!--  Brushes  -->
-      <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
-      <SolidColorBrush x:Key="PrimaryLightBrush" Color="{StaticResource PrimaryLightColor}" />
-      <SolidColorBrush x:Key="PrimaryDarkBrush" Color="{StaticResource PrimaryDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Primary" Color="{StaticResource Color.Primary}" />
+      <SolidColorBrush x:Key="Brush.Primary.Light" Color="{StaticResource Color.Primary.Light}" />
+      <SolidColorBrush x:Key="Brush.Primary.Dark" Color="{StaticResource Color.Primary.Dark}" />
 
-      <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
-      <SolidColorBrush x:Key="SecondaryLightBrush" Color="{StaticResource SecondaryLightColor}" />
-      <SolidColorBrush x:Key="SecondaryDarkBrush" Color="{StaticResource SecondaryDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Secondary" Color="{StaticResource Color.Secondary}" />
+      <SolidColorBrush x:Key="Brush.Secondary.Light" Color="{StaticResource Color.Secondary.Light}" />
+      <SolidColorBrush x:Key="Brush.Secondary.Dark" Color="{StaticResource Color.Secondary.Dark}" />
 
-      <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
-      <SolidColorBrush x:Key="AccentLightBrush" Color="{StaticResource AccentLightColor}" />
-      <SolidColorBrush x:Key="AccentDarkBrush" Color="{StaticResource AccentDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Accent" Color="{StaticResource Color.Accent}" />
+      <SolidColorBrush x:Key="Brush.Accent.Light" Color="{StaticResource Color.Accent.Light}" />
+      <SolidColorBrush x:Key="Brush.Accent.Dark" Color="{StaticResource Color.Accent.Dark}" />
 
-      <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource SuccessColor}" />
-      <SolidColorBrush x:Key="SuccessLightBrush" Color="{StaticResource SuccessLightColor}" />
-      <SolidColorBrush x:Key="SuccessDarkBrush" Color="{StaticResource SuccessDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Success" Color="{StaticResource Color.Success}" />
+      <SolidColorBrush x:Key="Brush.Success.Light" Color="{StaticResource Color.Success.Light}" />
+      <SolidColorBrush x:Key="Brush.Success.Dark" Color="{StaticResource Color.Success.Dark}" />
 
-      <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
-      <SolidColorBrush x:Key="ErrorLightBrush" Color="{StaticResource ErrorLightColor}" />
-      <SolidColorBrush x:Key="ErrorDarkBrush" Color="{StaticResource ErrorDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Error" Color="{StaticResource Color.Error}" />
+      <SolidColorBrush x:Key="Brush.Error.Light" Color="{StaticResource Color.Error.Light}" />
+      <SolidColorBrush x:Key="Brush.Error.Dark" Color="{StaticResource Color.Error.Dark}" />
 
-      <SolidColorBrush x:Key="WarningBrush" Color="{StaticResource WarningColor}" />
-      <SolidColorBrush x:Key="WarningLightBrush" Color="{StaticResource WarningLightColor}" />
-      <SolidColorBrush x:Key="WarningDarkBrush" Color="{StaticResource WarningDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Warning" Color="{StaticResource Color.Warning}" />
+      <SolidColorBrush x:Key="Brush.Warning.Light" Color="{StaticResource Color.Warning.Light}" />
+      <SolidColorBrush x:Key="Brush.Warning.Dark" Color="{StaticResource Color.Warning.Dark}" />
 
-      <SolidColorBrush x:Key="InfoBrush" Color="{StaticResource InfoColor}" />
-      <SolidColorBrush x:Key="InfoLightBrush" Color="{StaticResource InfoLightColor}" />
-      <SolidColorBrush x:Key="InfoDarkBrush" Color="{StaticResource InfoDarkColor}" />
+      <SolidColorBrush x:Key="Brush.Info" Color="{StaticResource Color.Info}" />
+      <SolidColorBrush x:Key="Brush.Info.Light" Color="{StaticResource Color.Info.Light}" />
+      <SolidColorBrush x:Key="Brush.Info.Dark" Color="{StaticResource Color.Info.Dark}" />
 
-      <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
-      <SolidColorBrush x:Key="SurfaceBrush" Color="{StaticResource SurfaceColor}" />
-      <SolidColorBrush x:Key="SurfaceElevated1Brush" Color="{StaticResource SurfaceElevated1Color}" />
-      <SolidColorBrush x:Key="SurfaceElevated2Brush" Color="{StaticResource SurfaceElevated2Color}" />
+      <SolidColorBrush x:Key="Brush.Background" Color="{StaticResource Color.Background}" />
+      <SolidColorBrush x:Key="Brush.Surface" Color="{StaticResource Color.Surface}" />
+      <SolidColorBrush x:Key="Brush.Surface.Elevated1" Color="{StaticResource Color.Surface.Elevated1}" />
+      <SolidColorBrush x:Key="Brush.Surface.Elevated2" Color="{StaticResource Color.Surface.Elevated2}" />
 
-      <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimaryColor}" />
-      <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}" />
-      <SolidColorBrush x:Key="TextDisabledBrush" Color="{StaticResource TextDisabledColor}" />
-      <SolidColorBrush x:Key="TextOnPrimaryBrush" Color="{StaticResource TextOnPrimaryColor}" />
-      <SolidColorBrush x:Key="TextOnSecondaryBrush" Color="{StaticResource TextOnSecondaryColor}" />
-      <SolidColorBrush x:Key="TextOnAccentBrush" Color="{StaticResource TextOnAccentColor}" />
+      <SolidColorBrush x:Key="Brush.Text.Primary" Color="{StaticResource Color.Text.Primary}" />
+      <SolidColorBrush x:Key="Brush.Text.Secondary" Color="{StaticResource Color.Text.Secondary}" />
+      <SolidColorBrush x:Key="Brush.Text.Disabled" Color="{StaticResource Color.Text.Disabled}" />
+      <SolidColorBrush x:Key="Brush.Text.OnPrimary" Color="{StaticResource Color.Text.OnPrimary}" />
+      <SolidColorBrush x:Key="Brush.Text.OnSecondary" Color="{StaticResource Color.Text.OnSecondary}" />
+      <SolidColorBrush x:Key="Brush.Text.OnAccent" Color="{StaticResource Color.Text.OnAccent}" />
 
-      <SolidColorBrush x:Key="TextColorDarkBrush" Color="{StaticResource TextColorDark}" />
-      <SolidColorBrush x:Key="TextColorLightBrush" Color="{StaticResource TextColorLight}" />
-      <SolidColorBrush x:Key="TextColorMutedBrush" Color="{StaticResource TextColorMuted}" />
-      <SolidColorBrush x:Key="TextColorDisabledBrush" Color="{StaticResource TextColorDisabled}" />
+      <SolidColorBrush x:Key="Brush.Text.Dark" Color="{StaticResource Color.Text.Dark}" />
+      <SolidColorBrush x:Key="Brush.Text.Light" Color="{StaticResource Color.Text.Light}" />
+      <SolidColorBrush x:Key="Brush.Text.Muted" Color="{StaticResource Color.Text.Muted}" />
+      <SolidColorBrush x:Key="Brush.Text.Disabled.Light" Color="{StaticResource Color.Text.Disabled.Light}" />
 
-      <SolidColorBrush x:Key="DividerBrush" Color="{StaticResource DividerColor}" />
-      <SolidColorBrush x:Key="OutlineBrush" Color="{StaticResource OutlineColor}" />
+      <SolidColorBrush x:Key="Brush.Divider" Color="{StaticResource Color.Divider}" />
+      <SolidColorBrush x:Key="Brush.Outline" Color="{StaticResource Color.Outline}" />
 
-      <SolidColorBrush x:Key="GlassButtonBorderBrush" Color="{StaticResource GlassButtonBorderColor}" />
-      <SolidColorBrush x:Key="GlassButtonHoverBorderBrush" Color="{StaticResource GlassButtonHoverBorderColor}" />
-      <SolidColorBrush x:Key="GlassButtonPressedBorderBrush" Color="{StaticResource GlassButtonPressedBorderColor}" />
-      <SolidColorBrush x:Key="GlassButtonPressedBackgroundBrush" Color="{StaticResource GlassButtonPressedBackgroundColor}" />
-      <SolidColorBrush x:Key="GlassButtonDisabledBorderBrush" Color="{StaticResource GlassButtonDisabledBorderColor}" />
-      <SolidColorBrush x:Key="GlassButtonDisabledBackgroundBrush" Color="{StaticResource GlassButtonDisabledBackgroundColor}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Border" Color="{StaticResource Color.GlassButton.Border}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Border.Hover" Color="{StaticResource Color.GlassButton.Border.Hover}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Border.Pressed" Color="{StaticResource Color.GlassButton.Border.Pressed}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Background.Pressed" Color="{StaticResource Color.GlassButton.Background.Pressed}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Border.Disabled" Color="{StaticResource Color.GlassButton.Border.Disabled}" />
+      <SolidColorBrush x:Key="Brush.GlassButton.Background.Disabled" Color="{StaticResource Color.GlassButton.Background.Disabled}" />
 
       <x:String x:Key="PanelThemeClass">GlassPanel</x:String>
     </ResourceDictionary>

@@ -19,8 +19,8 @@
     <!--  Introduction  -->
     <Border
       Padding="15"
-      Background="{DynamicResource SurfaceBrush}"
-      BorderBrush="{DynamicResource DividerBrush}"
+      Background="{DynamicResource Brush.Surface}"
+      BorderBrush="{DynamicResource Brush.Divider}"
       BorderThickness="1"
       CornerRadius="8">
       <TextBlock TextWrapping="Wrap">
@@ -308,8 +308,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">
@@ -370,8 +370,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">

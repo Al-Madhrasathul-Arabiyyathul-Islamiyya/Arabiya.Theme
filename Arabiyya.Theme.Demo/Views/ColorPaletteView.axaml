@@ -19,8 +19,8 @@
     <!--  Description  -->
     <Border
       Padding="15"
-      Background="{DynamicResource SurfaceBrush}"
-      BorderBrush="{DynamicResource DividerBrush}"
+      Background="{DynamicResource Brush.Surface}"
+      BorderBrush="{DynamicResource Brush.Divider}"
       BorderThickness="1"
       CornerRadius="8">
       <TextBlock TextWrapping="Wrap">
@@ -42,17 +42,17 @@
         <!--  Primary colors row  -->
         <Border
           Height="80"
-          Background="{DynamicResource PrimaryBrush}"
+          Background="{DynamicResource Brush.Primary}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="Primary"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="#0072B5"
               TextAlignment="Center" />
           </StackPanel>
@@ -63,17 +63,17 @@
           Grid.Column="1"
           Height="80"
           Margin="10,0"
-          Background="{DynamicResource PrimaryLightBrush}"
+          Background="{DynamicResource Brush.Primary.Light}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="Primary Light"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="#3A95D0"
               TextAlignment="Center" />
           </StackPanel>
@@ -83,17 +83,17 @@
         <Border
           Grid.Column="2"
           Height="80"
-          Background="{DynamicResource PrimaryDarkBrush}"
+          Background="{DynamicResource Brush.Primary.Dark}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="Primary Dark"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="#005A91"
               TextAlignment="Center" />
           </StackPanel>
@@ -118,17 +118,17 @@
         <!--  Secondary  -->
         <Border
           Height="80"
-          Background="{DynamicResource SecondaryBrush}"
+          Background="{DynamicResource Brush.Secondary}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="Secondary"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="#7D3C98"
               TextAlignment="Center" />
           </StackPanel>
@@ -139,17 +139,17 @@
           Grid.Column="1"
           Height="80"
           Margin="10,0"
-          Background="{DynamicResource SecondaryLightBrush}"
+          Background="{DynamicResource Brush.Secondary.Light}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="Secondary Light"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="#9B59B6"
               TextAlignment="Center" />
           </StackPanel>
@@ -159,17 +159,17 @@
         <Border
           Grid.Column="2"
           Height="80"
-          Background="{DynamicResource SecondaryDarkBrush}"
+          Background="{DynamicResource Brush.Secondary.Dark}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="Secondary Dark"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="#5B2C6F"
               TextAlignment="Center" />
           </StackPanel>
@@ -194,17 +194,17 @@
         <!--  Accent  -->
         <Border
           Height="80"
-          Background="{DynamicResource AccentBrush}"
+          Background="{DynamicResource Brush.Accent}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="Accent"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="#FF9800"
               TextAlignment="Center" />
           </StackPanel>
@@ -215,17 +215,17 @@
           Grid.Column="1"
           Height="80"
           Margin="10,0"
-          Background="{DynamicResource AccentLightBrush}"
+          Background="{DynamicResource Brush.Accent.Light}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="Accent Light"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="#FFB74D"
               TextAlignment="Center" />
           </StackPanel>
@@ -235,17 +235,17 @@
         <Border
           Grid.Column="2"
           Height="80"
-          Background="{DynamicResource AccentDarkBrush}"
+          Background="{DynamicResource Brush.Accent.Dark}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="Accent Dark"
               TextAlignment="Center" />
             <TextBlock
               FontSize="12"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="#F57C00"
               TextAlignment="Center" />
           </StackPanel>
@@ -269,7 +269,7 @@
       <Grid ColumnDefinitions="*,*,*,*">
         <Border
           Height="80"
-          Background="{DynamicResource SuccessBrush}"
+          Background="{DynamicResource Brush.Success}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
@@ -289,7 +289,7 @@
           Grid.Column="1"
           Height="80"
           Margin="8,0"
-          Background="{DynamicResource ErrorBrush}"
+          Background="{DynamicResource Brush.Error}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
@@ -309,7 +309,7 @@
           Grid.Column="2"
           Height="80"
           Margin="0,0,8,0"
-          Background="{DynamicResource WarningBrush}"
+          Background="{DynamicResource Brush.Warning}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
@@ -328,7 +328,7 @@
         <Border
           Grid.Column="3"
           Height="80"
-          Background="{DynamicResource InfoBrush}"
+          Background="{DynamicResource Brush.Info}"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
@@ -349,8 +349,8 @@
       <Border
         Margin="0,15,0,0"
         Padding="15"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="8">
@@ -373,8 +373,8 @@
       <Grid ColumnDefinitions="*,*" RowDefinitions="80,Auto,80,Auto">
         <Border
           Height="80"
-          Background="{DynamicResource BackgroundBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Background}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -393,8 +393,8 @@
           Grid.Column="1"
           Height="80"
           Margin="10,0"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -415,8 +415,8 @@
           Grid.Column="0"
           Height="80"
           Margin="0,15,0,0"
-          Background="{DynamicResource SurfaceElevated1Brush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface.Elevated1}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -436,8 +436,8 @@
           Grid.Column="1"
           Height="80"
           Margin="10,15,0,0"
-          Background="{DynamicResource SurfaceElevated2Brush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface.Elevated2}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -469,8 +469,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">
@@ -479,7 +479,7 @@
               Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
-              Foreground="{DynamicResource TextPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.Primary}"
               Text="Primary Text" />
             <TextBlock
               Grid.Row="0"
@@ -492,7 +492,7 @@
               Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
-              Foreground="{DynamicResource TextSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.Secondary}"
               Text="Secondary Text" />
             <TextBlock
               Grid.Row="0"
@@ -505,7 +505,7 @@
               Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
-              Foreground="{DynamicResource TextDisabledBrush}"
+              Foreground="{DynamicResource Brush.Text.Disabled}"
               Text="Disabled Text" />
             <TextBlock
               Grid.Row="0"
@@ -518,7 +518,7 @@
               Grid.Row="0"
               Grid.Column="0"
               FontSize="16"
-              Foreground="{DynamicResource TextColorMutedBrush}"
+              Foreground="{DynamicResource Brush.Text.Muted}"
               Text="Muted Text" />
             <TextBlock
               Grid.Row="0"
@@ -529,48 +529,48 @@
           <Border
             Margin="0,10,0,0"
             Padding="15"
-            Background="{DynamicResource PrimaryBrush}"
+            Background="{DynamicResource Brush.Primary}"
             CornerRadius="4">
             <Grid ColumnDefinitions="200,*">
               <TextBlock
                 FontSize="16"
-                Foreground="{DynamicResource TextOnPrimaryBrush}"
+                Foreground="{DynamicResource Brush.Text.OnPrimary}"
                 Text="Text on Primary" />
               <TextBlock
                 Grid.Column="1"
-                Foreground="{DynamicResource TextOnPrimaryBrush}"
+                Foreground="{DynamicResource Brush.Text.OnPrimary}"
                 Text="Used for text on primary-colored backgrounds" />
             </Grid>
           </Border>
 
           <Border
             Padding="15"
-            Background="{DynamicResource SecondaryBrush}"
+            Background="{DynamicResource Brush.Secondary}"
             CornerRadius="4">
             <Grid ColumnDefinitions="200,*">
               <TextBlock
                 FontSize="16"
-                Foreground="{DynamicResource TextOnSecondaryBrush}"
+                Foreground="{DynamicResource Brush.Text.OnSecondary}"
                 Text="Text on Secondary" />
               <TextBlock
                 Grid.Column="1"
-                Foreground="{DynamicResource TextOnSecondaryBrush}"
+                Foreground="{DynamicResource Brush.Text.OnSecondary}"
                 Text="Used for text on secondary-colored backgrounds" />
             </Grid>
           </Border>
 
           <Border
             Padding="15"
-            Background="{DynamicResource AccentBrush}"
+            Background="{DynamicResource Brush.Accent}"
             CornerRadius="4">
             <Grid ColumnDefinitions="200,*">
               <TextBlock
                 FontSize="16"
-                Foreground="{DynamicResource TextOnAccentBrush}"
+                Foreground="{DynamicResource Brush.Text.OnAccent}"
                 Text="Text on Accent" />
               <TextBlock
                 Grid.Column="1"
-                Foreground="{DynamicResource TextOnAccentBrush}"
+                Foreground="{DynamicResource Brush.Text.OnAccent}"
                 Text="Used for text on accent-colored backgrounds" />
             </Grid>
           </Border>
@@ -588,8 +588,8 @@
       <Grid ColumnDefinitions="*,*">
         <Border
           Height="80"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource OutlineBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Outline}"
           BorderThickness="4"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -608,8 +608,8 @@
           Grid.Column="1"
           Height="80"
           Margin="10,0"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="4"
           CornerRadius="4">
           <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -640,8 +640,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">

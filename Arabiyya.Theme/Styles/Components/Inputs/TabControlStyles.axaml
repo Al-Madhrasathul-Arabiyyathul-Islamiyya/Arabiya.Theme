@@ -16,7 +16,7 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightMedium}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDarkBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Dark}" />
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="Padding" Value="16,10" />
     <Setter Property="Margin" Value="0" />
@@ -54,7 +54,7 @@
             Margin="0,0,0,-2"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Bottom"
-            Background="{DynamicResource PrimaryBrush}"
+            Background="{DynamicResource Brush.Primary}"
             CornerRadius="1.5"
             IsVisible="False" />
         </Panel>
@@ -68,7 +68,7 @@
   </Style>
 
   <Style Selector="TabItem:pointerover /template/ Border#PART_LayoutRoot">
-    <Setter Property="TextElement.Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="TextElement.Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <!--  Selected state  -->
@@ -77,7 +77,7 @@
   </Style>
 
   <Style Selector="TabItem:selected /template/ Border#PART_LayoutRoot">
-    <Setter Property="TextElement.Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="TextElement.Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="TabItem:selected /template/ Border#PART_SelectedPipe">
@@ -124,11 +124,11 @@
 
   <Style Selector="TabControl.ButtonTabs TabItem">
     <Setter Property="BorderThickness" Value="1" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="Margin" Value="0,0,5,0" />
     <Setter Property="Padding" Value="16,8" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
     <Setter Property="Template">
       <ControlTemplate>
         <Border
@@ -152,20 +152,20 @@
   </Style>
 
   <Style Selector="TabControl.ButtonTabs TabItem:pointerover">
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
     <Setter Property="RenderTransform" Value="scale(1.01)" />
   </Style>
 
   <Style Selector="TabControl.ButtonTabs TabItem:selected">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 
   <Style Selector="TabControl.ButtonTabs TabItem:selected:pointerover">
-    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Dark}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary.Dark}" />
   </Style>
 
   <!--  Card Style Tabs  -->
@@ -175,17 +175,17 @@
   </Style>
 
   <Style Selector="TabControl.CardTabs WrapPanel">
-    <Setter Property="Background" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="Margin" Value="0" />
   </Style>
 
   <Style Selector="TabControl.CardTabs TabItem">
     <Setter Property="BorderThickness" Value="1,1,1,0" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="CornerRadius" Value="4,4,0,0" />
     <Setter Property="Margin" Value="5,5,0,0" />
     <Setter Property="Padding" Value="16,8" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
     <Setter Property="ZIndex" Value="0" />
     <Setter Property="Template">
       <ControlTemplate>
@@ -210,12 +210,12 @@
   </Style>
 
   <Style Selector="TabControl.CardTabs TabItem:pointerover">
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
   </Style>
 
   <Style Selector="TabControl.CardTabs TabItem:selected">
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
     <Setter Property="ZIndex" Value="1" />
   </Style>
 
@@ -224,8 +224,8 @@
   </Style>
 
   <Style Selector="TabControl.CardTabs ContentPresenter#PART_SelectedContentHost">
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
     <Setter Property="BorderThickness" Value="1,0,1,1" />
     <Setter Property="CornerRadius" Value="0,0,4,4" />
     <Setter Property="Margin" Value="5,0,5,5" />
@@ -238,7 +238,7 @@
   </Style>
 
   <Style Selector="TabControl.PillTabs WrapPanel">
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
     <Setter Property="Margin" Value="5" />
   </Style>
 
@@ -276,11 +276,11 @@
   </Style>
 
   <Style Selector="TabControl.PillTabs TabItem:selected">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 
   <Style Selector="TabControl.PillTabs TabItem:selected:pointerover">
-    <Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Dark}" />
   </Style>
 </Styles>

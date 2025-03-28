@@ -13,7 +13,7 @@
   d:DesignHeight="768"
   d:DesignWidth="1366"
   x:DataType="vm:MainViewModel"
-  Background="{DynamicResource ThemeBackgroundGradient}"
+  Background="{DynamicResource Gradient.Theme.Background}"
   CornerRadius="16"
   ExtendClientAreaToDecorationsHint="True"
   Icon="/Assets/logo.ico"

@@ -3,8 +3,8 @@
   <Style Selector="Window">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Background" Value="{DynamicResource BackgroundColor}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Background" Value="{DynamicResource Color.Background}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
   </Style>
 
   <Style Selector="UserControl">
@@ -19,9 +19,9 @@
     <Setter Property="Padding" Value="10,8" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="BorderThickness" Value="1" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineColor}" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceColor}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Color.Outline}" />
+    <Setter Property="Background" Value="{DynamicResource Color.Surface}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Primary}" />
   </Style>
 
   <!--  Base Button Styles  -->
@@ -38,21 +38,21 @@
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
     <Setter Property="Padding" Value="10,8" />
     <Setter Property="CornerRadius" Value="4" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceColor}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="Background" Value="{DynamicResource Color.Surface}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Primary}" />
   </Style>
 
   <!--  Base CheckBox Styles  -->
   <Style Selector="CheckBox">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Primary}" />
   </Style>
 
   <!--  Base RadioButton Styles  -->
   <Style Selector="RadioButton">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextPrimaryColor}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Primary}" />
   </Style>
 </Styles>

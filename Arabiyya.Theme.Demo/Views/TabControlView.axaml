@@ -17,7 +17,7 @@
     <TextBlock Classes="h2" Text="Tab Controls" />
 
     <!-- Introduction -->
-    <Border Padding="15" Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+    <Border Padding="15" Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
       <TextBlock TextWrapping="Wrap">
         Tab controls provide a way to organize content into separate views that users can navigate between.
         This showcase demonstrates various tab styles and configurations available in the Arabiyya theme.
@@ -28,20 +28,20 @@
     <StackPanel>
       <TextBlock Margin="0,0,0,10" Classes="h3" Text="Standard Tab Control" />
       
-      <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
         <TabControl Height="180">
           <TabItem Header="First Tab">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the content for the first tab. Standard tabs use an underline to indicate the active tab and are ideal for basic content organization." />
             </Border>
           </TabItem>
           <TabItem Header="Second Tab">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the content for the second tab. Hover over different tabs to see the interaction states." />
             </Border>
           </TabItem>
           <TabItem Header="Third Tab">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the content for the third tab. Tab controls automatically handle content switching when a new tab is selected." />
             </Border>
           </TabItem>
@@ -59,20 +59,20 @@
     <StackPanel>
       <TextBlock Margin="0,0,0,10" Classes="h3" Text="Button Style Tabs" />
       
-      <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
         <TabControl Height="180" Classes="ButtonTabs">
           <TabItem Header="Dashboard">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the dashboard view. Button-style tabs look like buttons and provide clear visual separation between tabs." />
             </Border>
           </TabItem>
           <TabItem Header="Analytics">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the analytics view. Button-style tabs are great for application-like interfaces where tab switching represents significant view changes." />
             </Border>
           </TabItem>
           <TabItem Header="Settings">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This is the settings view. Notice how the button tabs maintain their appearance across different themes." />
             </Border>
           </TabItem>
@@ -90,20 +90,20 @@
     <StackPanel>
       <TextBlock Margin="0,0,0,10" Classes="h3" Text="Card Style Tabs" />
       
-      <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
         <TabControl Height="180" Classes="CardTabs">
           <TabItem Header="Profile">
-            <Border Margin="0" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="0 0 4 4">
+            <Border Margin="0" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="0 0 4 4">
               <TextBlock TextWrapping="Wrap" Text="This is the profile view. Card-style tabs create a seamless connection between the tab and its content." />
             </Border>
           </TabItem>
           <TabItem Header="Account">
-            <Border Margin="0" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="0 0 4 4">
+            <Border Margin="0" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="0 0 4 4">
               <TextBlock TextWrapping="Wrap" Text="This is the account view. Card-style tabs are excellent for form-based interfaces and settings panels." />
             </Border>
           </TabItem>
           <TabItem Header="Notifications">
-            <Border Margin="0" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="0 0 4 4">
+            <Border Margin="0" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="0 0 4 4">
               <TextBlock TextWrapping="Wrap" Text="This is the notifications view. Notice how the selected tab connects to the content area with no visual separation." />
             </Border>
           </TabItem>
@@ -121,20 +121,20 @@
     <StackPanel>
       <TextBlock Margin="0,0,0,10" Classes="h3" Text="Pill Style Tabs" />
       
-      <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
         <TabControl Height="180" Classes="PillTabs">
           <TabItem Header="Today">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This shows today's data. Pill-style tabs use a rounded pill shape to highlight the selected tab." />
             </Border>
           </TabItem>
           <TabItem Header="This Week">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This shows this week's data. Pill tabs are useful for date ranges, filter categories, or view modes." />
             </Border>
           </TabItem>
           <TabItem Header="This Month">
-            <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+            <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
               <TextBlock TextWrapping="Wrap" Text="This shows this month's data. The pill shape creates a distinct visual that clearly shows which option is selected." />
             </Border>
           </TabItem>
@@ -156,20 +156,20 @@
         <!-- Left Placement -->
         <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,10,15">
           <TextBlock Margin="0,0,0,5" Text="Left Placement" />
-          <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+          <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
             <TabControl TabStripPlacement="Left" Height="180">
               <TabItem Header="Users">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Left-side tabs are great for wider content areas and application layouts." />
                 </Border>
               </TabItem>
               <TabItem Header="Groups">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Side tabs provide more vertical space for tab labels." />
                 </Border>
               </TabItem>
               <TabItem Header="Permissions">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Side tabs work well for administrative interfaces and settings." />
                 </Border>
               </TabItem>
@@ -180,20 +180,20 @@
         <!-- Right Placement -->
         <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,0,0,15">
           <TextBlock Margin="0,0,0,5" Text="Right Placement" />
-          <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+          <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
             <TabControl TabStripPlacement="Right" Height="180">
               <TabItem Header="Overview">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Right-side tabs can be useful for secondary navigation or detail panels." />
                 </Border>
               </TabItem>
               <TabItem Header="Details">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Right tabs work well in right-to-left layouts or secondary interfaces." />
                 </Border>
               </TabItem>
               <TabItem Header="History">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Consider using right tabs for supplementary information or log views." />
                 </Border>
               </TabItem>
@@ -204,20 +204,20 @@
         <!-- Bottom Placement -->
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0">
           <TextBlock Margin="0,0,0,5" Text="Bottom Placement" />
-          <Border Background="{DynamicResource SurfaceBrush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+          <Border Background="{DynamicResource Brush.Surface}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
             <TabControl TabStripPlacement="Bottom" Height="180">
               <TabItem Header="Step 1">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Bottom tabs work well for wizard interfaces or sequential processes." />
                 </Border>
               </TabItem>
               <TabItem Header="Step 2">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Bottom-placed tabs can be useful when the top of the content area needs to remain uncluttered." />
                 </Border>
               </TabItem>
               <TabItem Header="Step 3">
-                <Border Margin="5" Padding="10" Background="{DynamicResource SurfaceElevated1Brush}" CornerRadius="4">
+                <Border Margin="5" Padding="10" Background="{DynamicResource Brush.Surface.Elevated1}" CornerRadius="4">
                   <TextBlock TextWrapping="Wrap" Text="Consider using bottom tabs for step-by-step processes or when top navigation is already occupied." />
                 </Border>
               </TabItem>
@@ -234,7 +234,7 @@
     <StackPanel>
       <TextBlock Margin="0,0,0,10" Classes="h3" Text="Tab Style Guidelines" />
       
-      <Border Padding="20" Background="{DynamicResource SurfaceElevated1Brush}" BorderBrush="{DynamicResource DividerBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Padding="20" Background="{DynamicResource Brush.Surface.Elevated1}" BorderBrush="{DynamicResource Brush.Divider}" BorderThickness="1" CornerRadius="8">
         <StackPanel Spacing="15">
           <TextBlock Classes="h5" Text="When to Use Tabs" />
           <StackPanel Margin="10,0,0,0" Spacing="8">

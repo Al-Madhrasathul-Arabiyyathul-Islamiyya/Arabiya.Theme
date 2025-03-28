@@ -144,7 +144,7 @@
     <!--  Glass Buttons  -->
     <Border
       Padding="15"
-      Background="{StaticResource MainBackgroundGradient}"
+      Background="{StaticResource Gradient.MainBackground}"
       CornerRadius="8">
       <StackPanel>
         <TextBlock
@@ -166,7 +166,7 @@
     <!--  Glass Icon-Text Buttons  -->
     <Border
       Padding="15"
-      Background="{StaticResource MainBackgroundGradient}"
+      Background="{StaticResource Gradient.MainBackground}"
       CornerRadius="8">
       <StackPanel>
         <TextBlock
@@ -202,8 +202,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="4">
         <StackPanel Spacing="20">
@@ -249,3 +249,4 @@
     </StackPanel>
   </StackPanel>
 </UserControl>
+

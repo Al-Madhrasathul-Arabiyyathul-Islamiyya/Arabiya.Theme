@@ -20,8 +20,8 @@
     <!--  Introduction  -->
     <Border
       Padding="15"
-      Background="{DynamicResource SurfaceBrush}"
-      BorderBrush="{DynamicResource DividerBrush}"
+      Background="{DynamicResource Brush.Surface}"
+      BorderBrush="{DynamicResource Brush.Divider}"
       BorderThickness="1"
       CornerRadius="8">
       <StackPanel Spacing="10">
@@ -42,8 +42,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <Grid ColumnDefinitions="*,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
@@ -228,8 +228,8 @@
           Grid.Column="0"
           Margin="0,0,10,10"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -249,8 +249,8 @@
           Grid.Column="1"
           Margin="0,0,0,10"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -270,8 +270,8 @@
           Grid.Column="0"
           Margin="0,0,10,10"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -291,8 +291,8 @@
           Grid.Column="1"
           Margin="0,0,0,10"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -312,8 +312,8 @@
           Grid.Column="0"
           Margin="0,0,10,0"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -332,13 +332,13 @@
           Grid.Row="2"
           Grid.Column="1"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
             <TextBlock FontWeight="SemiBold" Text="Secondary Text" />
-            <TextBlock Foreground="{DynamicResource TextSecondaryBrush}" Text="Less prominent text with secondary color" />
+            <TextBlock Foreground="{DynamicResource Brush.Text.Secondary}" Text="Less prominent text with secondary color" />
             <TextBlock
               Margin="0,10,0,0"
               FontFamily="Consolas"
@@ -351,7 +351,7 @@
       <!--  Typography in context  -->
       <Border
         Padding="20"
-        BorderBrush="{DynamicResource DividerBrush}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">
@@ -405,8 +405,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <Grid
@@ -542,8 +542,8 @@
           Grid.Column="0"
           Margin="0,0,10,0"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -561,8 +561,8 @@
         <Border
           Grid.Column="1"
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel>
@@ -580,8 +580,8 @@
       <!--  Paragraph Spacing  -->
       <Border
         Padding="15"
-        Background="{DynamicResource SurfaceBrush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="16">
@@ -613,8 +613,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">

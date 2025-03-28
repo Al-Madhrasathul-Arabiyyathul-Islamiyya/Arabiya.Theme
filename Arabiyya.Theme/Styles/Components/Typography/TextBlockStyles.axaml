@@ -4,7 +4,7 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightRegular}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightDefault}" />
     <Setter Property="TextWrapping" Value="Wrap" />
   </Style>
@@ -12,7 +12,7 @@
   <Style Selector="TextBlock.h1">
     <Setter Property="FontWeight" Value="{StaticResource FontWeightBold}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH1}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH1}" />
   </Style>
 
@@ -20,7 +20,7 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightBold}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH2}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH2}" />
   </Style>
 
@@ -28,7 +28,7 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightBold}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH3}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH3}" />
   </Style>
 
@@ -36,7 +36,7 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH4}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH4}" />
   </Style>
 
@@ -44,42 +44,42 @@
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightMedium}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH5}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH5}" />
   </Style>
 
   <Style Selector="TextBlock.h6">
     <Setter Property="FontWeight" Value="{StaticResource FontWeightMedium}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeH6}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightH6}" />
   </Style>
 
   <Style Selector="TextBlock.body">
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
     <Setter Property="FontWeight" Value="{StaticResource FontWeightRegular}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="LineHeight" Value="{StaticResource LineHeightDefault}" />
   </Style>
 
   <Style Selector="TextBlock.text-dark">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
   </Style>
 
   <Style Selector="TextBlock.text-light">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorLight}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Light}" />
   </Style>
 
   <Style Selector="TextBlock.text-secondary">
-    <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Secondary}" />
   </Style>
 
   <Style Selector="TextBlock.text-muted">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorMuted}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Muted}" />
   </Style>
 
   <Style Selector="TextBlock.text-disabled">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDisabled}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Disabled}" />
   </Style>
 
   <Style Selector="TextBlock.small">

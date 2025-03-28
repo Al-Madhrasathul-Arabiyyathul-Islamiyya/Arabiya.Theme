@@ -20,8 +20,8 @@
     <!--  Introduction  -->
     <Border
       Padding="15"
-      Background="{DynamicResource SurfaceBrush}"
-      BorderBrush="{DynamicResource DividerBrush}"
+      Background="{DynamicResource Brush.Surface}"
+      BorderBrush="{DynamicResource Brush.Divider}"
       BorderThickness="1"
       CornerRadius="8">
       <TextBlock TextWrapping="Wrap">
@@ -45,7 +45,7 @@
           Grid.Column="0"
           Height="200"
           Margin="0,0,8,0"
-          Background="{DynamicResource ThemeBackgroundGradient}"
+          Background="{DynamicResource Gradient.Theme.Background}"
           CornerRadius="8">
           <StackPanel
             Margin="15"
@@ -107,12 +107,12 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource PrimaryGradient}"
+          Background="{DynamicResource Gradient.Primary}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="Primary Horizontal" />
           </StackPanel>
         </Border>
@@ -123,12 +123,12 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,16"
-          Background="{DynamicResource PrimaryVerticalGradient}"
+          Background="{DynamicResource Gradient.Primary.Vertical}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnPrimaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnPrimary}"
               Text="Primary Vertical" />
           </StackPanel>
         </Border>
@@ -139,12 +139,12 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource SecondaryGradient}"
+          Background="{DynamicResource Gradient.Secondary}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="Secondary Horizontal" />
           </StackPanel>
         </Border>
@@ -155,12 +155,12 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,16"
-          Background="{DynamicResource SecondaryVerticalGradient}"
+          Background="{DynamicResource Gradient.Secondary.Vertical}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnSecondaryBrush}"
+              Foreground="{DynamicResource Brush.Text.OnSecondary}"
               Text="Secondary Vertical" />
           </StackPanel>
         </Border>
@@ -171,12 +171,12 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,0"
-          Background="{DynamicResource AccentGradient}"
+          Background="{DynamicResource Gradient.Accent}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="Accent Horizontal" />
           </StackPanel>
         </Border>
@@ -187,12 +187,12 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,0"
-          Background="{DynamicResource AccentVerticalGradient}"
+          Background="{DynamicResource Gradient.Accent.Vertical}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
               FontWeight="SemiBold"
-              Foreground="{DynamicResource TextOnAccentBrush}"
+              Foreground="{DynamicResource Brush.Text.OnAccent}"
               Text="Accent Vertical" />
           </StackPanel>
         </Border>
@@ -201,8 +201,8 @@
       <!--  Description  -->
       <Border
         Padding="15"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="6">
         <StackPanel Spacing="10">
@@ -229,7 +229,7 @@
           Grid.Column="0"
           Height="90"
           Margin="0,0,6,0"
-          Background="{DynamicResource SuccessGradient}"
+          Background="{DynamicResource Gradient.Success}"
           CornerRadius="8">
           <TextBlock
             HorizontalAlignment="Center"
@@ -244,7 +244,7 @@
           Grid.Column="1"
           Height="90"
           Margin="6,0,6,0"
-          Background="{DynamicResource ErrorGradient}"
+          Background="{DynamicResource Gradient.Error}"
           CornerRadius="8">
           <TextBlock
             HorizontalAlignment="Center"
@@ -259,7 +259,7 @@
           Grid.Column="2"
           Height="90"
           Margin="6,0,6,0"
-          Background="{DynamicResource WarningGradient}"
+          Background="{DynamicResource Gradient.Warning}"
           CornerRadius="8">
           <TextBlock
             HorizontalAlignment="Center"
@@ -274,7 +274,7 @@
           Grid.Column="3"
           Height="90"
           Margin="6,0,0,0"
-          Background="{DynamicResource InfoGradient}"
+          Background="{DynamicResource Gradient.Info}"
           CornerRadius="8">
           <TextBlock
             HorizontalAlignment="Center"
@@ -314,7 +314,7 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource CalmWaterGradient}"
+          Background="{DynamicResource Gradient.CalmWater}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
@@ -336,7 +336,7 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,16"
-          Background="{DynamicResource SunriseGradient}"
+          Background="{DynamicResource Gradient.Sunrise}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
@@ -358,7 +358,7 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource PurpleDreamGradient}"
+          Background="{DynamicResource Gradient.PurpleDream}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
@@ -380,7 +380,7 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,16"
-          Background="{DynamicResource OceanViewGradient}"
+          Background="{DynamicResource Gradient.OceanView}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
@@ -402,7 +402,7 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource SunsetGradient}"
+          Background="{DynamicResource Gradient.Sunset}"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
             <TextBlock
@@ -424,8 +424,8 @@
           Grid.Column="1"
           Height="100"
           Margin="8,0,0,16"
-          Background="{DynamicResource LightGlassGradient}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Gradient.Glass.Light}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
@@ -444,8 +444,8 @@
           Grid.Column="0"
           Height="100"
           Margin="0,0,8,16"
-          Background="{DynamicResource DarkGlassGradient}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Gradient.Glass.Dark}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel Margin="15,0" VerticalAlignment="Center">
@@ -516,8 +516,8 @@
       <!--  Description  -->
       <Border
         Padding="15"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="6">
         <StackPanel Spacing="10">
@@ -590,8 +590,8 @@
           Grid.Column="0"
           Grid.ColumnSpan="2"
           Padding="15"
-          Background="{DynamicResource SurfaceElevated1Brush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface.Elevated1}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="6">
           <StackPanel Spacing="10">
@@ -618,8 +618,8 @@
         <!--  Button with Primary Gradient  -->
         <Border
           Padding="15"
-          Background="{DynamicResource SurfaceBrush}"
-          BorderBrush="{DynamicResource DividerBrush}"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
           BorderThickness="1"
           CornerRadius="8">
           <StackPanel Spacing="15">
@@ -628,13 +628,13 @@
             <Border
               Height="40"
               Padding="0,0,0,0"
-              Background="{DynamicResource PrimaryGradient}"
+              Background="{DynamicResource Gradient.Primary}"
               CornerRadius="6">
               <TextBlock
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontWeight="SemiBold"
-                Foreground="{DynamicResource TextOnPrimaryBrush}"
+                Foreground="{DynamicResource Brush.Text.OnPrimary}"
                 Text="Primary Action" />
             </Border>
 
@@ -687,8 +687,8 @@
 
       <Border
         Padding="20"
-        Background="{DynamicResource SurfaceElevated1Brush}"
-        BorderBrush="{DynamicResource DividerBrush}"
+        Background="{DynamicResource Brush.Surface.Elevated1}"
+        BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
         <StackPanel Spacing="15">

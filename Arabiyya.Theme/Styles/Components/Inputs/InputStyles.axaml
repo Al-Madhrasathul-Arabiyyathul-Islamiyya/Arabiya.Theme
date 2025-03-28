@@ -3,7 +3,7 @@
   <Style Selector="CheckBox">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="Margin" Value="0,2" />
     <Setter Property="VerticalAlignment" Value="Center" />
     <Setter Property="Transitions">
@@ -16,50 +16,50 @@
   </Style>
 
   <Style Selector="CheckBox /template/ Border#NormalRectangle">
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1.5" />
     <Setter Property="CornerRadius" Value="2" />
   </Style>
 
   <Style Selector="CheckBox:pointerover /template/ Border#NormalRectangle">
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="CheckBox:checked /template/ Border#NormalRectangle">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="CheckBox:indeterminate /template/ Border#NormalRectangle">
-    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Light}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="CheckBox:disabled /template/ Border#NormalRectangle">
-    <Setter Property="BorderBrush" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <Style Selector="CheckBox:disabled /template/ ContentPresenter#ContentPresenter">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <!--  CheckBox Secondary Style  -->
   <Style Selector="CheckBox.Secondary /template/ Border#NormalRectangle">
-    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <Style Selector="CheckBox.Secondary:checked /template/ Border#NormalRectangle">
-    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <!--  RadioButton Styles  -->
   <Style Selector="RadioButton">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="Margin" Value="0,2" />
     <Setter Property="VerticalAlignment" Value="Center" />
     <Setter Property="Transitions">
@@ -72,46 +72,46 @@
   </Style>
 
   <Style Selector="RadioButton /template/ Ellipse#OuterEllipse">
-    <Setter Property="Stroke" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Stroke" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="StrokeThickness" Value="1.5" />
   </Style>
 
   <Style Selector="RadioButton:pointerover /template/ Ellipse#OuterEllipse">
-    <Setter Property="Stroke" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Stroke" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="RadioButton:checked /template/ Ellipse#OuterEllipse">
-    <Setter Property="Stroke" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Stroke" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="RadioButton:checked /template/ Ellipse#InnerEllipse">
-    <Setter Property="Fill" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Fill" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="RadioButton:disabled /template/ Ellipse#OuterEllipse">
-    <Setter Property="Stroke" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="Stroke" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <Style Selector="RadioButton:disabled /template/ ContentPresenter#ContentPresenter">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <!--  RadioButton Secondary Style  -->
   <Style Selector="RadioButton.Secondary:checked /template/ Ellipse#OuterEllipse">
-    <Setter Property="Stroke" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Stroke" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <Style Selector="RadioButton.Secondary:checked /template/ Ellipse#InnerEllipse">
-    <Setter Property="Fill" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Fill" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <!--  ToggleSwitch Styles  -->
   <Style Selector="ToggleSwitch">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="VerticalAlignment" Value="Center" />
     <Setter Property="Transitions">
       <Setter.Value>
@@ -123,23 +123,23 @@
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="CornerRadius" Value="10" />
   </Style>
 
   <Style Selector="ToggleSwitch:pointerover /template/ Border#SwitchKnobBounds">
-    <Setter Property="BorderBrush" Value="{DynamicResource TextColorMutedBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Text.Muted}" />
   </Style>
 
   <Style Selector="ToggleSwitch /template/ Ellipse#SwitchKnob">
-    <Setter Property="Fill" Value="{DynamicResource TextColorMutedBrush}" />
+    <Setter Property="Fill" Value="{DynamicResource Brush.Text.Muted}" />
   </Style>
 
   <Style Selector="ToggleSwitch:checked /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="ToggleSwitch:checked /template/ Ellipse#SwitchKnob">
@@ -147,31 +147,31 @@
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ Border#SwitchKnobBounds">
-    <Setter Property="BorderBrush" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <Style Selector="ToggleSwitch:disabled /template/ ContentPresenter#ContentPresenter">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDisabledBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Disabled}" />
     <Setter Property="Opacity" Value="0.6" />
   </Style>
 
   <!--  ToggleSwitch Secondary Style  -->
   <Style Selector="ToggleSwitch.Secondary:checked /template/ Border#SwitchKnobBounds">
-    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <!--  Slider Styles  -->
   <Style Selector="Slider">
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Background" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="Margin" Value="0,8" />
     <Setter Property="MinHeight" Value="24" />
   </Style>
 
   <Style Selector="Slider /template/ RepeatButton#PART_DecreaseButton">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
     <Setter Property="CornerRadius" Value="2,0,0,2" />
   </Style>
 
@@ -180,7 +180,7 @@
   </Style>
 
   <Style Selector="Slider /template/ RepeatButton#PART_IncreaseButton">
-    <Setter Property="Background" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="CornerRadius" Value="0,2,2,0" />
   </Style>
 
@@ -189,7 +189,7 @@
   </Style>
 
   <Style Selector="Slider /template/ Thumb#thumb">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
     <Setter Property="Template">
       <ControlTemplate>
         <Border
@@ -228,32 +228,32 @@
 
   <!--  Slider Secondary Style  -->
   <Style Selector="Slider.Secondary">
-    <Setter Property="Foreground" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <Style Selector="Slider.Secondary /template/ RepeatButton#PART_DecreaseButton">
-    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <Style Selector="Slider.Secondary /template/ Thumb#thumb">
-    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <!--  ProgressBar Styles  -->
   <Style Selector="ProgressBar">
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Background" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="CornerRadius" Value="2" />
     <Setter Property="MinHeight" Value="4" />
     <Setter Property="Height" Value="4" />
   </Style>
 
   <Style Selector="ProgressBar:indeterminate /template/ Border#IndeterminateRect1">
-    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Light}" />
   </Style>
 
   <Style Selector="ProgressBar:indeterminate /template/ Border#IndeterminateRect2">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="ProgressBar:disabled">
@@ -262,39 +262,39 @@
 
   <!--  ProgressBar Secondary Style  -->
   <Style Selector="ProgressBar.Secondary">
-    <Setter Property="Foreground" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <Style Selector="ProgressBar.Secondary:indeterminate /template/ Border#IndeterminateRect1">
-    <Setter Property="Background" Value="{DynamicResource SecondaryLightBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary.Light}" />
   </Style>
 
   <Style Selector="ProgressBar.Secondary:indeterminate /template/ Border#IndeterminateRect2">
-    <Setter Property="Background" Value="{DynamicResource SecondaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Secondary}" />
   </Style>
 
   <!--  ProgressBar Status Styles  -->
   <Style Selector="ProgressBar.Success">
-    <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Success}" />
   </Style>
 
   <Style Selector="ProgressBar.Error">
-    <Setter Property="Foreground" Value="{DynamicResource ErrorBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Error}" />
   </Style>
 
   <Style Selector="ProgressBar.Warning">
-    <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Warning}" />
   </Style>
 
   <Style Selector="ProgressBar.Info">
-    <Setter Property="Foreground" Value="{DynamicResource InfoBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Info}" />
   </Style>
 
   <!--  DatePicker Styles  -->
   <Style Selector="DatePicker">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="Transitions">
       <Setter.Value>
@@ -306,20 +306,20 @@
   </Style>
 
   <Style Selector="DatePicker:pointerover /template/ Border">
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="DatePicker:focus /template/ Border">
     <Setter Property="BorderThickness" Value="2" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="DatePicker /template/ Button#PART_Button">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorMutedBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Muted}" />
   </Style>
 
   <Style Selector="DatePicker:pointerover /template/ Button#PART_Button">
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="DatePicker:disabled">
@@ -330,7 +330,7 @@
   <Style Selector="TimePicker">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeBody}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextColorDark}" />
+    <Setter Property="Foreground" Value="{DynamicResource Color.Text.Dark}" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="Transitions">
       <Setter.Value>
@@ -342,20 +342,20 @@
   </Style>
 
   <Style Selector="TimePicker:pointerover /template/ Border">
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="TimePicker:focus /template/ Border">
     <Setter Property="BorderThickness" Value="2" />
-    <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="TimePicker /template/ Button#PART_Button">
-    <Setter Property="Foreground" Value="{DynamicResource TextColorMutedBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.Muted}" />
   </Style>
 
   <Style Selector="TimePicker:pointerover /template/ Button#PART_Button">
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="TimePicker:disabled">
@@ -365,8 +365,8 @@
   <!--  Calendar Styles  -->
   <Style Selector="Calendar">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="CornerRadius" Value="4" />
   </Style>
@@ -379,13 +379,13 @@
   </Style>
 
   <Style Selector="Calendar /template/ Button.CalendarButton:pointerover">
-    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Light}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 
   <Style Selector="Calendar /template/ Button.CalendarButton:pressed">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 
   <Style Selector="Calendar /template/ Button.CalendarButton:disabled">
@@ -393,15 +393,15 @@
   </Style>
 
   <Style Selector="Calendar /template/ Button.CalendarButton.SelectedDate">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 
   <!--  Expander Styles  -->
   <Style Selector="Expander">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="CornerRadius" Value="4" />
   </Style>
@@ -412,12 +412,12 @@
   </Style>
 
   <Style Selector="Expander /template/ ToggleButton#ExpanderHeader:pointerover">
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated1Brush}" />
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="Expander:expanded /template/ ToggleButton#ExpanderHeader">
-    <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="Expander /template/ ContentPresenter#ExpanderContent">
@@ -428,8 +428,8 @@
   <Style Selector="ToolTip">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="FontSize" Value="{StaticResource FontSizeSmall}" />
-    <Setter Property="Background" Value="{DynamicResource SurfaceElevated2Brush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated2}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="Padding" Value="8" />
@@ -440,7 +440,7 @@
   <Style Selector="ListBox">
     <Setter Property="FontFamily" Value="{StaticResource MontserratFontFamily}" />
     <Setter Property="Background" Value="Transparent" />
-    <Setter Property="BorderBrush" Value="{DynamicResource OutlineBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource Brush.Outline}" />
     <Setter Property="BorderThickness" Value="1" />
     <Setter Property="CornerRadius" Value="4" />
     <Setter Property="VerticalAlignment" Value="Center" />
@@ -467,15 +467,15 @@
   </Style>
 
   <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource PrimaryLightBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary.Light}" />
     <Setter Property="Opacity" Value="0.5" />
   </Style>
 
   <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
-    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+    <Setter Property="Background" Value="{DynamicResource Brush.Primary}" />
   </Style>
 
   <Style Selector="ListBoxItem:selected">
-    <Setter Property="Foreground" Value="{DynamicResource TextOnPrimaryBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource Brush.Text.OnPrimary}" />
   </Style>
 </Styles>
