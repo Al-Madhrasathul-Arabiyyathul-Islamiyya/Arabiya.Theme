@@ -1,0 +1,633 @@
+<UserControl
+  x:Class="Arabiyya.Theme.Demo.Views.CardsView"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  d:DesignHeight="650"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="30">
+      <TextBlock Classes="h2" Text="Cards" />
+
+      <!--  Introduction  -->
+      <Border
+        Padding="15"
+        Background="{DynamicResource Brush.Surface}"
+        BorderBrush="{DynamicResource Brush.Divider}"
+        BorderThickness="1"
+        CornerRadius="8">
+        <TextBlock TextWrapping="Wrap">
+          Cards are versatile containers that group related information and actions. They provide a flexible way
+          to present content with a consistent appearance. The Arabiyya theme provides various card styles
+          for different use cases, from basic information display to interactive elements.
+        </TextBlock>
+      </Border>
+
+      <!--  Basic Card Types  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Basic Card Types" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto">
+          <!--  Standard Card  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,8,8"
+            Classes="Card">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Standard Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This is a standard card with default elevation and styling. It's suitable for most content display needs."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Elevated Card  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="8,0,0,8"
+            Classes="Card Elevated">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Elevated Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card has increased elevation to make it stand out more. Use it for important content or to create visual hierarchy."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Outlined Card  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,8,8,0"
+            Classes="Card Outlined">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Outlined Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card uses a border instead of elevation for a flatter appearance. It's useful in dense layouts or for secondary content."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Interactive Card  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8,8,0,0"
+            Classes="Card Interactive">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Interactive Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card responds to mouse hover and click events. Try hovering over me! Use for clickable content areas."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="Basic cards can be combined with different styles and content arrangements. Choose the most appropriate variant based on your content's importance and interaction needs."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Color Variants  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Card Color Variants" />
+
+        <WrapPanel Margin="0,0,0,15" Orientation="Horizontal">
+          <!--  Primary Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Primary">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Primary" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Primary colored card for emphasis."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Secondary Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Secondary">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Secondary" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Secondary colored card for context."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Success Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Success">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Success" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Indicates successful outcome."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Error Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Error">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Error" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Highlights error conditions."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Warning Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Warning">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Warning" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Indicates cautionary info."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Info Card  -->
+          <Border
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="Card Info">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Info" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Presents informational content."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+        </WrapPanel>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="Color variants can be used to convey meaning or status at a glance. Use color consistently to help users understand the context of the information."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Card with Header  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Cards with Sections" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto">
+          <!--  Card with Header  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,8,8"
+            Classes="Card">
+            <StackPanel>
+              <Border Classes="CardHeader">
+                <TextBlock Classes="h5" Text="Card with Header" />
+              </Border>
+              <Border Classes="CardContent">
+                <TextBlock
+                  Margin="0,16,0,0"
+                  Text="This card has a distinct header section. Use this pattern when you need to separate the title from the content clearly."
+                  TextWrapping="Wrap" />
+              </Border>
+            </StackPanel>
+          </Border>
+
+          <!--  Card with Actions  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="8,0,0,8"
+            Classes="Card">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Card with Actions" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card includes action buttons at the bottom. This pattern is useful for cards that require user interaction."
+                TextWrapping="Wrap" />
+              <Border Classes="CardActions">
+                <StackPanel>
+                  <Button Classes="Text BaseButton" Content="Cancel" />
+                  <Button Classes="Primary BaseButton" Content="Save" />
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </Border>
+
+          <!--  Card with Media  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,8,8,0"
+            Classes="Card">
+            <StackPanel>
+              <Border Background="#2D8C8C" Classes="CardMedia">
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontWeight="SemiBold"
+                  Foreground="White"
+                  Text="Media Area" />
+              </Border>
+              <TextBlock Classes="h5" Text="Card with Media" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card includes a media area at the top. Use for cards that need to display images or other media content."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+
+          <!--  Complete Card  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8,8,0,0"
+            Classes="Card">
+            <StackPanel>
+              <Border Background="#5D4C8C" Classes="CardMedia">
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontWeight="SemiBold"
+                  Foreground="White"
+                  Text="Media Area" />
+              </Border>
+              <Border Classes="CardHeader">
+                <TextBlock Classes="h5" Text="Complete Card" />
+              </Border>
+              <Border Classes="CardContent">
+                <TextBlock
+                  Margin="0,16,0,0"
+                  Text="This card combines media, header, content, and actions - demonstrating how all card elements can be used together."
+                  TextWrapping="Wrap" />
+              </Border>
+              <Border Classes="CardActions">
+                <StackPanel>
+                  <Button Classes="Text BaseButton" Content="Cancel" />
+                  <Button Classes="Primary BaseButton" Content="Save" />
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </Border>
+        </Grid>
+      </StackPanel>
+
+      <!--  Advanced Card Examples  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Advanced Card Examples" />
+
+        <!--  Horizontal Card  -->
+        <Border
+          Height="120"
+          Margin="0,0,0,16"
+          Classes="Card Horizontal">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border
+              Grid.Column="0"
+              Background="#8C5E2D"
+              Classes="CardMediaSide">
+              <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="SemiBold"
+                Foreground="White"
+                Text="Media"
+                TextAlignment="Center" />
+            </Border>
+
+            <!--  Added more horizontal spacing between the media and content  -->
+            <StackPanel Grid.Column="1" Margin="24,0,0,0">
+              <TextBlock Classes="h5" Text="Horizontal Card Layout" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card uses a horizontal layout with media on the side. It's useful for list items and compact layouts where vertical space is limited."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Grid>
+        </Border>
+
+        <!--  Compact Card  -->
+        <Border Margin="0,0,0,16" Classes="Card Compact">
+          <StackPanel>
+            <Border Classes="CardHeader">
+              <TextBlock Classes="h6" Text="Compact Card" />
+            </Border>
+            <Border Classes="CardContent">
+              <TextBlock
+                Margin="0,12,0,0"
+                Text="This card uses reduced padding for a more compact appearance. Use for dense interfaces or when you need to display many cards in limited space."
+                TextWrapping="Wrap" />
+            </Border>
+            <Border Classes="CardActions">
+              <StackPanel>
+                <Button Classes="Text BaseButton" Content="Action" />
+              </StackPanel>
+            </Border>
+          </StackPanel>
+        </Border>
+
+        <!--  Interactive Media Card  -->
+        <Border Margin="0,0,0,16" Classes="Card Interactive">
+          <StackPanel>
+            <Border Background="#2D578C" Classes="CardMedia">
+              <Grid>
+                <Ellipse
+                  Width="50"
+                  Height="50"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Fill="#80FFFFFF" />
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontFamily="{StaticResource PhosphorFontFamily}"
+                  FontSize="24"
+                  Foreground="#2D578C"
+                  Text="&#xE46A;" />
+              </Grid>
+            </Border>
+            <TextBlock Classes="h5" Text="Interactive Media Card" />
+            <TextBlock
+              Margin="0,8,0,0"
+              Text="This card combines media content with interactive behavior. Hover over this card to see the effect. This is great for gallery items or content previews."
+              TextWrapping="Wrap" />
+          </StackPanel>
+        </Border>
+      </StackPanel>
+
+      <!--  Usage Guidelines  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Card Usage Guidelines" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface.Elevated1}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h5" Text="When to Use Cards" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Use cards to group related information and actions" />
+              <TextBlock Text="• Use cards when you need to display a collection of similar content (e.g., products, articles)" />
+              <TextBlock Text="• Use cards to break up complex interfaces into manageable chunks" />
+              <TextBlock Text="• Use elevated cards to create visual hierarchy and draw attention to important content" />
+              <TextBlock Text="• Use outlined cards for secondary information or in dense layouts" />
+              <TextBlock Text="• Use interactive cards for clickable/tappable areas" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,10,0,0"
+              Classes="h5"
+              Text="Card Best Practices" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Keep card content focused and concise" />
+              <TextBlock Text="• Include only related information within a single card" />
+              <TextBlock Text="• Use consistent card layouts within the same view" />
+              <TextBlock Text="• Avoid nesting cards within cards" />
+              <TextBlock Text="• Ensure card actions are clear and discoverable" />
+              <TextBlock Text="• Limit the number of actions on a single card" />
+              <TextBlock Text="• Maintain sufficient spacing between cards" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,5,0,0"
+              Text="These guidelines help ensure that cards are used effectively and consistently throughout your application. Follow these practices to create intuitive and visually coherent interfaces."
+              TextWrapping="Wrap" />
+          </StackPanel>
+        </Border>
+      </StackPanel>
+
+      <!--  Implementation Example  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Implementation Example" />
+
+        <Border
+          Padding="20"
+          Background="#2D2D2D"
+          CornerRadius="4">
+          <StackPanel Spacing="10">
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;!-- Basic Card --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;Border Classes=&quot;Card&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;TextBlock Classes=&quot;h5&quot; Text=&quot;Card Title&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;TextBlock Margin=&quot;0,8,0,0&quot; Text=&quot;Card content goes here&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;/Border&gt;" />
+          </StackPanel>
+        </Border>
+      </StackPanel>
+
+      <!--  More Complex Code Example  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Complete Card Example" />
+
+        <Border
+          Padding="20"
+          Background="#2D2D2D"
+          CornerRadius="4">
+          <StackPanel Spacing="10">
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;!-- Complete Card with all features --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;Border Classes=&quot;Card Interactive&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Media area at top of card --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardMedia&quot; Background=&quot;#5D4C8C&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;Image Source=&quot;/Assets/image.png&quot; Stretch=&quot;UniformToFill&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card header --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardHeader&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;TextBlock Classes=&quot;h5&quot; Text=&quot;Complete Card&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card content --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardContent&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;TextBlock Margin=&quot;0,16,0,0&quot; TextWrapping=&quot;Wrap&quot;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="                Text=&quot;This is the card content area.&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card actions --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardActions&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="        &lt;Button Classes=&quot;Text BaseButton&quot; Content=&quot;Cancel&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="        &lt;Button Classes=&quot;Primary BaseButton&quot; Content=&quot;Save&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;/Border&gt;" />
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

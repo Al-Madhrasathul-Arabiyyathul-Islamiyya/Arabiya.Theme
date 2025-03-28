@@ -49,6 +49,8 @@
               <ListBoxItem Content="Other Inputs" />
               <ListBoxItem Content="Tab Controls" />
               <ListBoxItem Content="Gradients" />
+              <ListBoxItem Content="Cards" />
+              <ListBoxItem Content="Glass Cards" />
             </ListBox>
           </StackPanel>
 

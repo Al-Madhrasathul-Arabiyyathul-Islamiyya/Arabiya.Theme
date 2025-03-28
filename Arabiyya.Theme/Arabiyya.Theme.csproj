@@ -37,11 +37,8 @@
     <Folder Include="Assets\" />
     <Folder Include="Converters\" />
     <Folder Include="Styles\Components\Buttons\" />
-    <Folder Include="Styles\Components\Containers\Dialogs\" />
-    <Folder Include="Styles\Components\Containers\Cards\" />
-    <Folder Include="Styles\Components\Patterns\DataDisplay\" />
-    <Folder Include="Styles\Components\Patterns\Feedback\" />
-    <Folder Include="Styles\Components\Patterns\Forms\" />
+    <Folder Include="Styles\Components\Containers\" />
+    <Folder Include="Styles\Components\Patterns\" />
     <Folder Include="Styles\Components\Typography\" />
     <Folder Include="Styles\Core\" />
     <Folder Include="ThemeServices\" />
@@ -50,11 +47,12 @@
   <ItemGroup>
     <AvaloniaXaml Remove="Styles\Components\Containers\ContainerStyles.axaml" />
     <AvaloniaXaml Remove="Styles\Components\Inputs\InputsStyles.axaml" />
+    <AvaloniaXaml Remove="Styles\Components\Patterns\PatternsStyles.axaml" />
     <AvaloniaXaml Remove="Switcher\ThemeSwitcher.axaml" />
     <AvaloniaResource Include="Assets\**" />
     <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
   </ItemGroup>
-
+  
 </Project>

@@ -1,0 +1,659 @@
+<UserControl
+  x:Class="Arabiyya.Theme.Demo.Views.GlassCardsView"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:avaglass="using:AvaGlass.Controls"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  d:DesignHeight="650"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+
+  <!--  Background with gradient for demo purposes  -->
+  <UserControl.Background>
+    <LinearGradientBrush StartPoint="0%,0%" EndPoint="100%,100%">
+      <GradientStop Offset="0" Color="{DynamicResource Color.Primary.Dark}" />
+      <GradientStop Offset="1" Color="{DynamicResource Color.Secondary.Dark}" />
+    </LinearGradientBrush>
+  </UserControl.Background>
+
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="30">
+      <TextBlock
+        Classes="h2"
+        Foreground="White"
+        Text="Glass Cards" />
+
+      <!--  Introduction  -->
+      <avaglass:GlassmorphicPanel Classes="GlassCard">
+        <TextBlock TextWrapping="Wrap">
+          Glass cards create a modern, layered interface with translucent effects. They work particularly well
+          on top of colorful or image backgrounds, creating depth while maintaining context of what's behind them.
+          The Arabiyya theme provides various glass card styles for different contexts and visual needs.
+        </TextBlock>
+      </avaglass:GlassmorphicPanel>
+
+      <!--  Basic Glass Card Types  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Basic Glass Card Types" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto">
+          <!--  Light Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,8,8"
+            Classes="GlassCard Light">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Light Glass Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This is a standard glass card with light translucency. It works well on darker backgrounds and creates a subtle layering effect."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Dark Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="8,0,0,8"
+            Classes="GlassCard Dark">
+            <StackPanel>
+              <TextBlock
+                Classes="h5"
+                Foreground="White"
+                Text="Dark Glass Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Foreground="White"
+                Text="This is a dark/acrylic glass card. It's perfect for light backgrounds or when you want content to stand out against a busy background."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Frost Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,8,8,0"
+            Classes="GlassCard Frost">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Frosted Glass Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This card has a heavier frost effect with increased opacity. Use when you need more contrast between the card and its background."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Interactive Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8,8,0,0"
+            Classes="GlassCard Interactive">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Interactive Glass Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This glass card responds to mouse hover and click events. Try hovering over me! Perfect for clickable content with a modern look."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <avaglass:GlassmorphicPanel Classes="GlassCard">
+          <TextBlock Text="Glass cards can be used in various contexts where you want to maintain visual context of what's behind while presenting focused content. They create a sense of depth and modernity." TextWrapping="Wrap" />
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Color Variants  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Colorized Glass Cards" />
+
+        <WrapPanel Margin="0,0,0,15" Orientation="Horizontal">
+          <!--  Primary Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="GlassCard Primary">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Primary" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Primary tinted glass card."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Secondary Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="GlassCard Secondary">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Secondary" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Secondary tinted glass card."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Success Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="GlassCard Success">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Success" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Success tinted glass card."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Error Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Width="180"
+            Height="120"
+            Margin="0,0,10,10"
+            Classes="GlassCard Error">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Error" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="Error tinted glass card."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+        </WrapPanel>
+
+        <!--  Usage description  -->
+        <avaglass:GlassmorphicPanel Classes="GlassCard">
+          <TextBlock Text="Colorized glass cards use your theme colors as a tint applied to the glass effect. They're useful for categorization or to highlight different types of content while maintaining the glass aesthetic." TextWrapping="Wrap" />
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Glass Card with Header  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Structured Glass Cards" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto">
+          <!--  Glass Card with Header  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,8,8"
+            Classes="GlassCard">
+            <StackPanel>
+              <Border Classes="CardHeader">
+                <TextBlock Classes="h5" Text="Glass Card with Header" />
+              </Border>
+              <Border Classes="CardContent">
+                <TextBlock
+                  Margin="0,16,0,0"
+                  Text="This glass card has a distinct header section. The subtle border helps separate content areas while maintaining the glass aesthetic."
+                  TextWrapping="Wrap" />
+              </Border>
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Glass Card with Actions  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="8,0,0,8"
+            Classes="GlassCard">
+            <StackPanel>
+              <TextBlock Classes="h5" Text="Glass Card with Actions" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This glass card includes action buttons at the bottom. Glass buttons work particularly well with glass cards for a cohesive look."
+                TextWrapping="Wrap" />
+              <Border Classes="CardActions">
+                <StackPanel>
+                  <Button Classes="Text BaseButton" Content="Cancel" />
+                  <Button Classes="Glass" Content="Confirm" />
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Glass Card with Media  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,8,8,0"
+            Classes="GlassCard">
+            <StackPanel>
+              <Border Background="#2D8C8C" Classes="CardMedia">
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontWeight="SemiBold"
+                  Foreground="White"
+                  Text="Media Area" />
+              </Border>
+              <TextBlock Classes="h5" Text="Glass Card with Media" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This glass card includes a media area at the top. Images and media content create a nice contrast with the translucent card body."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+
+          <!--  Complete Glass Card  -->
+          <avaglass:GlassmorphicPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8,8,0,0"
+            Classes="GlassCard Interactive">
+            <StackPanel>
+              <Border Background="#5D4C8C" Classes="CardMedia">
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontWeight="SemiBold"
+                  Foreground="White"
+                  Text="Media Area" />
+              </Border>
+              <Border Classes="CardHeader">
+                <TextBlock Classes="h5" Text="Complete Glass Card" />
+              </Border>
+              <Border Classes="CardContent">
+                <TextBlock
+                  Margin="0,16,0,0"
+                  Text="This card combines all glass card elements - media, header, content, and actions - with interactive behavior."
+                  TextWrapping="Wrap" />
+              </Border>
+              <Border Classes="CardActions">
+                <StackPanel>
+                  <Button Classes="Text BaseButton" Content="Cancel" />
+                  <Button Classes="Glass" Content="Confirm" />
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </avaglass:GlassmorphicPanel>
+        </Grid>
+      </StackPanel>
+
+      <!--  Advanced Glass Card Examples  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Advanced Glass Card Examples" />
+
+        <!--  Horizontal Glass Card  -->
+        <avaglass:GlassmorphicPanel
+          Height="120"
+          Margin="0,0,0,16"
+          Classes="GlassCard Horizontal">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Border
+              Grid.Column="0"
+              Background="#8C5E2D"
+              Classes="CardMediaSide">
+              <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="SemiBold"
+                Foreground="White"
+                Text="Media"
+                TextAlignment="Center" />
+            </Border>
+            <StackPanel Grid.Column="1" Margin="24,0,0,0">
+              <TextBlock Classes="h5" Text="Horizontal Glass Card" />
+              <TextBlock
+                Margin="0,8,0,0"
+                Text="This glass card uses a horizontal layout with media on the side. Perfect for list items or compact layouts with strong visual elements."
+                TextWrapping="Wrap" />
+            </StackPanel>
+          </Grid>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Compact Glass Card  -->
+        <avaglass:GlassmorphicPanel Margin="0,0,0,16" Classes="GlassCard Compact Dark">
+          <StackPanel>
+            <Border Classes="CardHeader">
+              <TextBlock
+                Classes="h6"
+                Foreground="White"
+                Text="Compact Dark Glass Card" />
+            </Border>
+            <Border Classes="CardContent">
+              <TextBlock
+                Margin="0,12,0,0"
+                Foreground="White"
+                Text="This glass card uses reduced padding for a more compact appearance and dark glass styling. Good for information-dense interfaces or notification cards."
+                TextWrapping="Wrap" />
+            </Border>
+            <Border Classes="CardActions">
+              <StackPanel>
+                <Button Classes="Glass" Content="Action" />
+              </StackPanel>
+            </Border>
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+
+        <!--  Special Use Case Card  -->
+        <avaglass:GlassmorphicPanel
+          Margin="0,0,0,16"
+          BlurRadius="25"
+          Classes="GlassCard Interactive Primary">
+          <StackPanel>
+            <Border Background="#2D578C" Classes="CardMedia">
+              <Grid>
+                <Ellipse
+                  Width="50"
+                  Height="50"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Fill="#80FFFFFF" />
+                <TextBlock
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  FontFamily="{StaticResource PhosphorFontFamily}"
+                  FontSize="24"
+                  Foreground="#2D578C"
+                  Text="&#xE46A;" />
+              </Grid>
+            </Border>
+            <TextBlock Classes="h5" Text="Premium Glass Card" />
+            <TextBlock
+              Margin="0,8,0,0"
+              Text="This card combines primary color tinting, interactive behavior, and increased blur radius for a premium feel. Perfect for highlighting special features or content."
+              TextWrapping="Wrap" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Usage Guidelines  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Glass Card Usage Guidelines" />
+
+        <avaglass:GlassmorphicPanel Classes="GlassCard">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h5" Text="When to Use Glass Cards" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Use glass cards when you want to maintain visual context of background elements" />
+              <TextBlock Text="• Use glass cards for a modern, layered interface with depth" />
+              <TextBlock Text="• Use glass cards on top of gradients, images, or colorful backgrounds" />
+              <TextBlock Text="• Use dark glass cards on light backgrounds or when content needs to stand out" />
+              <TextBlock Text="• Use light glass cards on dark backgrounds for subtle layering" />
+              <TextBlock Text="• Use colorized glass cards to maintain theme color language while using transparency" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,10,0,0"
+              Classes="h5"
+              Text="Glass Card Best Practices" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Ensure text has sufficient contrast against the glass background" />
+              <TextBlock Text="• Use glass buttons with glass cards for consistency" />
+              <TextBlock Text="• Avoid placing too many glass elements on top of each other" />
+              <TextBlock Text="• Test glass effects on various backgrounds to ensure they work in all contexts" />
+              <TextBlock Text="• Use glass cards sparingly for main UI surfaces; they work best as focused content areas" />
+              <TextBlock Text="• Consider performance implications on lower-end devices" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,5,0,0"
+              Text="Glass effects can create stunning interfaces, but should be used thoughtfully to maintain usability and performance. They work particularly well for overlay content, modals, and featured content areas."
+              TextWrapping="Wrap" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Implementation Example  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Implementation Example" />
+
+        <avaglass:GlassmorphicPanel Classes="GlassCard Dark">
+          <StackPanel Spacing="10">
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;!-- Basic Glass Card --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;avaglass:GlassmorphicPanel Classes=&quot;GlassCard&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;TextBlock Classes=&quot;h5&quot; Text=&quot;Glass Card Title&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;TextBlock Margin=&quot;0,8,0,0&quot; TextWrapping=&quot;Wrap&quot;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="               Text=&quot;Card content goes here&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;/avaglass:GlassmorphicPanel&gt;" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Complete Card Example  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Advanced Implementation Example" />
+
+        <avaglass:GlassmorphicPanel Classes="GlassCard Dark">
+          <StackPanel Spacing="10">
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;!-- Complete Glass Card with all features --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;avaglass:GlassmorphicPanel Classes=&quot;GlassCard Interactive Primary&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Media area at top of card --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardMedia&quot; Background=&quot;#5D4C8C&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;Image Source=&quot;/Assets/image.png&quot; Stretch=&quot;UniformToFill&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card header --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardHeader&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;TextBlock Classes=&quot;h5&quot; Text=&quot;Glass Card Title&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card content --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardContent&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;TextBlock Margin=&quot;0,16,0,0&quot; TextWrapping=&quot;Wrap&quot;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="                Text=&quot;This is the card content area.&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    " />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;!-- Card actions --&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;Border Classes=&quot;CardActions&quot;&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="        &lt;Button Classes=&quot;Text BaseButton&quot; Content=&quot;Cancel&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="        &lt;Button Classes=&quot;Glass&quot; Content=&quot;Confirm&quot; /&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="      &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="    &lt;/Border&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="  &lt;/StackPanel&gt;" />
+            <TextBlock
+              FontFamily="Consolas"
+              Foreground="White"
+              Text="&lt;/avaglass:GlassmorphicPanel&gt;" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+
+      <!--  Customization Options  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Foreground="White"
+          Text="Customization Options" />
+
+        <avaglass:GlassmorphicPanel Classes="GlassCard">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h5" Text="Glass Card Properties" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• TintColor - The color tint applied to the glass effect" />
+              <TextBlock Text="• TintOpacity - The opacity of the color tint (0.0 to 1.0)" />
+              <TextBlock Text="• BlurRadius - The intensity of the blur effect" />
+              <TextBlock Text="• Mode - 'Glassmorphism' for light glass, 'Acrylic' for dark glass" />
+              <TextBlock Text="• BorderBrush - The border color (often semi-transparent)" />
+              <TextBlock Text="• BorderThickness - Border width (often 1px for subtle effect)" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,10,0,0"
+              Classes="h5"
+              Text="Example Custom Glass Card" />
+            <Border
+              Padding="10"
+              Background="#20000000"
+              CornerRadius="4">
+              <TextBlock
+                FontFamily="Consolas"
+                Foreground="White"
+                Text="&lt;avaglass:GlassmorphicPanel      Classes=&quot;GlassCard&quot;     BlurRadius=&quot;25&quot;     TintColor=&quot;Blue&quot;     TintOpacity=&quot;0.15&quot;     BorderBrush=&quot;#40FFFFFF&quot;&gt;     &lt;!-- Content here --&gt; &lt;/avaglass:GlassmorphicPanel&gt;"
+                TextWrapping="Wrap" />
+            </Border>
+
+            <TextBlock
+              Margin="0,5,0,0"
+              Text="You can customize the glass effect by combining the built-in classes with direct property settings. This allows for precise control over the appearance while maintaining consistent sizing and layout with other cards."
+              TextWrapping="Wrap" />
+          </StackPanel>
+        </avaglass:GlassmorphicPanel>
+      </StackPanel>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

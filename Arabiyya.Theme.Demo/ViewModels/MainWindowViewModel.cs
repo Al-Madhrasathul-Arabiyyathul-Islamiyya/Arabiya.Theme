@@ -24,6 +24,8 @@ public partial class MainViewModel : ObservableObject
             { 5, new InputsViewModel() },
             { 6, new TabControlViewModel() },
             { 7, new GradientsViewModel() },
+            { 8, new CardsViewModel() },
+            { 9, new GlassCardsViewModel() },
         }!;
 
         SelectedNavIndex = 0;

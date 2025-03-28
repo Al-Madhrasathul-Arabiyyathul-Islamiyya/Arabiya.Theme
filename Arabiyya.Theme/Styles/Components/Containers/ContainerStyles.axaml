@@ -1,4 +1,5 @@
 <Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <!--<StyleInclude Source="/Styles/Components/Containers/Cards/CardStyles.axaml" />-->
+  <StyleInclude Source="/Styles/Components/Containers/Cards/CardStyles.axaml" />
+  <StyleInclude Source="/Styles/Components/Containers/Cards/GlassCardStyles.axaml" />
   <StyleInclude Source="/Styles/Components/Containers/Panels/CustomPanelStyles.axaml" />
 </Styles>

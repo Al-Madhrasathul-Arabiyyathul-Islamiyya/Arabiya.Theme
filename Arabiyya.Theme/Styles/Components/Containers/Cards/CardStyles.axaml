@@ -23,12 +23,12 @@
     <Setter Property="Background" Value="{DynamicResource Brush.Surface}" />
     <Setter Property="CornerRadius" Value="8" />
     <Setter Property="Padding" Value="16" />
-    <Setter Property="BoxShadow" Value="0 1 3 0 rgba(0,0,0,0.1), 0 1 2 0 rgba(0,0,0,0.06)" />
+    <Setter Property="BoxShadow" Value="0 1 3 0 #0000001A, 0 1 2 0 #0000000F" />
     <Setter Property="Margin" Value="0,0,0,16" />
     <Setter Property="MaxWidth" Value="800" />
     <Setter Property="Transitions">
       <Transitions>
-        <TransformOperationsTransition Property="BoxShadow" Duration="0:0:0.2" />
+        <BoxShadowsTransition Property="BoxShadow" Duration="0:0:0.2" />
         <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2" />
       </Transitions>
     </Setter>
@@ -41,7 +41,7 @@
 
   <!--  Elevated Card - More pronounced shadow  -->
   <Style Selector="Border.Card.Elevated">
-    <Setter Property="BoxShadow" Value="0 4 6 -1 rgba(0,0,0,0.1), 0 2 4 -1 rgba(0,0,0,0.06)" />
+    <Setter Property="BoxShadow" Value="0 4 6 -1 #0000001A, 0 2 4 -1 #0000000F" />
     <Setter Property="Background" Value="{DynamicResource Brush.Surface.Elevated1}" />
   </Style>
 
@@ -59,13 +59,13 @@
   </Style>
 
   <Style Selector="Border.Card.Interactive:pointerover">
-    <Setter Property="BoxShadow" Value="0 10 15 -3 rgba(0,0,0,0.1), 0 4 6 -2 rgba(0,0,0,0.05)" />
-    <Setter Property="RenderTransform" Value="translateY(-2)" />
+    <Setter Property="BoxShadow" Value="0 10 15 -3 #0000001A, 0 4 6 -2 #0000000D" />
+    <Setter Property="RenderTransform" Value="translateY(-2px)" />
   </Style>
 
   <Style Selector="Border.Card.Interactive:pressed">
-    <Setter Property="BoxShadow" Value="0 1 3 0 rgba(0,0,0,0.1), 0 1 2 0 rgba(0,0,0,0.06)" />
-    <Setter Property="RenderTransform" Value="translateY(0)" />
+    <Setter Property="BoxShadow" Value="0 1 3 0 #0000001A, 0 1 2 0 #0000000F" />
+    <Setter Property="RenderTransform" Value="translateY(0px)" />
   </Style>
 
   <!--  Primary Card - Card with primary color styling  -->
@@ -164,17 +164,18 @@
   </Style>
 
   <!--  Horizontal Card Layout  -->
-  <!--
-  <Style Selector="Border.Card.Horizontal > Grid">
-    <Setter Property="ColumnDefinitions" Value="Auto,*" />
-  </Style>
-  -->
 
+  <!--  Media side element style  -->
   <Style Selector="Border.Card.Horizontal > Grid > Border.CardMediaSide">
     <Setter Property="Width" Value="120" />
     <Setter Property="Margin" Value="-16" />
     <Setter Property="CornerRadius" Value="8,0,0,8" />
     <Setter Property="ClipToBounds" Value="True" />
+  </Style>
+
+  <!--  Content spacing style  -->
+  <Style Selector="Border.Card.Horizontal > Grid > StackPanel">
+    <Setter Property="Margin" Value="24,0,0,0" />
   </Style>
 
   <!--  Compact Card  -->
@@ -196,4 +197,3 @@
     <Setter Property="Margin" Value="-12,4,-12,-12" />
   </Style>
 </Styles>
-
