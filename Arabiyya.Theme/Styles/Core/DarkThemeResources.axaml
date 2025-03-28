@@ -3,119 +3,82 @@
     <ResourceDictionary x:Key="Dark">
       <!--  Dark Theme Colors - with both prefixed and regular keys  -->
       <Color x:Key="PrimaryColor">#26C6DA</Color>
-      <Color x:Key="DarkPrimaryColor">#26C6DA</Color>
 
       <Color x:Key="PrimaryLightColor">#4DD0E1</Color>
-      <Color x:Key="DarkPrimaryLightColor">#4DD0E1</Color>
 
       <Color x:Key="PrimaryDarkColor">#00ACC1</Color>
-      <Color x:Key="DarkPrimaryDarkColor">#00ACC1</Color>
 
       <Color x:Key="SecondaryColor">#FF6E40</Color>
-      <Color x:Key="DarkSecondaryColor">#FF6E40</Color>
 
       <Color x:Key="SecondaryLightColor">#FF9E80</Color>
-      <Color x:Key="DarkSecondaryLightColor">#FF9E80</Color>
 
       <Color x:Key="SecondaryDarkColor">#DD2C00</Color>
-      <Color x:Key="DarkSecondaryDarkColor">#DD2C00</Color>
 
       <Color x:Key="AccentColor">#FF9800</Color>
-      <Color x:Key="DarkAccentColor">#FF9800</Color>
 
       <Color x:Key="AccentLightColor">#FFB74D</Color>
-      <Color x:Key="DarkAccentLightColor">#FFB74D</Color>
 
       <Color x:Key="AccentDarkColor">#F57C00</Color>
-      <Color x:Key="DarkAccentDarkColor">#F57C00</Color>
 
       <!--  Status Colors  -->
       <Color x:Key="SuccessColor">#00E676</Color>
-      <Color x:Key="DarkSuccessColor">#00E676</Color>
 
       <Color x:Key="SuccessLightColor">#69F0AE</Color>
-      <Color x:Key="DarkSuccessLightColor">#69F0AE</Color>
 
       <Color x:Key="SuccessDarkColor">#00C853</Color>
-      <Color x:Key="DarkSuccessDarkColor">#00C853</Color>
 
       <Color x:Key="ErrorColor">#FF5252</Color>
-      <Color x:Key="DarkErrorColor">#FF5252</Color>
 
       <Color x:Key="ErrorLightColor">#FF8A80</Color>
-      <Color x:Key="DarkErrorLightColor">#FF8A80</Color>
 
       <Color x:Key="ErrorDarkColor">#D50000</Color>
-      <Color x:Key="DarkErrorDarkColor">#D50000</Color>
 
       <Color x:Key="WarningColor">#FFAB40</Color>
-      <Color x:Key="DarkWarningColor">#FFAB40</Color>
 
       <Color x:Key="WarningLightColor">#FFD180</Color>
-      <Color x:Key="DarkWarningLightColor">#FFD180</Color>
 
       <Color x:Key="WarningDarkColor">#FF6D00</Color>
-      <Color x:Key="DarkWarningDarkColor">#FF6D00</Color>
 
       <Color x:Key="InfoColor">#40C4FF</Color>
-      <Color x:Key="DarkInfoColor">#40C4FF</Color>
 
       <Color x:Key="InfoLightColor">#80D8FF</Color>
-      <Color x:Key="DarkInfoLightColor">#80D8FF</Color>
 
       <Color x:Key="InfoDarkColor">#00B0FF</Color>
-      <Color x:Key="DarkInfoDarkColor">#00B0FF</Color>
 
       <!--  UI Colors  -->
       <Color x:Key="BackgroundColor">#121212</Color>
-      <Color x:Key="DarkBackgroundColor">#121212</Color>
 
       <Color x:Key="SurfaceColor">#1E1E1E</Color>
-      <Color x:Key="DarkSurfaceColor">#1E1E1E</Color>
 
       <Color x:Key="SurfaceElevated1Color">#252525</Color>
-      <Color x:Key="DarkSurfaceElevated1Color">#252525</Color>
 
       <Color x:Key="SurfaceElevated2Color">#2C2C2C</Color>
-      <Color x:Key="DarkSurfaceElevated2Color">#2C2C2C</Color>
 
       <!--  Text Colors  -->
       <Color x:Key="TextPrimaryColor">#E0E0E0</Color>
-      <Color x:Key="DarkTextPrimaryColor">#E0E0E0</Color>
 
       <Color x:Key="TextSecondaryColor">#B0B0B0</Color>
-      <Color x:Key="DarkTextSecondaryColor">#B0B0B0</Color>
 
       <Color x:Key="TextDisabledColor">#6C6C6C</Color>
-      <Color x:Key="DarkTextDisabledColor">#6C6C6C</Color>
 
       <Color x:Key="TextOnPrimaryColor">#000000</Color>
-      <Color x:Key="DarkTextOnPrimaryColor">#000000</Color>
 
       <Color x:Key="TextOnSecondaryColor">#000000</Color>
-      <Color x:Key="DarkTextOnSecondaryColor">#000000</Color>
 
       <Color x:Key="TextOnAccentColor">#000000</Color>
-      <Color x:Key="DarkTextOnAccentColor">#000000</Color>
 
       <Color x:Key="TextColorDark">#e2e8f0</Color>
-      <Color x:Key="DarkTextColorDark">#e2e8f0</Color>
 
       <Color x:Key="TextColorLight">#f8fafc</Color>
-      <Color x:Key="DarkTextColorLight">#f8fafc</Color>
 
       <Color x:Key="TextColorMuted">#94a3b8</Color>
-      <Color x:Key="DarkTextColorMuted">#94a3b8</Color>
 
       <Color x:Key="TextColorDisabled">#475569</Color>
-      <Color x:Key="DarkTextColorDisabled">#475569</Color>
 
       <!--  Border Colors  -->
       <Color x:Key="DividerColor">#424242</Color>
-      <Color x:Key="DarkDividerColor">#424242</Color>
 
       <Color x:Key="OutlineColor">#2A2A2A</Color>
-      <Color x:Key="DarkOutlineColor">#2A2A2A</Color>
 
       <!--  Background Gradients  -->
       <LinearGradientBrush x:Key="ThemeBackgroundGradient" StartPoint="0%,0%" EndPoint="100%,100%">
@@ -123,17 +86,7 @@
         <GradientStop Offset="1" Color="#166d3b" />
       </LinearGradientBrush>
 
-      <LinearGradientBrush x:Key="DarkThemeGradient" StartPoint="0%,0%" EndPoint="100%,100%">
-        <GradientStop Offset="0" Color="#000000" />
-        <GradientStop Offset="1" Color="#166d3b" />
-      </LinearGradientBrush>
-
       <LinearGradientBrush x:Key="GlassGradient" StartPoint="0%,0%" EndPoint="0%,100%">
-        <GradientStop Offset="0" Color="#19000000" />
-        <GradientStop Offset="1" Color="#0C000000" />
-      </LinearGradientBrush>
-
-      <LinearGradientBrush x:Key="DarkGlassGradient" StartPoint="0%,0%" EndPoint="0%,100%">
         <GradientStop Offset="0" Color="#19000000" />
         <GradientStop Offset="1" Color="#0C000000" />
       </LinearGradientBrush>
