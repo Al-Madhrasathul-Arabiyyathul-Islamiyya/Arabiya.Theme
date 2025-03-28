@@ -28,5 +28,6 @@
   <StyleInclude Source="/Styles/Components/Buttons/ButtonStyles.axaml" />
   <StyleInclude Source="/Styles/Components/Containers/ContainerStyles.axaml" />
   <StyleInclude Source="/Styles/Components/Inputs/InputsStyles.axaml" />
+  <StyleInclude Source="/Styles/Components/Patterns/PatternsStyles.axaml" />
   <StyleInclude Source="/Styles/Components/Typography/TextBlockStyles.axaml" />
 </Styles>
