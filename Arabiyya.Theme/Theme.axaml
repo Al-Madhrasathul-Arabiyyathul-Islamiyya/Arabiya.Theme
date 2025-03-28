@@ -26,9 +26,7 @@
 
   <!--  Control-specific styles  -->
   <StyleInclude Source="/Styles/Components/Buttons/ButtonStyles.axaml" />
+  <StyleInclude Source="/Styles/Components/Containers/ContainerStyles.axaml" />
+  <StyleInclude Source="/Styles/Components/Inputs/InputsStyles.axaml" />
   <StyleInclude Source="/Styles/Components/Typography/TextBlockStyles.axaml" />
-  <StyleInclude Source="/Styles/Components/Containers/Panels/CustomPanels.axaml" />
-  <StyleInclude Source="/Styles/Components/Inputs/TextInputStyles.axaml" />
-  <StyleInclude Source="/Styles/Components/Inputs/InputStyles.axaml" />
-  <StyleInclude Source="/Styles/Components/Inputs/TabControlStyles.axaml" />
 </Styles>

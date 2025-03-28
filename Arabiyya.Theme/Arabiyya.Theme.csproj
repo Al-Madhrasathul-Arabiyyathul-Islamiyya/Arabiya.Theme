@@ -39,8 +39,6 @@
     <Folder Include="Styles\Components\Buttons\" />
     <Folder Include="Styles\Components\Containers\Dialogs\" />
     <Folder Include="Styles\Components\Containers\Cards\" />
-    <Folder Include="Styles\Components\Containers\Panels\" />
-    <Folder Include="Styles\Components\Inputs\" />
     <Folder Include="Styles\Components\Patterns\DataDisplay\" />
     <Folder Include="Styles\Components\Patterns\Feedback\" />
     <Folder Include="Styles\Components\Patterns\Forms\" />
@@ -50,8 +48,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="Styles\Components\Containers\ContainerStyles.axaml" />
+    <AvaloniaXaml Remove="Styles\Components\Inputs\InputsStyles.axaml" />
     <AvaloniaXaml Remove="Switcher\ThemeSwitcher.axaml" />
+    <AvaloniaResource Include="Assets\**" />
     <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
