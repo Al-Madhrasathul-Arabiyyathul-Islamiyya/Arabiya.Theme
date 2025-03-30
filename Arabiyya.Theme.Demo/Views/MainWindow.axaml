@@ -5,6 +5,7 @@
   xmlns:avaglass="using:AvaGlass.Controls"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:nav="using:Arabiyya.Theme.Navigation.Controls"
   xmlns:sw="using:Arabiyya.Theme.Switcher"
   xmlns:vm="using:Arabiyya.Theme.Demo.ViewModels"
   Title="Arabiyya Theme Demo"
@@ -12,7 +13,8 @@
   Height="768"
   d:DesignHeight="768"
   d:DesignWidth="1366"
-  x:DataType="vm:MainViewModel"
+  x:CompileBindings="False"
+  x:DataType="vm:MainWindowViewModel"
   Background="{DynamicResource Gradient.Theme.Background}"
   CornerRadius="16"
   ExtendClientAreaToDecorationsHint="True"
@@ -21,72 +23,22 @@
   WindowStartupLocation="CenterScreen"
   mc:Ignorable="d">
 
-  <Design.DataContext>
-    <vm:MainViewModel />
-  </Design.DataContext>
-
   <Grid ColumnDefinitions="10,220,*,10" RowDefinitions="10,*,10">
-
     <!--  Sidebar Navigation  -->
-    <Border
+    <nav:SideNav
       Grid.Row="1"
       Grid.Column="1"
-      BorderThickness="8">
-      <avaglass:GlassmorphicPanel Classes="GlassPanel">
-        <Grid RowDefinitions="Auto,*,Auto">
-          <StackPanel Grid.Row="0" Margin="10,20">
-            <TextBlock
-              Margin="0,0,0,20"
-              Classes="h3"
-              Text="Theme Demo" />
-
-            <ListBox x:Name="NavigationList" SelectedIndex="{Binding SelectedNavIndex}">
-              <ListBoxItem Content="Color Palette" />
-              <ListBoxItem Content="Typography" />
-              <ListBoxItem Content="Buttons" />
-              <ListBoxItem Content="Glass Panels" />
-              <ListBoxItem Content="Text Inputs" />
-              <ListBoxItem Content="Other Inputs" />
-              <ListBoxItem Content="Tab Controls" />
-              <ListBoxItem Content="Gradients" />
-              <ListBoxItem Content="Cards" />
-              <ListBoxItem Content="Glass Cards" />
-            </ListBox>
-          </StackPanel>
-
-          <!--  Theme toggle at bottom  -->
-          <StackPanel Grid.Row="2" Margin="10">
-            <Border
-              Margin="0,0,0,20"
-              Padding="10"
-              Background="#20000000"
-              CornerRadius="6">
-              <StackPanel Spacing="10">
-                <!--  Default toggle switch  -->
-                <sw:ThemeSwitcher VariantType="Toggle" />
-
-                <!--  Icon toggle switch  -->
-                <sw:ThemeSwitcher VariantType="IconToggle" />
-
-                <!--  ComboBox style  -->
-                <sw:ThemeSwitcher VariantType="ComboBox" />
-
-                <!--  Icon button style  -->
-                <sw:ThemeSwitcher VariantType="IconButton" />
-              </StackPanel>
-            </Border>
-          </StackPanel>
-        </Grid>
-      </avaglass:GlassmorphicPanel>
-    </Border>
+      DataContext="{Binding NavigationService.Config}"
+      ShowIcons="True"
+      ShowLabels="True" />
 
     <!--  Content Area  -->
-    <ScrollViewer
+    <nav:NavigationHost
       Grid.Row="1"
       Grid.Column="2"
-      Margin="0,20">
-      <ContentControl Content="{Binding CurrentView}" />
-    </ScrollViewer>
+      Margin="0,20"
+      Content="{Binding CurrentContent}"
+      NavigationService="{Binding NavigationService}"
+      TransitionType="fade" />
   </Grid>
-
 </Window>

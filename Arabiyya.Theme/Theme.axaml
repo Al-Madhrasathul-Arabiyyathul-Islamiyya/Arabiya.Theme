@@ -17,6 +17,9 @@
         <ResourceInclude Source="/Styles/Core/DarkThemeResources.axaml" />
 
         <ResourceInclude Source="/Converters/Converters.axaml" />
+
+        <!--  Navigation Styles  -->
+        <ResourceInclude Source="/Navigation/NavigationStyles.axaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Styles.Resources>

@@ -13,6 +13,11 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
+
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    
     <AvaloniaResource Include="Theme.axaml" />
 
     <AvaloniaResource Include="Styles\Core\*.axaml" />
@@ -31,11 +38,16 @@
     <AvaloniaResource Include="Switcher\*" />
 
     <AvaloniaResource Include="ThemeServices\*" />
+
+    <AvaloniaXaml Include="Navigation\NavigationStyles.axaml" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Converters\" />
+    <Folder Include="Navigation\Controls" />
+    <Folder Include="Navigation\Converters" />
+    <Folder Include="Navigation\Models" />
+    <Folder Include="Navigation\Services" />
     <Folder Include="Styles\Components\Buttons\" />
     <Folder Include="Styles\Components\Containers\" />
     <Folder Include="Styles\Components\Patterns\" />
@@ -49,10 +61,8 @@
     <AvaloniaXaml Remove="Styles\Components\Inputs\InputsStyles.axaml" />
     <AvaloniaXaml Remove="Styles\Components\Patterns\PatternsStyles.axaml" />
     <AvaloniaXaml Remove="Switcher\ThemeSwitcher.axaml" />
-    <AvaloniaResource Include="Assets\**" />
     <None Remove="Assets\FontsMontserrat-Italic-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Montserrat-VariableFont_wght.ttf" />
     <None Remove="Assets\Fonts\Phosphor-Bold.ttf" />
   </ItemGroup>
-  
 </Project>

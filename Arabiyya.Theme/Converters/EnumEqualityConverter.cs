@@ -1,7 +1,7 @@
 ﻿using Avalonia.Data.Converters;
 using System.Globalization;
 
-namespace Arabiyya.Theme;
+namespace Arabiyya.Theme.Converters;
 public class EnumEqualityConverter : IValueConverter
 {
     public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
