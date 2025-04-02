@@ -167,34 +167,6 @@ public partial class SideNav : UserControl
     {
         base.OnLoaded(e);
 
-        // Store original values once the control is loaded
-        var listBox = this.FindControl<ListBox>("NavItemsListBox");
-        if (listBox != null && listBox.Items.Count > 0)
-        {
-            if (listBox.Items[0] is ListBoxItem firstItem)
-            {
-                var grid = firstItem.GetLogicalDescendants().OfType<Grid>().FirstOrDefault();
-                if (grid != null)
-                {
-                    var iconTextBlock = grid.GetLogicalDescendants()
-                        .OfType<TextBlock>()
-                        .FirstOrDefault(tb => Grid.GetColumn(tb) == 0);
-
-                    if (iconTextBlock != null)
-                    {
-                        _originalIconMargin = iconTextBlock.Margin;
-                    }
-                }
-            }
-        }
-
-        var glassPanel = this.FindControl<AvaGlass.Controls.GlassmorphicPanel>("GlassPanel");
-        if (glassPanel != null)
-        {
-            _originalPanelPadding = glassPanel.Padding;
-        }
-
-        // Apply initial state
         UpdateWidth(Config?.IsExpanded ?? true);
     }
 
@@ -220,8 +192,8 @@ public partial class SideNav : UserControl
                     new Binding
                     {
                         Source = NavigationService,
-                        Path = nameof(INavigationService.SelectedItem), // Use nameof for type safety
-                        Mode = BindingMode.TwoWay // Reflects service changes and updates service on UI change
+                        Path = nameof(INavigationService.SelectedItem),
+                        Mode = BindingMode.TwoWay
                     });
             }
         }
@@ -267,56 +239,17 @@ public partial class SideNav : UserControl
         UpdateVisualStates();
     }
 
-    private Thickness _originalIconMargin = new(12, 0, 8, 0);
-    private Thickness _originalPanelPadding = new(16, 0);
-    private readonly Thickness _originalHeaderBorderPadding = new(16);
-    private readonly Thickness _originalListBoxPadding = new(8,0);
-
     /// <summary>
     /// Updates the width of the control and the visibility of labels based on the expanded state.
     /// </summary>
     /// <param name="isExpanded">True if the sidebar should be expanded, false otherwise.</param>
     private void UpdateWidth(bool isExpanded)
     {
+        // Only set width and the ShowLabels property that styles depend on
         bool canCollapse = Config?.AllowCollapse ?? false;
         Width = isExpanded || !canCollapse ? ExpandedWidth : CollapsedWidth;
-
         ShowLabels = isExpanded;
         ShowIcons = true;
-
-        var glassPanel = this.FindControl<AvaGlass.Controls.GlassmorphicPanel>("GlassPanel");
-        var headerBorder = this.FindControl<Border>("HeaderBorder");
-        var listBox = this.FindControl<ListBox>("NavItemsListBox");
-
-        if (glassPanel != null)
-            glassPanel.Padding = isExpanded ? _originalPanelPadding : new Thickness(4, 0);
-
-        if (headerBorder != null)
-            headerBorder.Padding = isExpanded ? _originalHeaderBorderPadding : new Thickness(6);
-
-        if (listBox != null)
-        {
-            listBox.Padding = isExpanded ? _originalListBoxPadding : new Thickness(0);
-            foreach (var item in listBox.GetLogicalDescendants().OfType<ListBoxItem>())
-            {
-                var grid = item.GetLogicalDescendants().OfType<Grid>().FirstOrDefault();
-                if (grid != null)
-                {
-                    grid.HorizontalAlignment = isExpanded ? HorizontalAlignment.Stretch : HorizontalAlignment.Center;
-
-                    var iconTextBlock = grid.GetLogicalDescendants()
-                        .OfType<TextBlock>()
-                        .FirstOrDefault(tb => Grid.GetColumn(tb) == 0); // Column 0 should be the icon
-
-                    if (iconTextBlock != null)
-                    {
-                        iconTextBlock.FontSize = isExpanded ? 14 : 20;
-                        iconTextBlock.TextAlignment = isExpanded ? TextAlignment.Start : TextAlignment.Center;
-                        iconTextBlock.Margin = isExpanded ? _originalIconMargin : new Thickness(0);
-                    }
-                }
-            }
-        }
     }
 
     /// <summary>

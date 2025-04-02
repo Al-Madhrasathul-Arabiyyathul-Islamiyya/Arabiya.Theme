@@ -19,15 +19,18 @@
     <!--  DataTemplate DataType is NavigationItem  -->
     <DataTemplate x:Key="NavItemTemplate" x:DataType="navmodels:NavigationItem">
       <StackPanel ToolTip.Tip="{Binding Label}">
-        <Grid Height="40" ColumnDefinitions="Auto,*,Auto">
+        <Grid
+          x:Name="NavItemGrid"
+          Height="40"
+          Classes="NavItemGrid"
+          ColumnDefinitions="Auto,*,Auto">
 
           <!--  Icon: Visible based on SideNav's ShowIcons property  -->
           <TextBlock
             Grid.Column="0"
-            Width="20"
-            Margin="12,0,8,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Classes="IconBlock"
             FontFamily="{StaticResource PhosphorFontFamily}"
             IsVisible="{Binding $parent[local:SideNav].ShowIcons}"
             Text="{Binding Icon}" />
@@ -79,6 +82,50 @@
     </DataTemplate>
   </UserControl.Resources>
 
+  <!--  In SideNav.axaml  -->
+  <UserControl.Styles>
+    <!--  Styles that apply when navigation is expanded  -->
+    <Style Selector="local|SideNav[ShowLabels=True] Border#HeaderBorder">
+      <Setter Property="Padding" Value="16" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=True] ListBox#NavItemsListBox">
+      <Setter Property="Padding" Value="8,0" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=True] Grid.NavItemGrid">
+      <Setter Property="HorizontalAlignment" Value="Stretch" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=True] TextBlock.IconBlock">
+      <Setter Property="Margin" Value="12,0,8,0" />
+      <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <!--  Styles that apply when navigation is collapsed  -->
+    <Style Selector="local|SideNav[ShowLabels=False] avaglass|GlassmorphicPanel#GlassPanel">
+      <Setter Property="Padding" Value="4,0" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=False] Border#HeaderBorder">
+      <Setter Property="Padding" Value="6" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=False] ListBox#NavItemsListBox">
+      <Setter Property="Padding" Value="0" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=False] Grid.NavItemGrid">
+      <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <Style Selector="local|SideNav[ShowLabels=False] TextBlock.IconBlock">
+      <Setter Property="Margin" Value="0" />
+      <Setter Property="FontSize" Value="20" />
+      <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+  </UserControl.Styles>
+
   <!--  Main Grid  -->
   <Grid>
     <avaglass:GlassmorphicPanel x:Name="GlassPanel">
@@ -88,7 +135,6 @@
         <Border
           x:Name="HeaderBorder"
           Grid.Row="0"
-          Padding="16"
           BorderBrush="#20FFFFFF"
           BorderThickness="0,0,0,1">
           <Border.IsVisible>
@@ -135,7 +181,6 @@
           x:Name="NavItemsListBox"
           Grid.Row="1"
           Margin="0,8"
-          Padding="8,0"
           x:DataType="navmodels:NavigationItem"
           Background="Transparent"
           BorderThickness="0"
