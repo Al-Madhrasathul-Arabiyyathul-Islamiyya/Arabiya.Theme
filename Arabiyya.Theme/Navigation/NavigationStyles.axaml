@@ -5,8 +5,9 @@
   xmlns:converters="clr-namespace:Arabiyya.Theme.Navigation.Converters;assembly=Arabiyya.Theme">
 
   <!--  Converters  -->
-  <converters:ExpandIconConverter x:Key="ExpandIconConverter" />
+  <converters:AnyTrueConverter x:Key="AnyTrueConverter" />
   <converters:BoolToThemeClassConverter x:Key="BoolToThemeClassConverter" />
+  <converters:ExpandIconConverter x:Key="ExpandIconConverter" />
 
   <!--  SideNav styles  -->
   <Style x:Key="GlassPanel" Selector="avaglass|GlassmorphicPanel.GlassPanel">

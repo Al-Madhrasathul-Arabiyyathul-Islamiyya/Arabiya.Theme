@@ -29,7 +29,7 @@ public partial class App : Application
             // More info: https://docs.avaloniaui.net/docs/guides/development-guides/data-validation#manage-validationplugins
             DisableAvaloniaDataAnnotationValidation();
 
-            var serviceProvider = ConfigureServices();
+            _ = ConfigureServices();
 
             desktop.MainWindow = new MainWindow();
 
@@ -87,7 +87,9 @@ public partial class App : Application
 
         // Diagnostic check
         var navService = serviceProvider.GetService<INavigationService>();
-        Debug.WriteLine($"Navigation service registered: {navService != null}");
+        var viewFactory = serviceProvider.GetService<IViewFactory>();
+        System.Diagnostics.Debug.WriteLine($"Navigation service type: {navService?.GetType().Name}");
+        System.Diagnostics.Debug.WriteLine($"View factory type: {viewFactory?.GetType().Name}");
 
         // Store the service provider
         this.Resources.Add("ServiceProvider", serviceProvider);

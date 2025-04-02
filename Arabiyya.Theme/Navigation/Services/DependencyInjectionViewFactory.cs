@@ -1,4 +1,6 @@
-﻿namespace Arabiyya.Theme.Navigation.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace Arabiyya.Theme.Navigation.Services;
 
 /// <summary>
 /// IViewFactory implementation that resolves views from a dependency injection container
@@ -22,10 +24,12 @@ public class DependencyInjectionViewFactory : IViewFactory
     /// <param name="viewId">The unique identifier for the view</param>
     /// <param name="viewType">The type of view to create</param>
     /// <returns>The view instance</returns>
-    public object GetView(string viewId, Type viewType) =>
+    public object GetView(string viewId, Type viewType)
+    {
+        System.Diagnostics.Debug.WriteLine($"DependencyInjectionViewFactory.GetView called for {viewType.Name}");
+        return _serviceProvider.GetService(viewType) ?? Activator.CreateInstance(viewType)!;
+    }
         // Try to resolve the view from the service provider
-        _serviceProvider.GetService(viewType) ??
-               Activator.CreateInstance(viewType);
 
     /// <summary>
     /// Creates or retrieves a view instance using a factory function

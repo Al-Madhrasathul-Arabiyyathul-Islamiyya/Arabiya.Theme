@@ -21,8 +21,7 @@ public partial class InputsView : UserControl
     {
         base.OnLoaded(e);
 
-        // Get the view model and call its OnLoaded method
-        if (DataContext is InputsViewModel viewModel)
+        if (DataContext is InputsViewModel)
         {
             _ = InputsViewModel.OnLoaded(this);
         }

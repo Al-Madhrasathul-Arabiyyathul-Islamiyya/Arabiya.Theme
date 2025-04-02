@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" />
 
     <PackageReference Include="CommunityToolkit.Mvvm" />
 
@@ -45,7 +46,6 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Navigation\Controls" />
-    <Folder Include="Navigation\Converters" />
     <Folder Include="Navigation\Models" />
     <Folder Include="Navigation\Services" />
     <Folder Include="Styles\Components\Buttons\" />

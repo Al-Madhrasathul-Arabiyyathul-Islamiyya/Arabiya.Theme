@@ -1,4 +1,6 @@
-﻿namespace Arabiyya.Theme.Navigation.Services;
+﻿using Avalonia.Controls;
+
+namespace Arabiyya.Theme.Navigation.Services;
 /// <summary>
 /// Default implementation of IViewFactory that creates and caches view instances
 /// </summary>
@@ -24,6 +26,7 @@ public class DefaultViewFactory : IViewFactory
     /// <returns>The view instance</returns>
     public object GetView(string viewId, Type viewType)
     {
+        System.Diagnostics.Debug.WriteLine($"DefaultViewFactory.GetView called for {viewType.Name}");
         if (_cacheViews && _viewCache.TryGetValue(viewId, out object? cachedView))
         {
             return cachedView;
@@ -74,6 +77,12 @@ public class DefaultViewFactory : IViewFactory
             if (view is IDisposable disposable)
             {
                 disposable.Dispose();
+            }
+
+            // Handle Avalonia-specific cleanup
+            if (view is Control control)
+            {
+                control.DataContext = null;
             }
 
             _viewCache.Remove(viewId);

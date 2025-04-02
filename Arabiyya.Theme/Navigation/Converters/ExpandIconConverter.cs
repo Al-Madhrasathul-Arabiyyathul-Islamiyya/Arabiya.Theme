@@ -17,8 +17,8 @@ public class ExpandIconConverter : IValueConverter
     /// Converts a boolean to an icon
     /// </summary>
     public object Convert(object? value, Type? targetType, object? parameter, CultureInfo culture) => value is bool expanded && expanded
-            ? "\uE335" // Collapse icon (left arrow)
-            : "\uE336"; // Expand icon (right arrow)
+            ? "\uE1CE" // Collapse icon (left arrow)
+            : "\uE1D0"; // Expand icon (right arrow)
 
     /// <summary>
     /// Not implemented

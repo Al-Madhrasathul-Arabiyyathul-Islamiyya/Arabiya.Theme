@@ -2,7 +2,6 @@
   x:Class="Arabiyya.Theme.Demo.Views.MainWindow"
   xmlns="https://github.com/avaloniaui"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:avaglass="using:AvaGlass.Controls"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:nav="using:Arabiyya.Theme.Navigation.Controls"
@@ -13,7 +12,6 @@
   Height="768"
   d:DesignHeight="768"
   d:DesignWidth="1366"
-  x:CompileBindings="False"
   x:DataType="vm:MainWindowViewModel"
   Background="{DynamicResource Gradient.Theme.Background}"
   CornerRadius="16"
@@ -23,22 +21,39 @@
   WindowStartupLocation="CenterScreen"
   mc:Ignorable="d">
 
-  <Grid ColumnDefinitions="10,220,*,10" RowDefinitions="10,*,10">
+  <Design.DataContext>
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+
+  <Grid ColumnDefinitions="10,Auto,*,10" RowDefinitions="10,*,10">
+
+    <!--  Use Auto for SideNav width  -->
     <!--  Sidebar Navigation  -->
-    <nav:SideNav
+    <Border
       Grid.Row="1"
       Grid.Column="1"
-      DataContext="{Binding NavigationService.Config}"
-      ShowIcons="True"
-      ShowLabels="True" />
+      Background="Transparent">
+      <Grid RowDefinitions="*,Auto">
+        <nav:SideNav
+          VerticalAlignment="Stretch"
+          Config="{Binding NavigationService.Config}"
+          NavigationService="{Binding NavigationService}"
+          ShowIcons="True"
+          ShowLabels="True" />
+        <Panel Grid.Row="1" Margin="10">
+          <sw:ThemeSwitcher VariantType="IconButton" />
+        </Panel>
+      </Grid>
+    </Border>
 
     <!--  Content Area  -->
     <nav:NavigationHost
       Grid.Row="1"
       Grid.Column="2"
-      Margin="0,20"
-      Content="{Binding CurrentContent}"
+      Margin="4,20,0,0"
       NavigationService="{Binding NavigationService}"
       TransitionType="fade" />
+
   </Grid>
 </Window>

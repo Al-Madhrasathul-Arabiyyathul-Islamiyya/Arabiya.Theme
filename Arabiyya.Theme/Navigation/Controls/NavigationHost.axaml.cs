@@ -3,108 +3,127 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Arabiyya.Theme.Navigation.Controls
+namespace Arabiyya.Theme.Navigation.Controls;
+
+public partial class NavigationHost : ContentControl
 {
-    public partial class NavigationHost : ContentControl
+    public static readonly StyledProperty<INavigationService> NavigationServiceProperty =
+        AvaloniaProperty.Register<NavigationHost, INavigationService>(nameof(NavigationService));
+
+    public static readonly StyledProperty<string> TransitionTypeProperty =
+        AvaloniaProperty.Register<NavigationHost, string>(nameof(TransitionType), "fade");
+    private INavigationService _navigationService;
+
+    /// <summary>
+    /// Gets or sets the navigation service
+    /// </summary>
+    public INavigationService NavigationService
     {
-        public static readonly StyledProperty<INavigationService> NavigationServiceProperty =
-            AvaloniaProperty.Register<NavigationHost, INavigationService>(nameof(NavigationService));
-
-        public static readonly StyledProperty<string> TransitionTypeProperty =
-            AvaloniaProperty.Register<NavigationHost, string>(nameof(TransitionType), "fade");
-
-        /// <summary>
-        /// Gets or sets the navigation service
-        /// </summary>
-        public INavigationService NavigationService
+        get => GetValue(NavigationServiceProperty);
+        set
         {
-            get => GetValue(NavigationServiceProperty);
-            set
-            {
-                SetValue(NavigationServiceProperty, value);
-                OnNavigationServiceChanged(value);
-            }
+            SetValue(NavigationServiceProperty, value);
+            OnNavigationServiceChanged(value);
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the type of transition to use
+    /// </summary>
+    public string TransitionType
+    {
+        get => GetValue(TransitionTypeProperty);
+        set
+        {
+            SetValue(TransitionTypeProperty, value);
+            OnTransitionTypeChanged(value);
+        }
+    }
+
+    public NavigationHost()
+    {
+        InitializeComponent();
+
+        // Set initial classes
+        var presenter = this.FindControl<ContentControl>("ContentPresenter");
+        presenter?.Classes.Add(TransitionType);
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
+
+    private void OnNavigationServiceChanged(INavigationService navigationService)
+    {
+        // Unsubscribe from old service
+        if (_navigationService != null)
+        {
+            _navigationService.Navigated -= OnNavigated;
         }
 
-        /// <summary>
-        /// Gets or sets the type of transition to use
-        /// </summary>
-        public string TransitionType
+        _navigationService = navigationService;
+
+        if (navigationService != null)
         {
-            get => GetValue(TransitionTypeProperty);
-            set
+            // Set initial content
+            Content = navigationService.CurrentContent;
+
+            // Listen for changes
+            navigationService.Navigated += OnNavigated;
+        }
+    }
+
+    private void OnNavigated(object sender, NavigatedEventArgs e)
+    {
+        // Update the content
+        Content = e.Content;
+
+        // Apply transition
+        var presenter = this.FindControl<ContentControl>("ContentPresenter");
+        if (presenter != null && !string.IsNullOrEmpty(TransitionType))
+        {
+            presenter.Classes.Clear();
+            presenter.Classes.Add(TransitionType);
+        }
+    }
+
+    private void OnTransitionTypeChanged(string transitionType)
+    {
+        var presenter = this.FindControl<ContentControl>("ContentPresenter");
+        if (presenter != null)
+        {
+            presenter.Classes.Clear();
+
+            if (!string.IsNullOrEmpty(transitionType))
             {
-                SetValue(TransitionTypeProperty, value);
-                OnTransitionTypeChanged(value);
+                presenter.Classes.Add(transitionType);
             }
         }
+    }
 
-        public NavigationHost()
+    protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
+    {
+        base.OnPropertyChanged(change);
+
+        if (change.Property == NavigationServiceProperty)
         {
-            InitializeComponent();
-
-            // Set initial classes
-            var presenter = this.FindControl<ContentControl>("ContentPresenter");
-            presenter?.Classes.Add(TransitionType);
+            OnNavigationServiceChanged((INavigationService)change.NewValue);
         }
-
-        private void InitializeComponent()
+        else if (change.Property == TransitionTypeProperty)
         {
-            AvaloniaXamlLoader.Load(this);
+            OnTransitionTypeChanged((string)change.NewValue);
         }
+    }
 
-        private void OnNavigationServiceChanged(INavigationService navigationService)
+    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnDetachedFromVisualTree(e);
+
+        if (_navigationService != null)
         {
-            if (navigationService != null)
-            {
-                // Set initial content
-                Content = navigationService.CurrentContent;
-
-                // Listen for changes
-                navigationService.Navigated += OnNavigated;
-            }
-        }
-
-        private void OnNavigated(object sender, NavigatedEventArgs e)
-        {
-            // Update the content
-            Content = e.Content;
-
-            // Apply transition
-            var presenter = this.FindControl<ContentControl>("ContentPresenter");
-            if (presenter != null && !string.IsNullOrEmpty(TransitionType))
-            {
-                presenter.Classes.Clear();
-                presenter.Classes.Add(TransitionType);
-            }
-        }
-
-        private void OnTransitionTypeChanged(string transitionType)
-        {
-            var presenter = this.FindControl<ContentControl>("ContentPresenter");
-            if (presenter != null)
-            {
-                presenter.Classes.Clear();
-
-                if (!string.IsNullOrEmpty(transitionType))
-                {
-                    presenter.Classes.Add(transitionType);
-                }
-            }
-        }
-
-        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
-        {
-            base.OnPropertyChanged(change);
-
-            if (change.Property == NavigationServiceProperty)
-            {
-                OnNavigationServiceChanged((INavigationService)change.NewValue);
-            }
-            else if (change.Property == TransitionTypeProperty)
-            {
-                OnTransitionTypeChanged((string)change.NewValue);
-            }
+            _navigationService.Navigated -= OnNavigated;
+            _navigationService = null;
         }
     }
 }

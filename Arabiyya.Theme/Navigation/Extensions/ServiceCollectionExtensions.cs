@@ -1,4 +1,5 @@
 ﻿using Arabiyya.Theme.Navigation.Services;
+using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -32,11 +33,18 @@ public static class ServiceCollectionExtensions
     /// <returns>The service collection</returns>
     public static IServiceCollection AddNavigationWithDI(this IServiceCollection services)
     {
-        // Register the DI view factory
-        services.AddSingleton<IViewFactory, DependencyInjectionViewFactory>();
+        services.AddSingleton<IMessenger>(StrongReferenceMessenger.Default);
 
-        // Register the navigation service
-        services.AddSingleton<INavigationService, NavigationService>();
+        services.AddSingleton<IViewFactory>(sp => new DependencyInjectionViewFactory(sp));
+
+        services.AddSingleton<INavigationService>(sp =>
+        {
+            var viewFactory = sp.GetRequiredService<IViewFactory>();
+            var messenger = sp.GetRequiredService<IMessenger>();
+
+            System.Diagnostics.Debug.WriteLine($"Creating NavigationService with {viewFactory.GetType().Name}");
+            return new NavigationService(viewFactory, messenger);
+        });
 
         return services;
     }

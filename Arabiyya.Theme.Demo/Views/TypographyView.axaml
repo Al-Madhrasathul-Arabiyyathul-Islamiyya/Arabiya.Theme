@@ -14,691 +14,693 @@
     <vm:TypographyViewModel />
   </Design.DataContext>
 
-  <StackPanel Margin="20" Spacing="30">
-    <TextBlock Classes="h2" Text="Typography System" />
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="30">
+      <TextBlock Classes="h2" Text="Typography System" />
 
-    <!--  Introduction  -->
-    <Border
-      Padding="15"
-      Background="{DynamicResource Brush.Surface}"
-      BorderBrush="{DynamicResource Brush.Divider}"
-      BorderThickness="1"
-      CornerRadius="8">
-      <StackPanel Spacing="10">
-        <TextBlock TextWrapping="Wrap">
-          This theme uses Montserrat, a clean and modern sans-serif typeface that offers excellent
-          readability across different screen sizes and resolutions. The typography system is organized
-          into a hierarchy of styles to create visual order and improve the user experience.
-        </TextBlock>
-      </StackPanel>
-    </Border>
-
-    <!--  Heading Showcase  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Headings and Text Styles" />
-
-      <Border
-        Padding="20"
-        Background="{DynamicResource Brush.Surface}"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <Grid ColumnDefinitions="*,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
-          <!--  Headers  -->
-          <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            Margin="0,0,0,10"
-            FontWeight="Bold"
-            Text="Style" />
-          <TextBlock
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="0,0,20,10"
-            FontWeight="Bold"
-            Text="Size" />
-          <TextBlock
-            Grid.Row="0"
-            Grid.Column="2"
-            Margin="0,0,0,10"
-            FontWeight="Bold"
-            Text="Weight" />
-
-          <!--  H1  -->
-          <TextBlock
-            Grid.Row="1"
-            Grid.Column="0"
-            Classes="h1"
-            Text="Heading 1" />
-          <TextBlock
-            Grid.Row="1"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="32px" />
-          <TextBlock
-            Grid.Row="1"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Bold (700)" />
-
-          <!--  H2  -->
-          <TextBlock
-            Grid.Row="2"
-            Grid.Column="0"
-            Classes="h2"
-            Text="Heading 2" />
-          <TextBlock
-            Grid.Row="2"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="28px" />
-          <TextBlock
-            Grid.Row="2"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Bold (700)" />
-
-          <!--  H3  -->
-          <TextBlock
-            Grid.Row="3"
-            Grid.Column="0"
-            Classes="h3"
-            Text="Heading 3" />
-          <TextBlock
-            Grid.Row="3"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="24px" />
-          <TextBlock
-            Grid.Row="3"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Bold (700)" />
-
-          <!--  H4  -->
-          <TextBlock
-            Grid.Row="4"
-            Grid.Column="0"
-            Classes="h4"
-            Text="Heading 4" />
-          <TextBlock
-            Grid.Row="4"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="20px" />
-          <TextBlock
-            Grid.Row="4"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="SemiBold (600)" />
-
-          <!--  H5  -->
-          <TextBlock
-            Grid.Row="5"
-            Grid.Column="0"
-            Classes="h5"
-            Text="Heading 5" />
-          <TextBlock
-            Grid.Row="5"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="18px" />
-          <TextBlock
-            Grid.Row="5"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Medium (500)" />
-
-          <!--  H6  -->
-          <TextBlock
-            Grid.Row="6"
-            Grid.Column="0"
-            Classes="h6"
-            Text="Heading 6" />
-          <TextBlock
-            Grid.Row="6"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="16px" />
-          <TextBlock
-            Grid.Row="6"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Medium (500)" />
-
-          <!--  Body  -->
-          <TextBlock
-            Grid.Row="7"
-            Grid.Column="0"
-            Classes="body"
-            Text="Body text"
-            TextWrapping="Wrap" />
-          <TextBlock
-            Grid.Row="7"
-            Grid.Column="1"
-            Margin="0,0,20,0"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="14px" />
-          <TextBlock
-            Grid.Row="7"
-            Grid.Column="2"
-            VerticalAlignment="Center"
-            FontFamily="Consolas"
-            Text="Regular (400)" />
-        </Grid>
-      </Border>
-    </StackPanel>
-
-    <!--  Text Variants Showcase  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Text Style Variants" />
-
-      <Grid
-        Margin="0,0,0,15"
-        ColumnDefinitions="*,*"
-        RowDefinitions="Auto,Auto,Auto">
-        <!--  Regular  -->
-        <Border
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,10"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Regular Text" />
-            <TextBlock Text="Standard body text with regular weight" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Font weight: 400" />
-          </StackPanel>
-        </Border>
-
-        <!--  Bold  -->
-        <Border
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,10"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Bold Text" />
-            <TextBlock FontWeight="Bold" Text="Body text with bold weight for emphasis" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Font weight: 700" />
-          </StackPanel>
-        </Border>
-
-        <!--  Italic  -->
-        <Border
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,0,10,10"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Italic Text" />
-            <TextBlock Classes="italic" Text="Text with italic styling for subtle emphasis" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Font style: Italic" />
-          </StackPanel>
-        </Border>
-
-        <!--  Bold Italic  -->
-        <Border
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,0,0,10"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Bold Italic Text" />
-            <TextBlock Classes="bolditalic" Text="Text with bold italic styling for strong emphasis" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Font weight: 700, Style: Italic" />
-          </StackPanel>
-        </Border>
-
-        <!--  Caption  -->
-        <Border
-          Grid.Row="2"
-          Grid.Column="0"
-          Margin="0,0,10,0"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Caption Text" />
-            <TextBlock Classes="caption" Text="Smaller text used for supplementary information and captions" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Font size: 10px" />
-          </StackPanel>
-        </Border>
-
-        <!--  Secondary Text  -->
-        <Border
-          Grid.Row="2"
-          Grid.Column="1"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Secondary Text" />
-            <TextBlock Foreground="{DynamicResource Brush.Text.Secondary}" Text="Less prominent text with secondary color" />
-            <TextBlock
-              Margin="0,10,0,0"
-              FontFamily="Consolas"
-              FontSize="12"
-              Text="Color: TextSecondaryBrush" />
-          </StackPanel>
-        </Border>
-      </Grid>
-
-      <!--  Typography in context  -->
-      <Border
-        Padding="20"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <StackPanel Spacing="15">
-          <TextBlock Classes="h4" Text="Typography in Context" />
-
-          <!--  Glass Panel Example  -->
-          <avaglass:GlassmorphicPanel
-            MinHeight="140"
-            Margin="0,0,0,10"
-            Classes="GlassPanel">
-            <StackPanel Margin="15">
-              <TextBlock Classes="h4" Text="Glass Panel Typography" />
-              <TextBlock TextWrapping="Wrap">
-                Typography on glass panels should maintain good contrast.
-                For light themes, use regular text colors on this slightly translucent surface.
-              </TextBlock>
-              <Button
-                Margin="0,10,0,0"
-                Classes="Glass"
-                Content="Glass Button" />
-            </StackPanel>
-          </avaglass:GlassmorphicPanel>
-
-          <!--  Acrylic Panel Example  -->
-          <avaglass:GlassmorphicPanel MinHeight="140" Classes="AcrylicPanel">
-            <StackPanel Margin="15">
-              <TextBlock
-                Classes="h4"
-                Foreground="White"
-                Text="Acrylic Panel Typography" />
-              <TextBlock Foreground="White" TextWrapping="Wrap">
-                For dark or acrylic panels, use light text colors to ensure readability
-                against the darker background.
-              </TextBlock>
-              <Button
-                Margin="0,10,0,0"
-                Classes="Glass"
-                Content="Glass Button" />
-            </StackPanel>
-          </avaglass:GlassmorphicPanel>
-        </StackPanel>
-      </Border>
-    </StackPanel>
-
-    <!--  Font Weight Showcase  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Font Weights" />
-
-      <Border
-        Padding="20"
-        Background="{DynamicResource Brush.Surface}"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <Grid
-          Margin="0,0,0,0"
-          ColumnDefinitions="150,*"
-          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
-          <!--  Headers  -->
-          <TextBlock
-            Grid.Row="0"
-            Grid.Column="0"
-            Margin="0,0,0,10"
-            FontWeight="Bold"
-            Text="Weight Name" />
-          <TextBlock
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="0,0,0,10"
-            FontWeight="Bold"
-            Text="Sample Text" />
-
-          <!--  Thin  -->
-          <TextBlock
-            Grid.Row="1"
-            Grid.Column="0"
-            Text="Thin (100)" />
-          <TextBlock
-            Grid.Row="1"
-            Grid.Column="1"
-            FontFamily="{DynamicResource MontserratFontFamily}"
-            FontWeight="Thin"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  Light  -->
-          <TextBlock
-            Grid.Row="2"
-            Grid.Column="0"
-            Text="Light (300)" />
-          <TextBlock
-            Grid.Row="2"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="Light"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  Regular  -->
-          <TextBlock
-            Grid.Row="3"
-            Grid.Column="0"
-            Text="Regular (400)" />
-          <TextBlock
-            Grid.Row="3"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="Regular"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  Medium  -->
-          <TextBlock
-            Grid.Row="4"
-            Grid.Column="0"
-            Text="Medium (500)" />
-          <TextBlock
-            Grid.Row="4"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="Medium"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  SemiBold  -->
-          <TextBlock
-            Grid.Row="5"
-            Grid.Column="0"
-            Text="SemiBold (600)" />
-          <TextBlock
-            Grid.Row="5"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="SemiBold"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  Bold  -->
-          <TextBlock
-            Grid.Row="6"
-            Grid.Column="0"
-            Text="Bold (700)" />
-          <TextBlock
-            Grid.Row="6"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="Bold"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  ExtraBold  -->
-          <TextBlock
-            Grid.Row="7"
-            Grid.Column="0"
-            Text="ExtraBold (800)" />
-          <TextBlock
-            Grid.Row="7"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="ExtraBold"
-            Text="The quick brown fox jumps over the lazy dog." />
-
-          <!--  Black  -->
-          <TextBlock
-            Grid.Row="8"
-            Grid.Column="0"
-            Text="Black (900)" />
-          <TextBlock
-            Grid.Row="8"
-            Grid.Column="1"
-            FontFamily="{StaticResource MontserratFontFamily}"
-            FontWeight="Black"
-            Text="The quick brown fox jumps over the lazy dog." />
-        </Grid>
-      </Border>
-    </StackPanel>
-
-    <!--  Line Height & Spacing Demo  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Line Height &amp; Spacing" />
-
-      <Grid
-        Margin="0,0,0,15"
-        ColumnDefinitions="*,*"
-        RowDefinitions="Auto">
-        <!--  Default Line Height  -->
-        <Border
-          Grid.Column="0"
-          Margin="0,0,10,0"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Default Line Height (1.25)" />
-            <TextBlock Classes="line-default">
-              This is a paragraph with the default line height.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum facilisis, dui eget finibus varius, enim dui
-              ultricies ex, eu efficitur justo ligula at nisi.
-            </TextBlock>
-          </StackPanel>
-        </Border>
-
-        <!--  Comfortable Line Height  -->
-        <Border
-          Grid.Column="1"
-          Padding="15"
-          Background="{DynamicResource Brush.Surface}"
-          BorderBrush="{DynamicResource Brush.Divider}"
-          BorderThickness="1"
-          CornerRadius="8">
-          <StackPanel>
-            <TextBlock FontWeight="SemiBold" Text="Comfortable Line Height (1.5)" />
-            <TextBlock Classes="line-comfortable">
-              This is a paragraph with a more comfortable line height.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum facilisis, dui eget finibus varius, enim dui
-              ultricies ex, eu efficitur justo ligula at nisi.
-            </TextBlock>
-          </StackPanel>
-        </Border>
-      </Grid>
-
-      <!--  Paragraph Spacing  -->
+      <!--  Introduction  -->
       <Border
         Padding="15"
         Background="{DynamicResource Brush.Surface}"
         BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
-        <StackPanel Spacing="16">
-          <TextBlock FontWeight="SemiBold" Text="Paragraph Spacing" />
+        <StackPanel Spacing="10">
           <TextBlock TextWrapping="Wrap">
-            This is the first paragraph with default text.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Duis rhoncus ex id eros efficitur efficitur.
-          </TextBlock>
-          <TextBlock TextWrapping="Wrap">
-            This is the second paragraph with 16px spacing between paragraphs.
-            Proper spacing improves readability and creates a visual hierarchy.
-            Vestibulum facilisis, dui eget finibus varius.
-          </TextBlock>
-          <TextBlock TextWrapping="Wrap">
-            This is the third paragraph. Spacing between paragraphs should be
-            consistent throughout the application to maintain visual rhythm.
+            This theme uses Montserrat, a clean and modern sans-serif typeface that offers excellent
+            readability across different screen sizes and resolutions. The typography system is organized
+            into a hierarchy of styles to create visual order and improve the user experience.
           </TextBlock>
         </StackPanel>
       </Border>
-    </StackPanel>
 
-    <!--  Typography Guidelines  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Typography Guidelines" />
+      <!--  Heading Showcase  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Headings and Text Styles" />
 
-      <Border
-        Padding="20"
-        Background="{DynamicResource Brush.Surface.Elevated1}"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <StackPanel Spacing="15">
-          <TextBlock Classes="h5" Text="Usage Recommendations" />
-          <Grid ColumnDefinitions="150,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <Grid ColumnDefinitions="*,Auto,Auto" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+            <!--  Headers  -->
             <TextBlock
               Grid.Row="0"
               Grid.Column="0"
+              Margin="0,0,0,10"
+              FontWeight="Bold"
+              Text="Style" />
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="1"
+              Margin="0,0,20,10"
+              FontWeight="Bold"
+              Text="Size" />
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="2"
+              Margin="0,0,0,10"
+              FontWeight="Bold"
+              Text="Weight" />
+
+            <!--  H1  -->
+            <TextBlock
+              Grid.Row="1"
+              Grid.Column="0"
+              Classes="h1"
               Text="Heading 1" />
             <TextBlock
-              Grid.Row="0"
+              Grid.Row="1"
               Grid.Column="1"
-              Text="Main page titles, hero section headers" />
-
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="32px" />
             <TextBlock
               Grid.Row="1"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Bold (700)" />
+
+            <!--  H2  -->
+            <TextBlock
+              Grid.Row="2"
               Grid.Column="0"
+              Classes="h2"
               Text="Heading 2" />
             <TextBlock
-              Grid.Row="1"
+              Grid.Row="2"
               Grid.Column="1"
-              Text="Section titles, major content dividers" />
-
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="28px" />
             <TextBlock
               Grid.Row="2"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Bold (700)" />
+
+            <!--  H3  -->
+            <TextBlock
+              Grid.Row="3"
               Grid.Column="0"
+              Classes="h3"
               Text="Heading 3" />
             <TextBlock
+              Grid.Row="3"
+              Grid.Column="1"
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="24px" />
+            <TextBlock
+              Grid.Row="3"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Bold (700)" />
+
+            <!--  H4  -->
+            <TextBlock
+              Grid.Row="4"
+              Grid.Column="0"
+              Classes="h4"
+              Text="Heading 4" />
+            <TextBlock
+              Grid.Row="4"
+              Grid.Column="1"
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="20px" />
+            <TextBlock
+              Grid.Row="4"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="SemiBold (600)" />
+
+            <!--  H5  -->
+            <TextBlock
+              Grid.Row="5"
+              Grid.Column="0"
+              Classes="h5"
+              Text="Heading 5" />
+            <TextBlock
+              Grid.Row="5"
+              Grid.Column="1"
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="18px" />
+            <TextBlock
+              Grid.Row="5"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Medium (500)" />
+
+            <!--  H6  -->
+            <TextBlock
+              Grid.Row="6"
+              Grid.Column="0"
+              Classes="h6"
+              Text="Heading 6" />
+            <TextBlock
+              Grid.Row="6"
+              Grid.Column="1"
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="16px" />
+            <TextBlock
+              Grid.Row="6"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Medium (500)" />
+
+            <!--  Body  -->
+            <TextBlock
+              Grid.Row="7"
+              Grid.Column="0"
+              Classes="body"
+              Text="Body text"
+              TextWrapping="Wrap" />
+            <TextBlock
+              Grid.Row="7"
+              Grid.Column="1"
+              Margin="0,0,20,0"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="14px" />
+            <TextBlock
+              Grid.Row="7"
+              Grid.Column="2"
+              VerticalAlignment="Center"
+              FontFamily="Consolas"
+              Text="Regular (400)" />
+          </Grid>
+        </Border>
+      </StackPanel>
+
+      <!--  Text Variants Showcase  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Text Style Variants" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto,Auto,Auto">
+          <!--  Regular  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,10"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Regular Text" />
+              <TextBlock Text="Standard body text with regular weight" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Font weight: 400" />
+            </StackPanel>
+          </Border>
+
+          <!--  Bold  -->
+          <Border
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,10"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Bold Text" />
+              <TextBlock FontWeight="Bold" Text="Body text with bold weight for emphasis" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Font weight: 700" />
+            </StackPanel>
+          </Border>
+
+          <!--  Italic  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,10,10"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Italic Text" />
+              <TextBlock Classes="italic" Text="Text with italic styling for subtle emphasis" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Font style: Italic" />
+            </StackPanel>
+          </Border>
+
+          <!--  Bold Italic  -->
+          <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,0,10"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Bold Italic Text" />
+              <TextBlock Classes="bolditalic" Text="Text with bold italic styling for strong emphasis" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Font weight: 700, Style: Italic" />
+            </StackPanel>
+          </Border>
+
+          <!--  Caption  -->
+          <Border
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,0,10,0"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Caption Text" />
+              <TextBlock Classes="caption" Text="Smaller text used for supplementary information and captions" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Font size: 10px" />
+            </StackPanel>
+          </Border>
+
+          <!--  Secondary Text  -->
+          <Border
+            Grid.Row="2"
+            Grid.Column="1"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Secondary Text" />
+              <TextBlock Foreground="{DynamicResource Brush.Text.Secondary}" Text="Less prominent text with secondary color" />
+              <TextBlock
+                Margin="0,10,0,0"
+                FontFamily="Consolas"
+                FontSize="12"
+                Text="Color: TextSecondaryBrush" />
+            </StackPanel>
+          </Border>
+        </Grid>
+
+        <!--  Typography in context  -->
+        <Border
+          Padding="20"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h4" Text="Typography in Context" />
+
+            <!--  Glass Panel Example  -->
+            <avaglass:GlassmorphicPanel
+              MinHeight="140"
+              Margin="0,0,0,10"
+              Classes="GlassPanel">
+              <StackPanel Margin="15">
+                <TextBlock Classes="h4" Text="Glass Panel Typography" />
+                <TextBlock TextWrapping="Wrap">
+                  Typography on glass panels should maintain good contrast.
+                  For light themes, use regular text colors on this slightly translucent surface.
+                </TextBlock>
+                <Button
+                  Margin="0,10,0,0"
+                  Classes="Glass"
+                  Content="Glass Button" />
+              </StackPanel>
+            </avaglass:GlassmorphicPanel>
+
+            <!--  Acrylic Panel Example  -->
+            <avaglass:GlassmorphicPanel MinHeight="140" Classes="AcrylicPanel">
+              <StackPanel Margin="15">
+                <TextBlock
+                  Classes="h4"
+                  Foreground="White"
+                  Text="Acrylic Panel Typography" />
+                <TextBlock Foreground="White" TextWrapping="Wrap">
+                  For dark or acrylic panels, use light text colors to ensure readability
+                  against the darker background.
+                </TextBlock>
+                <Button
+                  Margin="0,10,0,0"
+                  Classes="Glass"
+                  Content="Glass Button" />
+              </StackPanel>
+            </avaglass:GlassmorphicPanel>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+
+      <!--  Font Weight Showcase  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Font Weights" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <Grid
+            Margin="0,0,0,0"
+            ColumnDefinitions="150,*"
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+            <!--  Headers  -->
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="0"
+              Margin="0,0,0,10"
+              FontWeight="Bold"
+              Text="Weight Name" />
+            <TextBlock
+              Grid.Row="0"
+              Grid.Column="1"
+              Margin="0,0,0,10"
+              FontWeight="Bold"
+              Text="Sample Text" />
+
+            <!--  Thin  -->
+            <TextBlock
+              Grid.Row="1"
+              Grid.Column="0"
+              Text="Thin (100)" />
+            <TextBlock
+              Grid.Row="1"
+              Grid.Column="1"
+              FontFamily="{DynamicResource MontserratFontFamily}"
+              FontWeight="Thin"
+              Text="The quick brown fox jumps over the lazy dog." />
+
+            <!--  Light  -->
+            <TextBlock
+              Grid.Row="2"
+              Grid.Column="0"
+              Text="Light (300)" />
+            <TextBlock
               Grid.Row="2"
               Grid.Column="1"
-              Text="Subsection titles, card headers" />
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="Light"
+              Text="The quick brown fox jumps over the lazy dog." />
 
+            <!--  Regular  -->
             <TextBlock
               Grid.Row="3"
               Grid.Column="0"
-              Text="Heading 4-6" />
+              Text="Regular (400)" />
             <TextBlock
               Grid.Row="3"
               Grid.Column="1"
-              Text="Minor section titles, component labels" />
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="Regular"
+              Text="The quick brown fox jumps over the lazy dog." />
 
+            <!--  Medium  -->
             <TextBlock
               Grid.Row="4"
               Grid.Column="0"
-              Text="Body" />
+              Text="Medium (500)" />
             <TextBlock
               Grid.Row="4"
               Grid.Column="1"
-              Text="Main content text, descriptions, paragraphs" />
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="Medium"
+              Text="The quick brown fox jumps over the lazy dog." />
 
+            <!--  SemiBold  -->
             <TextBlock
               Grid.Row="5"
               Grid.Column="0"
-              Text="Caption" />
+              Text="SemiBold (600)" />
             <TextBlock
               Grid.Row="5"
               Grid.Column="1"
-              Text="Supporting text, timestamps, metadata" />
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="SemiBold"
+              Text="The quick brown fox jumps over the lazy dog." />
+
+            <!--  Bold  -->
+            <TextBlock
+              Grid.Row="6"
+              Grid.Column="0"
+              Text="Bold (700)" />
+            <TextBlock
+              Grid.Row="6"
+              Grid.Column="1"
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="Bold"
+              Text="The quick brown fox jumps over the lazy dog." />
+
+            <!--  ExtraBold  -->
+            <TextBlock
+              Grid.Row="7"
+              Grid.Column="0"
+              Text="ExtraBold (800)" />
+            <TextBlock
+              Grid.Row="7"
+              Grid.Column="1"
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="ExtraBold"
+              Text="The quick brown fox jumps over the lazy dog." />
+
+            <!--  Black  -->
+            <TextBlock
+              Grid.Row="8"
+              Grid.Column="0"
+              Text="Black (900)" />
+            <TextBlock
+              Grid.Row="8"
+              Grid.Column="1"
+              FontFamily="{StaticResource MontserratFontFamily}"
+              FontWeight="Black"
+              Text="The quick brown fox jumps over the lazy dog." />
           </Grid>
+        </Border>
+      </StackPanel>
 
-          <TextBlock
-            Margin="0,10,0,0"
-            Classes="h5"
-            Text="Typography Best Practices" />
-          <StackPanel Margin="10,0,0,0" Spacing="8">
-            <TextBlock Text="• Maintain hierarchy with consistent heading levels" />
-            <TextBlock Text="• Use appropriate font weights for proper emphasis" />
-            <TextBlock Text="• Keep line lengths between 50-75 characters for optimal readability" />
-            <TextBlock Text="• Ensure sufficient contrast between text and background colors" />
-            <TextBlock Text="• Use italic sparingly for specific emphasis only" />
-            <TextBlock Text="• Allow adequate line spacing (1.5 for body text)" />
+      <!--  Line Height & Spacing Demo  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Line Height &amp; Spacing" />
+
+        <Grid
+          Margin="0,0,0,15"
+          ColumnDefinitions="*,*"
+          RowDefinitions="Auto">
+          <!--  Default Line Height  -->
+          <Border
+            Grid.Column="0"
+            Margin="0,0,10,0"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Default Line Height (1.25)" />
+              <TextBlock Classes="line-default">
+                This is a paragraph with the default line height.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum facilisis, dui eget finibus varius, enim dui
+                ultricies ex, eu efficitur justo ligula at nisi.
+              </TextBlock>
+            </StackPanel>
+          </Border>
+
+          <!--  Comfortable Line Height  -->
+          <Border
+            Grid.Column="1"
+            Padding="15"
+            Background="{DynamicResource Brush.Surface}"
+            BorderBrush="{DynamicResource Brush.Divider}"
+            BorderThickness="1"
+            CornerRadius="8">
+            <StackPanel>
+              <TextBlock FontWeight="SemiBold" Text="Comfortable Line Height (1.5)" />
+              <TextBlock Classes="line-comfortable">
+                This is a paragraph with a more comfortable line height.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum facilisis, dui eget finibus varius, enim dui
+                ultricies ex, eu efficitur justo ligula at nisi.
+              </TextBlock>
+            </StackPanel>
+          </Border>
+        </Grid>
+
+        <!--  Paragraph Spacing  -->
+        <Border
+          Padding="15"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="16">
+            <TextBlock FontWeight="SemiBold" Text="Paragraph Spacing" />
+            <TextBlock TextWrapping="Wrap">
+              This is the first paragraph with default text.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Duis rhoncus ex id eros efficitur efficitur.
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap">
+              This is the second paragraph with 16px spacing between paragraphs.
+              Proper spacing improves readability and creates a visual hierarchy.
+              Vestibulum facilisis, dui eget finibus varius.
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap">
+              This is the third paragraph. Spacing between paragraphs should be
+              consistent throughout the application to maintain visual rhythm.
+            </TextBlock>
           </StackPanel>
+        </Border>
+      </StackPanel>
 
-          <TextBlock
-            Margin="0,10,0,0"
-            Classes="h5"
-            Text="Theme Adaptability" />
-          <TextBlock TextWrapping="Wrap">
-            Typography should adapt gracefully between light and dark themes.
-            On glass panels, use the default text colors for good contrast.
-            On acrylic (dark) panels, use lighter text colors to ensure readability.
-          </TextBlock>
-        </StackPanel>
-      </Border>
+      <!--  Typography Guidelines  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Typography Guidelines" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface.Elevated1}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h5" Text="Usage Recommendations" />
+            <Grid ColumnDefinitions="150,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+              <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Heading 1" />
+              <TextBlock
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="Main page titles, hero section headers" />
+
+              <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Heading 2" />
+              <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="Section titles, major content dividers" />
+
+              <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Heading 3" />
+              <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Subsection titles, card headers" />
+
+              <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Heading 4-6" />
+              <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Minor section titles, component labels" />
+
+              <TextBlock
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Body" />
+              <TextBlock
+                Grid.Row="4"
+                Grid.Column="1"
+                Text="Main content text, descriptions, paragraphs" />
+
+              <TextBlock
+                Grid.Row="5"
+                Grid.Column="0"
+                Text="Caption" />
+              <TextBlock
+                Grid.Row="5"
+                Grid.Column="1"
+                Text="Supporting text, timestamps, metadata" />
+            </Grid>
+
+            <TextBlock
+              Margin="0,10,0,0"
+              Classes="h5"
+              Text="Typography Best Practices" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Maintain hierarchy with consistent heading levels" />
+              <TextBlock Text="• Use appropriate font weights for proper emphasis" />
+              <TextBlock Text="• Keep line lengths between 50-75 characters for optimal readability" />
+              <TextBlock Text="• Ensure sufficient contrast between text and background colors" />
+              <TextBlock Text="• Use italic sparingly for specific emphasis only" />
+              <TextBlock Text="• Allow adequate line spacing (1.5 for body text)" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,10,0,0"
+              Classes="h5"
+              Text="Theme Adaptability" />
+            <TextBlock TextWrapping="Wrap">
+              Typography should adapt gracefully between light and dark themes.
+              On glass panels, use the default text colors for good contrast.
+              On acrylic (dark) panels, use lighter text colors to ensure readability.
+            </TextBlock>
+          </StackPanel>
+        </Border>
+      </StackPanel>
     </StackPanel>
-  </StackPanel>
+  </ScrollViewer>
 </UserControl>

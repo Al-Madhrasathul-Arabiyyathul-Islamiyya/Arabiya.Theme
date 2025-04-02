@@ -13,391 +13,393 @@
     <vm:TextInputsViewModel />
   </Design.DataContext>
 
-  <StackPanel Margin="20" Spacing="30">
-    <TextBlock Classes="h2" Text="Text Inputs" />
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="30">
+      <TextBlock Classes="h2" Text="Text Inputs" />
 
-    <!--  Introduction  -->
-    <Border
-      Padding="15"
-      Background="{DynamicResource Brush.Surface}"
-      BorderBrush="{DynamicResource Brush.Divider}"
-      BorderThickness="1"
-      CornerRadius="8">
-      <TextBlock TextWrapping="Wrap">
-        Text inputs allow users to enter and edit text data. Our design system provides consistent styling
-        for various input elements with appropriate states for normal, focus, disabled, and error conditions.
-      </TextBlock>
-    </Border>
-
-    <!--  Standard Text Boxes  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Text Boxes" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
-        <!--  Standard TextBox  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard TextBox" />
-          <TextBox Watermark="Enter text here" />
-        </StackPanel>
-
-        <!--  Small TextBox  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Small TextBox" />
-          <TextBox Classes="small" Watermark="Search..." />
-        </StackPanel>
-
-        <!--  Large TextBox  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Large TextBox" />
-          <TextBox Classes="large" Text="Large input field" />
-        </StackPanel>
-
-        <!--  With Label  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock
-            Margin="0,0,0,5"
-            FontWeight="DemiBold"
-            Text="With Label" />
-          <StackPanel>
-            <TextBlock Margin="0,0,0,5" Text="Full Name" />
-            <TextBox Text="John Doe" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Error State  -->
-        <StackPanel
-          Grid.Row="2"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Error State" />
-          <TextBox Classes="error" Text="Invalid input" />
-          <TextBlock Classes="caption text-error" Text="This field contains an error" />
-        </StackPanel>
-
-        <!--  Success State  -->
-        <StackPanel
-          Grid.Row="2"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Success State" />
-          <TextBox Classes="success" Text="Valid input" />
-          <TextBlock Classes="caption text-success" Text="This field is valid" />
-        </StackPanel>
-
-        <!--  Disabled State  -->
-        <StackPanel
-          Grid.Row="3"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Disabled State" />
-          <TextBox IsEnabled="False" Text="Cannot edit this field" />
-        </StackPanel>
-
-        <!--  ReadOnly State  -->
-        <StackPanel
-          Grid.Row="3"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Read Only State" />
-          <TextBox IsReadOnly="True" Text="Read only content" />
-        </StackPanel>
-      </Grid>
-    </StackPanel>
-
-    <!--  Multi-line Text Areas  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Text Areas" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
-        <!--  Standard Text Area  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Multi-line Text Area" />
-          <TextBox Classes="multiline" Watermark="Enter multiple lines of text here..." />
-        </StackPanel>
-
-        <!--  With Text Content  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="With Content" />
-          <TextBox Classes="multiline" Text="This is a multi-line text area with content that can wrap to multiple lines. It's useful for longer form inputs like comments, descriptions, etc." />
-        </StackPanel>
-
-        <!--  Disabled  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Disabled" />
-          <TextBox
-            Classes="multiline"
-            IsEnabled="False"
-            Text="This text area is disabled and cannot be edited." />
-        </StackPanel>
-
-        <!--  Character Count  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="With Character Count" />
-          <TextBox Classes="multiline" Watermark="Limited to 200 characters..." />
-          <Grid Margin="0,5,0,0">
-            <TextBlock
-              HorizontalAlignment="Right"
-              Classes="caption text-muted"
-              Text="0/200" />
-          </Grid>
-        </StackPanel>
-      </Grid>
-    </StackPanel>
-
-    <!--  Number Inputs  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Number Inputs" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
-        <!--  Standard Number Input  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard Number Input" />
-          <NumericUpDown
-            FormatString="F0"
-            Increment="1"
-            Minimum="0"
-            Value="10" />
-        </StackPanel>
-
-        <!--  Decimal Number Input  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Decimal Number Input" />
-          <NumericUpDown
-            FormatString="F2"
-            Increment="0.25"
-            Minimum="0"
-            Value="10.75" />
-        </StackPanel>
-
-        <!--  With Min/Max  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="With Min/Max Range (0-100)" />
-          <NumericUpDown
-            FormatString="F0"
-            Increment="5"
-            Maximum="100"
-            Minimum="0"
-            Value="50" />
-        </StackPanel>
-
-        <!--  Disabled  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Disabled" />
-          <NumericUpDown IsEnabled="False" Value="42" />
-        </StackPanel>
-      </Grid>
-    </StackPanel>
-
-    <!--  ComboBox Examples  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Dropdown Menus" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
-        <!--  Standard ComboBox  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard Dropdown" />
-          <ComboBox SelectedIndex="0">
-            <ComboBoxItem>Option 1</ComboBoxItem>
-            <ComboBoxItem>Option 2</ComboBoxItem>
-            <ComboBoxItem>Option 3</ComboBoxItem>
-          </ComboBox>
-        </StackPanel>
-
-        <!--  With Placeholder  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="With Placeholder" />
-          <ComboBox PlaceholderText="Select an option">
-            <ComboBoxItem>Option 1</ComboBoxItem>
-            <ComboBoxItem>Option 2</ComboBoxItem>
-            <ComboBoxItem>Option 3</ComboBoxItem>
-          </ComboBox>
-        </StackPanel>
-
-        <!--  Disabled  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Disabled" />
-          <ComboBox IsEnabled="False" SelectedIndex="0">
-            <ComboBoxItem>Option 1</ComboBoxItem>
-            <ComboBoxItem>Option 2</ComboBoxItem>
-            <ComboBoxItem>Option 3</ComboBoxItem>
-          </ComboBox>
-        </StackPanel>
-
-        <!--  With Label  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="With Label" />
-          <StackPanel>
-            <TextBlock Margin="0,0,0,5" Text="Country" />
-            <ComboBox SelectedIndex="0">
-              <ComboBoxItem>United States</ComboBoxItem>
-              <ComboBoxItem>Canada</ComboBoxItem>
-              <ComboBoxItem>United Kingdom</ComboBoxItem>
-              <ComboBoxItem>Australia</ComboBoxItem>
-            </ComboBox>
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-    </StackPanel>
-
-    <!--  Form Example  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Form Example" />
-
+      <!--  Introduction  -->
       <Border
-        Padding="20"
+        Padding="15"
         Background="{DynamicResource Brush.Surface}"
         BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
-        <StackPanel Spacing="15">
-          <TextBlock Classes="h4" Text="User Profile Form" />
+        <TextBlock TextWrapping="Wrap">
+          Text inputs allow users to enter and edit text data. Our design system provides consistent styling
+          for various input elements with appropriate states for normal, focus, disabled, and error conditions.
+        </TextBlock>
+      </Border>
 
-          <StackPanel>
-            <TextBlock Margin="0,0,0,5" Text="Full Name" />
-            <TextBox Text="John Doe" />
+      <!--  Standard Text Boxes  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Text Boxes" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+          <!--  Standard TextBox  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard TextBox" />
+            <TextBox Watermark="Enter text here" />
           </StackPanel>
 
-          <StackPanel>
-            <TextBlock Margin="0,0,0,5" Text="Email Address" />
-            <TextBox Text="john.doe@example.com" />
+          <!--  Small TextBox  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Small TextBox" />
+            <TextBox Classes="small" Watermark="Search..." />
           </StackPanel>
 
-          <Grid ColumnDefinitions="1*,1*">
-            <StackPanel Grid.Column="0" Margin="0,0,5,0">
-              <TextBlock Margin="0,0,0,5" Text="Age" />
-              <NumericUpDown
-                FormatString="F0"
-                Maximum="120"
-                Minimum="18"
-                Value="30" />
+          <!--  Large TextBox  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Large TextBox" />
+            <TextBox Classes="large" Text="Large input field" />
+          </StackPanel>
+
+          <!--  With Label  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock
+              Margin="0,0,0,5"
+              FontWeight="DemiBold"
+              Text="With Label" />
+            <StackPanel>
+              <TextBlock Margin="0,0,0,5" Text="Full Name" />
+              <TextBox Text="John Doe" />
             </StackPanel>
+          </StackPanel>
 
-            <StackPanel Grid.Column="1" Margin="5,0,0,0">
+          <!--  Error State  -->
+          <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Error State" />
+            <TextBox Classes="error" Text="Invalid input" />
+            <TextBlock Classes="caption text-error" Text="This field contains an error" />
+          </StackPanel>
+
+          <!--  Success State  -->
+          <StackPanel
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Success State" />
+            <TextBox Classes="success" Text="Valid input" />
+            <TextBlock Classes="caption text-success" Text="This field is valid" />
+          </StackPanel>
+
+          <!--  Disabled State  -->
+          <StackPanel
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Disabled State" />
+            <TextBox IsEnabled="False" Text="Cannot edit this field" />
+          </StackPanel>
+
+          <!--  ReadOnly State  -->
+          <StackPanel
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Read Only State" />
+            <TextBox IsReadOnly="True" Text="Read only content" />
+          </StackPanel>
+        </Grid>
+      </StackPanel>
+
+      <!--  Multi-line Text Areas  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Text Areas" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+          <!--  Standard Text Area  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Multi-line Text Area" />
+            <TextBox Classes="multiline" Watermark="Enter multiple lines of text here..." />
+          </StackPanel>
+
+          <!--  With Text Content  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="With Content" />
+            <TextBox Classes="multiline" Text="This is a multi-line text area with content that can wrap to multiple lines. It's useful for longer form inputs like comments, descriptions, etc." />
+          </StackPanel>
+
+          <!--  Disabled  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Disabled" />
+            <TextBox
+              Classes="multiline"
+              IsEnabled="False"
+              Text="This text area is disabled and cannot be edited." />
+          </StackPanel>
+
+          <!--  Character Count  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="With Character Count" />
+            <TextBox Classes="multiline" Watermark="Limited to 200 characters..." />
+            <Grid Margin="0,5,0,0">
+              <TextBlock
+                HorizontalAlignment="Right"
+                Classes="caption text-muted"
+                Text="0/200" />
+            </Grid>
+          </StackPanel>
+        </Grid>
+      </StackPanel>
+
+      <!--  Number Inputs  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Number Inputs" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+          <!--  Standard Number Input  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard Number Input" />
+            <NumericUpDown
+              FormatString="F0"
+              Increment="1"
+              Minimum="0"
+              Value="10" />
+          </StackPanel>
+
+          <!--  Decimal Number Input  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Decimal Number Input" />
+            <NumericUpDown
+              FormatString="F2"
+              Increment="0.25"
+              Minimum="0"
+              Value="10.75" />
+          </StackPanel>
+
+          <!--  With Min/Max  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="With Min/Max Range (0-100)" />
+            <NumericUpDown
+              FormatString="F0"
+              Increment="5"
+              Maximum="100"
+              Minimum="0"
+              Value="50" />
+          </StackPanel>
+
+          <!--  Disabled  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Disabled" />
+            <NumericUpDown IsEnabled="False" Value="42" />
+          </StackPanel>
+        </Grid>
+      </StackPanel>
+
+      <!--  ComboBox Examples  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Dropdown Menus" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+          <!--  Standard ComboBox  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard Dropdown" />
+            <ComboBox SelectedIndex="0">
+              <ComboBoxItem>Option 1</ComboBoxItem>
+              <ComboBoxItem>Option 2</ComboBoxItem>
+              <ComboBoxItem>Option 3</ComboBoxItem>
+            </ComboBox>
+          </StackPanel>
+
+          <!--  With Placeholder  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="With Placeholder" />
+            <ComboBox PlaceholderText="Select an option">
+              <ComboBoxItem>Option 1</ComboBoxItem>
+              <ComboBoxItem>Option 2</ComboBoxItem>
+              <ComboBoxItem>Option 3</ComboBoxItem>
+            </ComboBox>
+          </StackPanel>
+
+          <!--  Disabled  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Disabled" />
+            <ComboBox IsEnabled="False" SelectedIndex="0">
+              <ComboBoxItem>Option 1</ComboBoxItem>
+              <ComboBoxItem>Option 2</ComboBoxItem>
+              <ComboBoxItem>Option 3</ComboBoxItem>
+            </ComboBox>
+          </StackPanel>
+
+          <!--  With Label  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="With Label" />
+            <StackPanel>
               <TextBlock Margin="0,0,0,5" Text="Country" />
               <ComboBox SelectedIndex="0">
                 <ComboBoxItem>United States</ComboBoxItem>
                 <ComboBoxItem>Canada</ComboBoxItem>
                 <ComboBoxItem>United Kingdom</ComboBoxItem>
+                <ComboBoxItem>Australia</ComboBoxItem>
               </ComboBox>
             </StackPanel>
-          </Grid>
-
-          <StackPanel>
-            <TextBlock Margin="0,0,0,5" Text="Bio" />
-            <TextBox Classes="multiline" Text="A brief description about yourself that will be visible on your public profile." />
           </StackPanel>
+        </Grid>
+      </StackPanel>
 
-          <StackPanel
-            HorizontalAlignment="Right"
-            Orientation="Horizontal"
-            Spacing="10">
-            <Button Classes="Text BaseButton" Content="Cancel" />
-            <Button Classes="Primary BaseButton" Content="Save Profile" />
+      <!--  Form Example  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Form Example" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h4" Text="User Profile Form" />
+
+            <StackPanel>
+              <TextBlock Margin="0,0,0,5" Text="Full Name" />
+              <TextBox Text="John Doe" />
+            </StackPanel>
+
+            <StackPanel>
+              <TextBlock Margin="0,0,0,5" Text="Email Address" />
+              <TextBox Text="john.doe@example.com" />
+            </StackPanel>
+
+            <Grid ColumnDefinitions="1*,1*">
+              <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                <TextBlock Margin="0,0,0,5" Text="Age" />
+                <NumericUpDown
+                  FormatString="F0"
+                  Maximum="120"
+                  Minimum="18"
+                  Value="30" />
+              </StackPanel>
+
+              <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                <TextBlock Margin="0,0,0,5" Text="Country" />
+                <ComboBox SelectedIndex="0">
+                  <ComboBoxItem>United States</ComboBoxItem>
+                  <ComboBoxItem>Canada</ComboBoxItem>
+                  <ComboBoxItem>United Kingdom</ComboBoxItem>
+                </ComboBox>
+              </StackPanel>
+            </Grid>
+
+            <StackPanel>
+              <TextBlock Margin="0,0,0,5" Text="Bio" />
+              <TextBox Classes="multiline" Text="A brief description about yourself that will be visible on your public profile." />
+            </StackPanel>
+
+            <StackPanel
+              HorizontalAlignment="Right"
+              Orientation="Horizontal"
+              Spacing="10">
+              <Button Classes="Text BaseButton" Content="Cancel" />
+              <Button Classes="Primary BaseButton" Content="Save Profile" />
+            </StackPanel>
           </StackPanel>
-        </StackPanel>
-      </Border>
+        </Border>
+      </StackPanel>
+
+      <!--  Guidelines  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,15"
+          Classes="h3"
+          Text="Input Guidelines" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface.Elevated1}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h5" Text="Best Practices" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Always provide clear labels for input fields" />
+              <TextBlock Text="• Use placeholder text to provide hints, not labels" />
+              <TextBlock Text="• Indicate required fields clearly" />
+              <TextBlock Text="• Provide meaningful error messages when validation fails" />
+              <TextBlock Text="• Group related fields together" />
+              <TextBlock Text="• Use appropriate input types for different data (text, number, date, etc.)" />
+              <TextBlock Text="• Maintain consistent styling across all form elements" />
+            </StackPanel>
+
+            <TextBlock
+              Margin="0,5,0,0"
+              Classes="h5"
+              Text="Available Classes" />
+            <StackPanel Margin="10,0,0,0" Spacing="8">
+              <TextBlock Text="• Size variants: small, large" />
+              <TextBlock Text="• State variants: error, success, dark" />
+              <TextBlock Text="• Special types: multiline" />
+              <TextBlock Text="• Combine them: TextBox Classes='small error dark'" />
+            </StackPanel>
+          </StackPanel>
+        </Border>
+      </StackPanel>
     </StackPanel>
-
-    <!--  Guidelines  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,15"
-        Classes="h3"
-        Text="Input Guidelines" />
-
-      <Border
-        Padding="20"
-        Background="{DynamicResource Brush.Surface.Elevated1}"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <StackPanel Spacing="15">
-          <TextBlock Classes="h5" Text="Best Practices" />
-          <StackPanel Margin="10,0,0,0" Spacing="8">
-            <TextBlock Text="• Always provide clear labels for input fields" />
-            <TextBlock Text="• Use placeholder text to provide hints, not labels" />
-            <TextBlock Text="• Indicate required fields clearly" />
-            <TextBlock Text="• Provide meaningful error messages when validation fails" />
-            <TextBlock Text="• Group related fields together" />
-            <TextBlock Text="• Use appropriate input types for different data (text, number, date, etc.)" />
-            <TextBlock Text="• Maintain consistent styling across all form elements" />
-          </StackPanel>
-
-          <TextBlock
-            Margin="0,5,0,0"
-            Classes="h5"
-            Text="Available Classes" />
-          <StackPanel Margin="10,0,0,0" Spacing="8">
-            <TextBlock Text="• Size variants: small, large" />
-            <TextBlock Text="• State variants: error, success, dark" />
-            <TextBlock Text="• Special types: multiline" />
-            <TextBlock Text="• Combine them: TextBox Classes='small error dark'" />
-          </StackPanel>
-        </StackPanel>
-      </Border>
-    </StackPanel>
-  </StackPanel>
+  </ScrollViewer>
 </UserControl>

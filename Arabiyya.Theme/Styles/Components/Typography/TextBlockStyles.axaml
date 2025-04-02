@@ -120,6 +120,10 @@
     <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
   </Style>
 
+  <Style Selector="TextBlock.demibold">
+    <Setter Property="FontWeight" Value="{StaticResource FontWeightSemiBold}" />
+  </Style>
+
   <Style Selector="TextBlock.bold">
     <Setter Property="FontWeight" Value="{StaticResource FontWeightBold}" />
   </Style>

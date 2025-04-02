@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Arabiyya.Theme.Navigation.Models;
 
@@ -97,4 +99,24 @@ public partial class NavigationConfig : ObservableObject
     /// </summary>
     [ObservableProperty]
     private string _defaultLayout = "default";
+
+    [RelayCommand]
+    private void ToggleExpanded() => IsExpanded = !IsExpanded;
+
+    /// <summary>
+    /// Serializes the configuration to JSON
+    /// </summary>
+    public string ToJson()
+    {
+        return System.Text.Json.JsonSerializer.Serialize(this);
+    }
+
+    /// <summary>
+    /// Deserializes configuration from JSON
+    /// </summary>
+    public static NavigationConfig FromJson(string json)
+    {
+        var result = System.Text.Json.JsonSerializer.Deserialize<NavigationConfig>(json);
+        return result ?? throw new InvalidOperationException("Deserialization returned null.");
+    }
 }

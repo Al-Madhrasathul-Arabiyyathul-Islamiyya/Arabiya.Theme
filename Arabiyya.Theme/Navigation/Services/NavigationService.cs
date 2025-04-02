@@ -1,336 +1,459 @@
-﻿using Arabiyya.Theme.Navigation.Models;
+﻿using System.Collections.ObjectModel;
+using Arabiyya.Theme.Navigation.Models;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 
 namespace Arabiyya.Theme.Navigation.Services;
 
 /// <summary>
-/// Default implementation of the INavigationService interface
+/// Default implementation of the <see cref="INavigationService"/> interface.
+/// Handles view creation, navigation logic, history management, and guard execution.
 /// </summary>
 public partial class NavigationService : ObservableObject, INavigationService
 {
     private readonly IViewFactory _viewFactory;
     private readonly IMessenger _messenger;
-    private readonly List<INavigationGuard> _guards = new();
-    private NavigationItem _selectedItem;
-    private NavigationConfig _config;
+    private readonly NavigationGuardPipeline _guardPipeline = new();
+    private readonly Stack<NavigationItem> _backStack = new();
+    private readonly Stack<NavigationItem> _forwardStack = new();
 
-    /// <summary>
-    /// Gets the current navigation configuration
-    /// </summary>
-    public NavigationConfig Config => _config;
+    [ObservableProperty]
+    private NavigationConfig _config = new();
 
-    /// <summary>
-    /// Gets the collection of navigation items
-    /// </summary>
-    public IReadOnlyList<NavigationItem>? Items => _config.Items.ToList().AsReadOnly();
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(NavigateCommand))]
+    [NotifyCanExecuteChangedFor(nameof(GoBackCommand))]
+    [NotifyCanExecuteChangedFor(nameof(GoForwardCommand))]
+    private NavigationItem? _selectedItem;
 
-    /// <summary>
-    /// Gets the currently selected navigation item
-    /// </summary>
-    public NavigationItem SelectedItem
-    {
-        get => _selectedItem;
-        private set => SetProperty(ref _selectedItem, value);
-    }
-
-    /// <summary>
-    /// Gets the current content being displayed
-    /// </summary>
     [ObservableProperty]
     private object? _currentContent;
 
-    /// <summary>
-    /// Raised when navigation is about to occur
-    /// </summary>
-    public event EventHandler<NavigatingEventArgs> Navigating;
+    /// <inheritdoc/>
+    public IReadOnlyList<NavigationItem>? Items => Config?.Items?.ToList()?.AsReadOnly();
+
+    /// <inheritdoc/>
+    [RelayCommand(CanExecute = nameof(CanNavigate))]
+    private async Task NavigateAsyncCmd(NavigationItem? item) => await NavigateToAsyncItem(item);
+
+    // Explicit interface implementation for clarity if using source generator for the public command
+    /// <inheritdoc/>
+    public IRelayCommand<NavigationItem?> NavigateCommand => NavigateAsyncCmdCommand;
+
+
+    /// <inheritdoc/>
+    [RelayCommand(CanExecute = nameof(CanGoBack))]
+    public async Task GoBackAsync()
+    {
+        if (!CanGoBack)
+            return;
+
+        var item = _backStack.Pop();
+        if (SelectedItem != null)
+        {
+            _forwardStack.Push(SelectedItem);
+        }
+        await NavigateToAsyncInternal(item, true);
+        OnPropertyChanged(nameof(CanGoBack));
+        OnPropertyChanged(nameof(CanGoForward));
+    }
+
+    /// <inheritdoc/>
+    [RelayCommand(CanExecute = nameof(CanGoForward))]
+    public async Task GoForwardAsync()
+    {
+        if (!CanGoForward)
+            return;
+
+        var item = _forwardStack.Pop();
+        if (SelectedItem != null)
+        {
+            _backStack.Push(SelectedItem);
+        }
+        await NavigateToAsyncInternal(item, true);
+        OnPropertyChanged(nameof(CanGoBack));
+        OnPropertyChanged(nameof(CanGoForward));
+    }
+
+    /// <inheritdoc/>
+    public bool CanGoBack => _backStack.Count > 0;
+
+    /// <inheritdoc/>
+    public bool CanGoForward => _forwardStack.Count > 0;
+
+    /// <inheritdoc/>
+    public event EventHandler<NavigatingEventArgs>? Navigating;
+
+    /// <inheritdoc/>
+    public event EventHandler<NavigatedEventArgs>? Navigated;
 
     /// <summary>
-    /// Raised when navigation has been completed
-    /// </summary>
-    public event EventHandler<NavigatedEventArgs> Navigated;
-
-    /// <summary>
-    /// Creates a new instance of NavigationService with a default view factory
+    /// Initializes a new instance of the <see cref="NavigationService"/> class with default dependencies.
     /// </summary>
     public NavigationService() : this(new DefaultViewFactory(), StrongReferenceMessenger.Default)
     {
     }
 
     /// <summary>
-    /// Creates a new instance of NavigationService with the specified view factory
+    /// Initializes a new instance of the <see cref="NavigationService"/> class with specified dependencies.
     /// </summary>
-    /// <param name="viewFactory">The view factory to use</param>
-    /// <param name="messenger">The messenger service to use</param>
+    /// <param name="viewFactory">The factory used to create view instances.</param>
+    /// <param name="messenger">The messenger for sending navigation-related messages.</param>
     public NavigationService(IViewFactory viewFactory, IMessenger messenger)
     {
         _viewFactory = viewFactory ?? throw new ArgumentNullException(nameof(viewFactory));
         _messenger = messenger ?? throw new ArgumentNullException(nameof(messenger));
     }
 
-    /// <summary>
-    /// Initializes the navigation service with the specified configuration
-    /// </summary>
-    /// <param name="config">The navigation configuration</param>
+    /// <inheritdoc/>
     public void Initialize(NavigationConfig config)
     {
-        _config = config ?? throw new ArgumentNullException(nameof(config));
+        ArgumentNullException.ThrowIfNull(config);
+        Config = config;
 
-        // Initialize with the first item if available
-        if (config.Items.Count > 0)
+        _backStack.Clear();
+        _forwardStack.Clear();
+        SelectedItem = null;
+        CurrentContent = null;
+
+        // Initialize with the first navigable item or the one specified in config
+        NavigationItem? initialItem = null;
+        if (!string.IsNullOrEmpty(Config.SelectedItemId))
         {
-            string? selectedItemId = config.SelectedItemId;
-
-            if (!string.IsNullOrEmpty(selectedItemId))
-            {
-                // Try to select the specified item
-                var item = config.Items.FirstOrDefault(i => i.Id == selectedItemId);
-                if (item != null)
-                {
-                    _ = NavigateToAsync(item);
-                    return;
-                }
-            }
-
-            // Default to the first item
-            _ = NavigateToAsync(config.Items[0]);
+            initialItem = Config.Items.FirstOrDefault(i => i.Id == Config.SelectedItemId && i.IsEnabled);
         }
+
+        initialItem ??= Config.Items.FirstOrDefault(i => i.IsEnabled);
+
+        if (initialItem != null)
+        {
+            // Initial navigation should be synchronous or handled carefully
+            // to avoid race conditions if Initialize is called frequently.
+            // Using await directly here assumes Initialize isn't called rapidly on UI thread.
+            _ = NavigateToAsyncInternal(initialItem, skipHistory: true);
+        }
+
+        GoBackCommand.NotifyCanExecuteChanged();
+        GoForwardCommand.NotifyCanExecuteChanged();
     }
 
-    /// <summary>
-    /// Navigates to the specified navigation item
-    /// </summary>
-    /// <param name="item">The navigation item to navigate to</param>
-    /// <returns>True if navigation was successful, false otherwise</returns>
-    public async Task<bool> NavigateToAsync(NavigationItem item)
+    /// <inheritdoc/>
+    public Task<bool> ParseRouteAsync(string url)
     {
-        if (item == null)
-            return false;
+        if (string.IsNullOrEmpty(url))
+            return Task.FromResult(false);
 
-        // Check if the item is enabled
-        if (!item.IsEnabled)
-            return false;
+        string path = url.Contains("://") ? new Uri(url).AbsolutePath : url;
+        path = path.TrimStart('/');
+        string[] segments = path.Split('/');
 
-        // Raise the Navigating event
-        var args = new NavigatingEventArgs(SelectedItem, item);
-        Navigating?.Invoke(this, args);
+        if (segments.Length == 0)
+            return Task.FromResult(false);
 
-        // Check if navigation was canceled
-        if (args.Cancel)
-            return false;
+        // Find item matching the first segment (by Path or ID)
+        var item = FindItemByPathOrId(Config.Items, segments[0]);
 
-        // Check navigation guards
-        if (_guards.Count > 0)
-        {
-            foreach (var guard in _guards)
-            {
-                var result = await guard.CheckAccessAsync(SelectedItem, item);
-                if (!result.IsAllowed)
-                {
-                    // If a redirect is specified, navigate to it
-                    if (!string.IsNullOrEmpty(result.RedirectPath))
-                    {
-                        await NavigateToPathAsync(result.RedirectPath);
-                    }
+        // TODO: Handle deeper segments (segments[1], etc.) for nested navigation if required.
 
-                    // Send a message about the guard rejection
-                    _messenger.Send(new NavigationGuardRejectedMessage(SelectedItem, item, result));
-
-                    return false;
-                }
-            }
-        }
-
-        // Update the selected state of all items
-        foreach (var navItem in Items!)
-        {
-            navItem.IsSelected = navItem == item;
-        }
-
-        // Update the selected item
-        SelectedItem = item;
-        _config.SelectedItemId = item.Id;
-
-        // Create or get the content if needed
-        if (item.Content == null)
-        {
-            try
-            {
-                if (item.ContentFactory != null)
-                {
-                    // Use the factory function if provided
-                    item.Content = _viewFactory.GetView(item.Id, item.ContentFactory);
-                }
-                else if (item.ContentType != null)
-                {
-                    // Use the content type if provided
-                    item.Content = _viewFactory.GetView(item.Id, item.ContentType);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log the error
-                System.Diagnostics.Debug.WriteLine($"Error creating content for navigation item: {ex.Message}");
-                return false;
-            }
-        }
-
-        if (item.Content == null)
-            { return false; }
-
-        // Update the current content
-        CurrentContent = item.Content;
-
-        // Raise the Navigated event
-        Navigated?.Invoke(this, new NavigatedEventArgs(item, CurrentContent));
-
-        // Send a message that navigation has completed
-        _messenger.Send(new NavigationCompletedMessage(item, CurrentContent));
-
-        return true;
+        return item != null ? NavigateToAsync(item) : Task.FromResult(false);
     }
 
-    /// <summary>
-    /// Navigates to the item with the specified ID
-    /// </summary>
-    /// <param name="itemId">The ID of the item to navigate to</param>
-    /// <returns>True if navigation was successful, false otherwise</returns>
+
+    // Public NavigateToAsync method (called by commands, external code)
+    /// <inheritdoc/>
+    public async Task<bool> NavigateToAsync(NavigationItem item, bool skipHistory = false)
+    {
+        return await NavigateToAsyncInternal(item, skipHistory);
+    }
+
+    private async Task<bool> NavigateToAsyncItem(NavigationItem? item)
+    {
+        return item != null && await NavigateToAsyncInternal(item, false);
+    }
+
+    /// <inheritdoc/>
     public Task<bool> NavigateToAsync(string itemId)
     {
-        var item = Items?.FirstOrDefault(i => i.Id == itemId);
-        return item != null
-            ? NavigateToAsync(item)
-            : Task.FromResult(false);
+        var item = FindItemById(Config.Items, itemId);
+        return item != null ? NavigateToAsync(item) : Task.FromResult(false);
     }
 
-    /// <summary>
-    /// Navigates to the specified path
-    /// </summary>
-    /// <param name="path">The path to navigate to</param>
-    /// <returns>True if navigation was successful, false otherwise</returns>
+    /// <inheritdoc/>
     public Task<bool> NavigateToPathAsync(string path)
     {
         if (string.IsNullOrEmpty(path))
             return Task.FromResult(false);
-
-        // Normalize the path
         path = path.TrimStart('/');
-
-        // Find the item with matching path
-        var item = Items?.FirstOrDefault(i => i.Path == path);
-
-        // If found, navigate to it
-        if (item != null)
-        {
-            return NavigateToAsync(item);
-        }
-
-        // If not found, check if any item has a matching ID
-        // (for backward compatibility and simple cases)
-        return NavigateToAsync(path);
+        var item = FindItemByPath(Config.Items, path);
+        return item != null ? NavigateToAsync(item) : NavigateToAsync(path);
     }
 
-    /// <summary>
-    /// Adds a new navigation item
-    /// </summary>
-    /// <param name="item">The item to add</param>
+    // Central internal navigation logic
+    private async Task<bool> NavigateToAsyncInternal(NavigationItem item, bool skipHistory)
+    {
+        ArgumentNullException.ThrowIfNull(item);
+
+        if (item.Equals(Config.SelectedItemId))
+        {
+            System.Diagnostics.Debug.WriteLine($"NavigationService: Skipped navigation to already selected item: {item.Label}");
+            return true; 
+        }
+
+        // Pass SelectedItem (which can be null) to guards
+        var navigatingArgs = new NavigatingEventArgs(SelectedItem!, item);
+        Navigating?.Invoke(this, navigatingArgs);
+        if (navigatingArgs.Cancel)
+        { return false; }
+
+        // Pass SelectedItem (which can be null) to guards
+        var guardResult = await _guardPipeline.ExecuteAsync(SelectedItem!, item);
+        if (!guardResult.IsAllowed)
+        { return false; }
+
+        // --- History Management ---
+        if (!skipHistory && SelectedItem != null)
+        {
+            _backStack.Push(SelectedItem);
+            _forwardStack.Clear();
+        }
+
+        var previousSelectedItem = SelectedItem;
+        SelectedItem = item;
+        Config.SelectedItemId = item.Id;
+
+        UpdateSelectionState(Config.Items, item);
+
+        // --- Content Loading ---
+        if (item.Content == null)
+        {
+            System.Diagnostics.Debug.WriteLine($"Creating content for {item.Label} with ID {item.Id}");
+
+            try
+            {
+                if (item.ContentFactory != null)
+                {
+                    System.Diagnostics.Debug.WriteLine("Using ContentFactory");
+                    item.Content = item.ContentFactory();
+                    System.Diagnostics.Debug.WriteLine($"ContentFactory result: {item.Content?.GetType().Name ?? "null"}");
+                }
+                else if (item.ContentType != null)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Using ContentType: {item.ContentType.Name}");
+                    object view = _viewFactory.GetView(item.Id!, item.ContentType);
+                    System.Diagnostics.Debug.WriteLine($"View created: {view?.GetType().Name ?? "null"}");
+                    item.Content = view;
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("WARNING: No content source available");
+                    item.Content = new TextBlock { Text = $"No content defined for {item.Label}" };
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error creating content: {ex}");
+            }
+        }
+
+        if (item.Content == null)
+        {
+            SelectedItem = null;
+            return false;
+        }
+
+        CurrentContent = item.Content;
+
+        // --- Completion ---
+        Navigated?.Invoke(this, new NavigatedEventArgs(item, CurrentContent!));
+        _messenger.Send(new NavigationCompletedMessage(item, CurrentContent!));
+        System.Diagnostics.Debug.WriteLine($"NavigationService: Navigation successful to: {item.Label}");
+
+        // Explicitly notify CanExecute changes after state modification if needed,
+        // although [NotifyCanExecuteChangedFor] on SelectedItem handles most cases.
+        GoBackCommand.NotifyCanExecuteChanged();
+        GoForwardCommand.NotifyCanExecuteChanged();
+
+        return true;
+    }
+
+    /// <inheritdoc/>
     public void AddItem(NavigationItem item)
     {
-        if (item == null)
-            throw new ArgumentNullException(nameof(item));
-
-        _config?.Items.Add(item);
+        ArgumentNullException.ThrowIfNull(item);
+        Config?.Items.Add(item);
+        OnPropertyChanged(nameof(Items)); 
     }
 
-    /// <summary>
-    /// Removes a navigation item
-    /// </summary>
-    /// <param name="item">The item to remove</param>
-    /// <returns>True if the item was removed, false otherwise</returns>
+    /// <inheritdoc/>
     public bool RemoveItem(NavigationItem item)
     {
-        if (item == null || _config?.Items == null)
+        ArgumentNullException.ThrowIfNull(item);
+        if (Config?.Items == null)
             return false;
 
-        // If removing the currently selected item, try to select another one
-        if (item == SelectedItem && _config.Items.Count > 1)
+        bool removed = Config.Items.Remove(item);
+        if (removed)
         {
-            int index = _config.Items.IndexOf(item);
-            var nextItem = index < _config.Items.Count - 1
-                ? _config.Items[index + 1]
-                : _config.Items[index - 1];
+            OnPropertyChanged(nameof(Items));
 
-            // Navigate to the next item async
-            _ = NavigateToAsync(nextItem);
+            // Handle removing from history stacks
+            RemoveFromStack(_backStack, item);
+            RemoveFromStack(_forwardStack, item);
+            OnPropertyChanged(nameof(CanGoBack));
+            OnPropertyChanged(nameof(CanGoForward));
+
+            if (item.Equals(Config.SelectedItemId))
+            {
+                NavigationItem? nextItem = _backStack.Count > 0 ? _backStack.Peek() : Config.Items.FirstOrDefault(i => i.IsEnabled);
+                if (nextItem != null)
+                {
+                    if (_backStack.Count > 0 && nextItem == _backStack.Peek())
+                        _backStack.Pop();
+                    _ = NavigateToAsyncInternal(nextItem, true);
+                }
+                else
+                {
+                    SelectedItem = null;
+                    CurrentContent = null;
+                }
+            }
         }
-
-        return _config.Items.Remove(item);
+        return removed;
     }
 
-    /// <summary>
-    /// Removes the navigation item with the specified ID
-    /// </summary>
-    /// <param name="itemId">The ID of the item to remove</param>
-    /// <returns>True if the item was removed, false otherwise</returns>
+    /// <inheritdoc/>
     public bool RemoveItem(string itemId)
     {
-        if (string.IsNullOrEmpty(itemId) || _config?.Items == null)
-            return false;
-
-        var item = _config.Items.FirstOrDefault(i => i.Id == itemId);
+        var item = FindItemById(Config.Items, itemId);
         return item != null && RemoveItem(item);
     }
 
-    /// <summary>
-    /// Clears all navigation items
-    /// </summary>
+    /// <inheritdoc/>
     public void ClearItems()
     {
-        if (_config?.Items != null)
+        if (Config?.Items != null)
         {
-            // Release all views
-            foreach (var item in _config.Items)
+            foreach (var item in Config.Items)
             {
-                _viewFactory.ReleaseView(item.Id!);
+                if (item.Id != null)
+                    _viewFactory.ReleaseView(item.Id);
             }
-
-            _config.Items.Clear();
-            SelectedItem = null;
-            CurrentContent = null;
+            Config.Items.Clear();
+            OnPropertyChanged(nameof(Items));
         }
+        _backStack.Clear();
+        _forwardStack.Clear();
+        SelectedItem = null;
+        CurrentContent = null;
+        OnPropertyChanged(nameof(CanGoBack));
+        OnPropertyChanged(nameof(CanGoForward));
     }
 
-    /// <summary>
-    /// Toggles the expanded state of the navigation panel
-    /// </summary>
+    /// <inheritdoc/>
     public void ToggleExpanded()
     {
-        if (_config != null)
+        if (Config != null)
         {
-            _config.IsExpanded = !_config.IsExpanded;
+            Config.IsExpanded = !Config.IsExpanded;
         }
     }
 
-    /// <summary>
-    /// Adds a navigation guard to the service
-    /// </summary>
-    /// <param name="guard">The guard to add</param>
-    public void AddGuard(INavigationGuard guard)
-    {
-        ArgumentNullException.ThrowIfNull(guard);
+    /// <inheritdoc/>
+    public void AddGuard(INavigationGuard guard) => _guardPipeline.AddGuard(guard);
 
-        _guards.Add(guard);
+    /// <inheritdoc/>
+    public void RemoveGuard(INavigationGuard guard) => _guardPipeline.RemoveGuard(guard);
+
+
+    // --- Private Helper Methods ---
+
+    private bool CanNavigate(NavigationItem? item) => item != null && item.IsEnabled && item.Id != Config.SelectedItemId;
+
+    // Recursively find item by ID
+    private static NavigationItem? FindItemById(IEnumerable<NavigationItem>? items, string id)
+    {
+        if (items == null || string.IsNullOrEmpty(id))
+            return null;
+        foreach (var item in items)
+        {
+            if (item.Id == id)
+                return item;
+            var foundInChild = FindItemById(item.ChildItems, id);
+            if (foundInChild != null)
+                return foundInChild;
+        }
+        return null;
     }
 
-    /// <summary>
-    /// Removes a navigation guard from the service
-    /// </summary>
-    /// <param name="guard">The guard to remove</param>
-    public void RemoveGuard(INavigationGuard guard)
+    // Recursively find item by Path
+    private static NavigationItem? FindItemByPath(IEnumerable<NavigationItem>? items, string path)
     {
-        if (guard != null)
+        if (items == null || string.IsNullOrEmpty(path))
+            return null;
+        foreach (var item in items)
         {
-            _guards.Remove(guard);
+            if (string.Equals(item.Path, path, StringComparison.OrdinalIgnoreCase))
+                return item;
+            var foundInChild = FindItemByPath(item.ChildItems, path);
+            if (foundInChild != null)
+                return foundInChild;
+        }
+        return null;
+    }
+
+    // Recursively find item by Path or ID
+    private static NavigationItem? FindItemByPathOrId(IEnumerable<NavigationItem>? items, string pathOrId)
+    {
+        if (items == null || string.IsNullOrEmpty(pathOrId))
+            return null;
+        foreach (var item in items)
+        {
+            if (string.Equals(item.Path, pathOrId, StringComparison.OrdinalIgnoreCase) || item.Id == pathOrId)
+                return item;
+            var foundInChild = FindItemByPathOrId(item.ChildItems, pathOrId);
+            if (foundInChild != null)
+                return foundInChild;
+        }
+        return null;
+    }
+
+    // Recursively update IsSelected state
+    private static void UpdateSelectionState(IEnumerable<NavigationItem>? items, NavigationItem selected)
+    {
+        if (items == null || !items.Any())
+            return;
+
+        foreach (var item in items)
+        {
+            item.IsSelected = item.Equals(selected);
+
+            if (item.ChildItems.Count > 0)
+            {
+                UpdateSelectionState(item.ChildItems, selected);
+            }
+        }
+    }
+
+    // Helper to remove an item from a history stack efficiently
+    private static void RemoveFromStack(Stack<NavigationItem> stack, NavigationItem itemToRemove)
+    {
+        if (stack.Count == 0)
+            return;
+
+        var temp = new Stack<NavigationItem>(stack.Count);
+        while (stack.Count > 0)
+        {
+            var item = stack.Pop();
+            if (!item.Equals(itemToRemove))
+            {
+                temp.Push(item);
+            }
+        }
+        while (temp.Count > 0)
+        {
+            stack.Push(temp.Pop());
         }
     }
 }

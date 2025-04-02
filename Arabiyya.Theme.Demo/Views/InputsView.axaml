@@ -13,653 +13,655 @@
     <vm:InputsViewModel />
   </Design.DataContext>
 
-  <StackPanel Margin="20" Spacing="30">
-    <TextBlock Classes="h2" Text="Input Controls" />
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="30">
+      <TextBlock Classes="h2" Text="Input Controls" />
 
-    <!--  Introduction  -->
-    <Border
-      Padding="15"
-      Background="{DynamicResource Brush.Surface}"
-      BorderBrush="{DynamicResource Brush.Divider}"
-      BorderThickness="1"
-      CornerRadius="8">
-      <TextBlock TextWrapping="Wrap">
-        This showcase demonstrates the various input controls available in the Arabiyya theme.
-        Each control has been styled to maintain consistency across the application while providing
-        clear visual feedback for different states such as hover, focus, and disabled.
-      </TextBlock>
-    </Border>
-
-    <!--  CheckBox Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="CheckBox Controls" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
-        <!--  Standard CheckBoxes  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard CheckBoxes" />
-          <StackPanel Spacing="8">
-            <CheckBox Content="Unchecked Option" />
-            <CheckBox Content="Checked Option" IsChecked="True" />
-            <CheckBox
-              Content="Indeterminate Option"
-              IsChecked="{x:Null}"
-              IsThreeState="True" />
-            <CheckBox Content="Disabled Option" IsEnabled="False" />
-            <CheckBox
-              Content="Disabled Checked"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Secondary CheckBoxes  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Secondary CheckBoxes" />
-          <StackPanel Spacing="8">
-            <CheckBox Classes="Secondary" Content="Unchecked Option" />
-            <CheckBox
-              Classes="Secondary"
-              Content="Checked Option"
-              IsChecked="True" />
-            <CheckBox
-              Classes="Secondary"
-              Content="Indeterminate Option"
-              IsChecked="{x:Null}"
-              IsThreeState="True" />
-            <CheckBox
-              Classes="Secondary"
-              Content="Disabled Option"
-              IsEnabled="False" />
-            <CheckBox
-              Classes="Secondary"
-              Content="Disabled Checked"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="CheckBoxes allow users to select multiple options from a set. They should be used when multiple selections are allowed."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  RadioButton Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="RadioButton Controls" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
-        <!--  Standard RadioButtons  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard RadioButtons" />
-          <StackPanel Spacing="8">
-            <RadioButton Content="Option One" GroupName="Group1" />
-            <RadioButton
-              Content="Option Two"
-              GroupName="Group1"
-              IsChecked="True" />
-            <RadioButton Content="Option Three" GroupName="Group1" />
-            <RadioButton Content="Disabled Option" IsEnabled="False" />
-            <RadioButton
-              Content="Disabled Checked"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Secondary RadioButtons  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Secondary RadioButtons" />
-          <StackPanel Spacing="8">
-            <RadioButton
-              Classes="Secondary"
-              Content="Option One"
-              GroupName="Group2" />
-            <RadioButton
-              Classes="Secondary"
-              Content="Option Two"
-              GroupName="Group2"
-              IsChecked="True" />
-            <RadioButton
-              Classes="Secondary"
-              Content="Option Three"
-              GroupName="Group2" />
-            <RadioButton
-              Classes="Secondary"
-              Content="Disabled Option"
-              IsEnabled="False" />
-            <RadioButton
-              Classes="Secondary"
-              Content="Disabled Checked"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="RadioButtons allow users to select a single option from a set. They should be used when only one selection is allowed."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  ToggleSwitch Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="ToggleSwitch Controls" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
-        <!--  Standard ToggleSwitches  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard ToggleSwitches" />
-          <StackPanel Spacing="15">
-            <ToggleSwitch Content="Off Toggle" />
-            <ToggleSwitch Content="On Toggle" IsChecked="True" />
-            <ToggleSwitch Content="Disabled Toggle" IsEnabled="False" />
-            <ToggleSwitch
-              Content="Disabled On Toggle"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Secondary ToggleSwitches  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Secondary ToggleSwitches" />
-          <StackPanel Spacing="15">
-            <ToggleSwitch Classes="Secondary" Content="Off Toggle" />
-            <ToggleSwitch
-              Classes="Secondary"
-              Content="On Toggle"
-              IsChecked="True" />
-            <ToggleSwitch
-              Classes="Secondary"
-              Content="Disabled Toggle"
-              IsEnabled="False" />
-            <ToggleSwitch
-              Classes="Secondary"
-              Content="Disabled On Toggle"
-              IsChecked="True"
-              IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="ToggleSwitches are used for binary settings when immediate results are expected. They should represent on/off states rather than select/deselect."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  Slider Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Slider Controls" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
-        <!--  Horizontal Sliders  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Horizontal Sliders" />
-          <StackPanel Spacing="15">
-            <Slider
-              Maximum="100"
-              Minimum="0"
-              Value="25" />
-            <Slider
-              Maximum="100"
-              Minimum="0"
-              TickFrequency="10"
-              TickPlacement="Outside"
-              Value="50" />
-            <Slider
-              IsEnabled="False"
-              Maximum="100"
-              Minimum="0"
-              Value="75" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Vertical Sliders  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Vertical Sliders" />
-          <StackPanel
-            HorizontalAlignment="Center"
-            Orientation="Horizontal"
-            Spacing="30">
-            <Slider
-              Height="150"
-              Maximum="100"
-              Minimum="0"
-              Orientation="Vertical"
-              Value="25" />
-            <Slider
-              Height="150"
-              Maximum="100"
-              Minimum="0"
-              Orientation="Vertical"
-              TickFrequency="10"
-              TickPlacement="Outside"
-              Value="50" />
-            <Slider
-              Height="150"
-              IsEnabled="False"
-              Maximum="100"
-              Minimum="0"
-              Orientation="Vertical"
-              Value="75" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Secondary Sliders  -->
-        <StackPanel
-          Grid.Row="1"
-          Grid.Column="0"
-          Grid.ColumnSpan="2"
-          Margin="0,10,0,0">
-          <TextBlock Margin="0,0,0,5" Text="Secondary Sliders" />
-          <StackPanel Spacing="15">
-            <Slider
-              Classes="Secondary"
-              Maximum="100"
-              Minimum="0"
-              Value="60" />
-            <Slider
-              Classes="Secondary"
-              IsEnabled="False"
-              Maximum="100"
-              Minimum="0"
-              Value="40" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="Sliders allow users to select a value from a continuous range. They are ideal for settings where the relative value is more important than the precise numeric value."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  ProgressBar Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="ProgressBar Controls" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
-        <!--  Standard ProgressBars  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="Standard ProgressBars" />
-          <StackPanel Spacing="15">
-            <ProgressBar Maximum="100" Value="25" />
-            <ProgressBar Maximum="100" Value="50" />
-            <ProgressBar Maximum="100" Value="75" />
-            <ProgressBar IsIndeterminate="True" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  Secondary and Status ProgressBars  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="Status ProgressBars" />
-          <StackPanel Spacing="15">
-            <ProgressBar
-              Classes="Secondary"
-              Maximum="100"
-              Value="60" />
-            <ProgressBar
-              Classes="Success"
-              Maximum="100"
-              Value="80" />
-            <ProgressBar
-              Classes="Error"
-              Maximum="100"
-              Value="30" />
-            <ProgressBar
-              Classes="Warning"
-              Maximum="100"
-              Value="45" />
-            <ProgressBar
-              Classes="Info"
-              Maximum="100"
-              Value="65" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="ProgressBars indicate the progress of an operation. Use determinate progress bars for operations with known duration, and indeterminate progress bars for operations with unknown duration."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  DatePicker and TimePicker Controls  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Date &amp; Time Pickers" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
-        <!--  DatePicker  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="0"
-          Margin="0,0,10,15">
-          <TextBlock Margin="0,0,0,5" Text="DatePicker" />
-          <StackPanel Spacing="15">
-            <DatePicker />
-            <DatePicker SelectedDate="2025-01-15" />
-            <DatePicker IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-
-        <!--  TimePicker  -->
-        <StackPanel
-          Grid.Row="0"
-          Grid.Column="1"
-          Margin="0,0,0,15">
-          <TextBlock Margin="0,0,0,5" Text="TimePicker" />
-          <StackPanel Spacing="15">
-            <TimePicker />
-            <TimePicker SelectedTime="14:30:00" />
-            <TimePicker IsEnabled="False" />
-          </StackPanel>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,5,0,0"
-        Text="Date and Time pickers allow users to select dates and times in a consistent format. They provide a structured input method that prevents formatting errors."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  Calendar Control  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Calendar Control" />
-
+      <!--  Introduction  -->
       <Border
         Padding="15"
         Background="{DynamicResource Brush.Surface}"
         BorderBrush="{DynamicResource Brush.Divider}"
         BorderThickness="1"
         CornerRadius="8">
-        <Calendar SelectionMode="SingleDate" />
+        <TextBlock TextWrapping="Wrap">
+          This showcase demonstrates the various input controls available in the Arabiyya theme.
+          Each control has been styled to maintain consistency across the application while providing
+          clear visual feedback for different states such as hover, focus, and disabled.
+        </TextBlock>
       </Border>
 
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,10,0,0"
-        Text="The Calendar control allows users to view and select dates in a visual calendar format. It's useful for date-based searches, scheduling, and other date-centric functionality."
-        TextWrapping="Wrap" />
-    </StackPanel>
+      <!--  CheckBox Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="CheckBox Controls" />
 
-    <!--  Expander Control  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Expander Control" />
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
+          <!--  Standard CheckBoxes  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard CheckBoxes" />
+            <StackPanel Spacing="8">
+              <CheckBox Content="Unchecked Option" />
+              <CheckBox Content="Checked Option" IsChecked="True" />
+              <CheckBox
+                Content="Indeterminate Option"
+                IsChecked="{x:Null}"
+                IsThreeState="True" />
+              <CheckBox Content="Disabled Option" IsEnabled="False" />
+              <CheckBox
+                Content="Disabled Checked"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
 
-      <StackPanel Spacing="10">
-        <Expander Header="Collapsed Content (Click to Expand)">
-          <TextBlock
-            Margin="10"
-            Text="This content is hidden until the user expands the control. Use expanders to save space when displaying non-critical information or details that only some users will need."
-            TextWrapping="Wrap" />
-        </Expander>
+          <!--  Secondary CheckBoxes  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Secondary CheckBoxes" />
+            <StackPanel Spacing="8">
+              <CheckBox Classes="Secondary" Content="Unchecked Option" />
+              <CheckBox
+                Classes="Secondary"
+                Content="Checked Option"
+                IsChecked="True" />
+              <CheckBox
+                Classes="Secondary"
+                Content="Indeterminate Option"
+                IsChecked="{x:Null}"
+                IsThreeState="True" />
+              <CheckBox
+                Classes="Secondary"
+                Content="Disabled Option"
+                IsEnabled="False" />
+              <CheckBox
+                Classes="Secondary"
+                Content="Disabled Checked"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
 
-        <Expander Header="Expanded Content" IsExpanded="True">
-          <TextBlock
-            Margin="10"
-            Text="This expander is open by default. Expanders are great for FAQ sections, detailed descriptions, and advanced options."
-            TextWrapping="Wrap" />
-        </Expander>
-
-        <Expander Header="Disabled Expander" IsEnabled="False">
-          <TextBlock Text="This content won't be accessible" />
-        </Expander>
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="CheckBoxes allow users to select multiple options from a set. They should be used when multiple selections are allowed."
+          TextWrapping="Wrap" />
       </StackPanel>
 
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,10,0,0"
-        Text="Expanders allow users to show or hide content as needed. They help reduce visual clutter while keeping information accessible."
-        TextWrapping="Wrap" />
-    </StackPanel>
+      <!--  RadioButton Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="RadioButton Controls" />
 
-    <!--  ListBox Control  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="ListBox Control" />
-
-      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
-        <StackPanel Grid.Column="0" Margin="0,0,10,0">
-          <TextBlock Margin="0,0,0,5" Text="Single Selection" />
-          <ListBox Height="150" SelectedIndex="1">
-            <ListBoxItem Content="First Item" />
-            <ListBoxItem Content="Second Item" />
-            <ListBoxItem Content="Third Item" />
-            <ListBoxItem Content="Fourth Item" />
-            <ListBoxItem Content="Disabled Item" IsEnabled="False" />
-          </ListBox>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1">
-          <TextBlock Margin="0,0,0,5" Text="Multiple Selection" />
-          <ListBox Height="150" SelectionMode="Multiple">
-            <ListBoxItem Content="First Item" IsSelected="True" />
-            <ListBoxItem Content="Second Item" />
-            <ListBoxItem Content="Third Item" IsSelected="True" />
-            <ListBoxItem Content="Fourth Item" />
-            <ListBoxItem Content="Disabled Item" IsEnabled="False" />
-          </ListBox>
-        </StackPanel>
-      </Grid>
-
-      <!--  Usage description  -->
-      <TextBlock
-        Margin="0,10,0,0"
-        Text="ListBoxes display a collection of items that users can select. They're useful for selecting options from a limited set of choices."
-        TextWrapping="Wrap" />
-    </StackPanel>
-
-    <!--  Form Showcase  -->
-    <StackPanel>
-      <TextBlock
-        Margin="0,0,0,10"
-        Classes="h3"
-        Text="Form Showcase" />
-
-      <Border
-        Padding="20"
-        Background="{DynamicResource Brush.Surface}"
-        BorderBrush="{DynamicResource Brush.Divider}"
-        BorderThickness="1"
-        CornerRadius="8">
-        <StackPanel Spacing="15">
-          <TextBlock Classes="h4" Text="Event Registration Form" />
-
-          <Grid
-            Margin="0,10"
-            ColumnDefinitions="1*,1*"
-            RowDefinitions="Auto,Auto">
-            <!--  Personal Information Section  -->
-            <StackPanel
-              Grid.Row="0"
-              Grid.Column="0"
-              Margin="0,0,10,0"
-              Spacing="10">
-              <TextBlock FontWeight="SemiBold" Text="Personal Information" />
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Full Name" />
-                <TextBox Text="John Doe" />
-              </StackPanel>
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Email Address" />
-                <TextBox Text="john.doe@example.com" />
-              </StackPanel>
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Phone Number" />
-                <TextBox Text="+1 (555) 123-4567" />
-              </StackPanel>
-            </StackPanel>
-
-            <!--  Event Details Section  -->
-            <StackPanel
-              Grid.Row="0"
-              Grid.Column="1"
-              Spacing="10">
-              <TextBlock FontWeight="SemiBold" Text="Event Details" />
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Event Date" />
-                <DatePicker SelectedDate="2025-01-15" />
-              </StackPanel>
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Session Time" />
-                <TimePicker SelectedTime="09:00:00" />
-              </StackPanel>
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Number of Attendees" />
-                <NumericUpDown
-                  Maximum="10"
-                  Minimum="1"
-                  Value="2" />
-              </StackPanel>
-            </StackPanel>
-
-            <!--  Preferences Section  -->
-            <StackPanel
-              Grid.Row="1"
-              Grid.Column="0"
-              Margin="0,20,10,0"
-              Spacing="10">
-              <TextBlock FontWeight="SemiBold" Text="Preferences" />
-
-              <TextBlock Margin="0,0,0,5" Text="Session Type" />
-              <StackPanel Spacing="8">
-                <RadioButton
-                  Content="In-person session"
-                  GroupName="SessionType"
-                  IsChecked="True" />
-                <RadioButton Content="Virtual session" GroupName="SessionType" />
-                <RadioButton Content="Hybrid session" GroupName="SessionType" />
-              </StackPanel>
-
-              <TextBlock Margin="0,10,0,5" Text="Additional Services" />
-              <StackPanel Spacing="8">
-                <CheckBox Content="Printed materials" IsChecked="True" />
-                <CheckBox Content="Lunch included" IsChecked="True" />
-                <CheckBox Content="Parking pass" />
-                <CheckBox Content="Certificate of attendance" />
-              </StackPanel>
-            </StackPanel>
-
-            <!--  Special Requests Section  -->
-            <StackPanel
-              Grid.Row="1"
-              Grid.Column="1"
-              Margin="0,20,0,0"
-              Spacing="10">
-              <TextBlock FontWeight="SemiBold" Text="Special Requests" />
-
-              <StackPanel>
-                <TextBlock Margin="0,0,0,5" Text="Special Accommodations" />
-                <TextBox
-                  Height="100"
-                  Classes="multiline"
-                  Text="No special accommodations needed." />
-              </StackPanel>
-
-              <StackPanel Margin="0,10,0,0">
-                <TextBlock Margin="0,0,0,5" Text="Dietary Restrictions" />
-                <ComboBox SelectedIndex="0">
-                  <ComboBoxItem>No restrictions</ComboBoxItem>
-                  <ComboBoxItem>Vegetarian</ComboBoxItem>
-                  <ComboBoxItem>Vegan</ComboBoxItem>
-                  <ComboBoxItem>Gluten-free</ComboBoxItem>
-                  <ComboBoxItem>Other (please specify)</ComboBoxItem>
-                </ComboBox>
-              </StackPanel>
-            </StackPanel>
-          </Grid>
-
-          <!--  Consent Section  -->
-          <StackPanel Margin="0,15,0,0" Spacing="10">
-            <TextBlock FontWeight="SemiBold" Text="Consent" />
-            <CheckBox Content="I agree to the terms and conditions" IsChecked="True" />
-            <CheckBox Content="I would like to receive updates about future events" />
-          </StackPanel>
-
-          <!--  Form Actions  -->
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
+          <!--  Standard RadioButtons  -->
           <StackPanel
-            Margin="0,15,0,0"
-            HorizontalAlignment="Right"
-            Orientation="Horizontal"
-            Spacing="10">
-            <Button Classes="Text BaseButton" Content="Cancel" />
-            <Button Classes="Primary BaseButton" Content="Register" />
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard RadioButtons" />
+            <StackPanel Spacing="8">
+              <RadioButton Content="Option One" GroupName="Group1" />
+              <RadioButton
+                Content="Option Two"
+                GroupName="Group1"
+                IsChecked="True" />
+              <RadioButton Content="Option Three" GroupName="Group1" />
+              <RadioButton Content="Disabled Option" IsEnabled="False" />
+              <RadioButton
+                Content="Disabled Checked"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
           </StackPanel>
+
+          <!--  Secondary RadioButtons  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Secondary RadioButtons" />
+            <StackPanel Spacing="8">
+              <RadioButton
+                Classes="Secondary"
+                Content="Option One"
+                GroupName="Group2" />
+              <RadioButton
+                Classes="Secondary"
+                Content="Option Two"
+                GroupName="Group2"
+                IsChecked="True" />
+              <RadioButton
+                Classes="Secondary"
+                Content="Option Three"
+                GroupName="Group2" />
+              <RadioButton
+                Classes="Secondary"
+                Content="Disabled Option"
+                IsEnabled="False" />
+              <RadioButton
+                Classes="Secondary"
+                Content="Disabled Checked"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="RadioButtons allow users to select a single option from a set. They should be used when only one selection is allowed."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  ToggleSwitch Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="ToggleSwitch Controls" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
+          <!--  Standard ToggleSwitches  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard ToggleSwitches" />
+            <StackPanel Spacing="15">
+              <ToggleSwitch Content="Off Toggle" />
+              <ToggleSwitch Content="On Toggle" IsChecked="True" />
+              <ToggleSwitch Content="Disabled Toggle" IsEnabled="False" />
+              <ToggleSwitch
+                Content="Disabled On Toggle"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+
+          <!--  Secondary ToggleSwitches  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Secondary ToggleSwitches" />
+            <StackPanel Spacing="15">
+              <ToggleSwitch Classes="Secondary" Content="Off Toggle" />
+              <ToggleSwitch
+                Classes="Secondary"
+                Content="On Toggle"
+                IsChecked="True" />
+              <ToggleSwitch
+                Classes="Secondary"
+                Content="Disabled Toggle"
+                IsEnabled="False" />
+              <ToggleSwitch
+                Classes="Secondary"
+                Content="Disabled On Toggle"
+                IsChecked="True"
+                IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="ToggleSwitches are used for binary settings when immediate results are expected. They should represent on/off states rather than select/deselect."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Slider Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="Slider Controls" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+          <!--  Horizontal Sliders  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Horizontal Sliders" />
+            <StackPanel Spacing="15">
+              <Slider
+                Maximum="100"
+                Minimum="0"
+                Value="25" />
+              <Slider
+                Maximum="100"
+                Minimum="0"
+                TickFrequency="10"
+                TickPlacement="Outside"
+                Value="50" />
+              <Slider
+                IsEnabled="False"
+                Maximum="100"
+                Minimum="0"
+                Value="75" />
+            </StackPanel>
+          </StackPanel>
+
+          <!--  Vertical Sliders  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Vertical Sliders" />
+            <StackPanel
+              HorizontalAlignment="Center"
+              Orientation="Horizontal"
+              Spacing="30">
+              <Slider
+                Height="150"
+                Maximum="100"
+                Minimum="0"
+                Orientation="Vertical"
+                Value="25" />
+              <Slider
+                Height="150"
+                Maximum="100"
+                Minimum="0"
+                Orientation="Vertical"
+                TickFrequency="10"
+                TickPlacement="Outside"
+                Value="50" />
+              <Slider
+                Height="150"
+                IsEnabled="False"
+                Maximum="100"
+                Minimum="0"
+                Orientation="Vertical"
+                Value="75" />
+            </StackPanel>
+          </StackPanel>
+
+          <!--  Secondary Sliders  -->
+          <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,10,0,0">
+            <TextBlock Margin="0,0,0,5" Text="Secondary Sliders" />
+            <StackPanel Spacing="15">
+              <Slider
+                Classes="Secondary"
+                Maximum="100"
+                Minimum="0"
+                Value="60" />
+              <Slider
+                Classes="Secondary"
+                IsEnabled="False"
+                Maximum="100"
+                Minimum="0"
+                Value="40" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="Sliders allow users to select a value from a continuous range. They are ideal for settings where the relative value is more important than the precise numeric value."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  ProgressBar Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="ProgressBar Controls" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+          <!--  Standard ProgressBars  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="Standard ProgressBars" />
+            <StackPanel Spacing="15">
+              <ProgressBar Maximum="100" Value="25" />
+              <ProgressBar Maximum="100" Value="50" />
+              <ProgressBar Maximum="100" Value="75" />
+              <ProgressBar IsIndeterminate="True" />
+            </StackPanel>
+          </StackPanel>
+
+          <!--  Secondary and Status ProgressBars  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="Status ProgressBars" />
+            <StackPanel Spacing="15">
+              <ProgressBar
+                Classes="Secondary"
+                Maximum="100"
+                Value="60" />
+              <ProgressBar
+                Classes="Success"
+                Maximum="100"
+                Value="80" />
+              <ProgressBar
+                Classes="Error"
+                Maximum="100"
+                Value="30" />
+              <ProgressBar
+                Classes="Warning"
+                Maximum="100"
+                Value="45" />
+              <ProgressBar
+                Classes="Info"
+                Maximum="100"
+                Value="65" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="ProgressBars indicate the progress of an operation. Use determinate progress bars for operations with known duration, and indeterminate progress bars for operations with unknown duration."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  DatePicker and TimePicker Controls  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="Date &amp; Time Pickers" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto">
+          <!--  DatePicker  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="0,0,10,15">
+            <TextBlock Margin="0,0,0,5" Text="DatePicker" />
+            <StackPanel Spacing="15">
+              <DatePicker />
+              <DatePicker SelectedDate="2025-01-15" />
+              <DatePicker IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+
+          <!--  TimePicker  -->
+          <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,15">
+            <TextBlock Margin="0,0,0,5" Text="TimePicker" />
+            <StackPanel Spacing="15">
+              <TimePicker />
+              <TimePicker SelectedTime="14:30:00" />
+              <TimePicker IsEnabled="False" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,5,0,0"
+          Text="Date and Time pickers allow users to select dates and times in a consistent format. They provide a structured input method that prevents formatting errors."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Calendar Control  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="Calendar Control" />
+
+        <Border
+          Padding="15"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <Calendar SelectionMode="SingleDate" />
+        </Border>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,10,0,0"
+          Text="The Calendar control allows users to view and select dates in a visual calendar format. It's useful for date-based searches, scheduling, and other date-centric functionality."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Expander Control  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="Expander Control" />
+
+        <StackPanel Spacing="10">
+          <Expander Header="Collapsed Content (Click to Expand)">
+            <TextBlock
+              Margin="10"
+              Text="This content is hidden until the user expands the control. Use expanders to save space when displaying non-critical information or details that only some users will need."
+              TextWrapping="Wrap" />
+          </Expander>
+
+          <Expander Header="Expanded Content" IsExpanded="True">
+            <TextBlock
+              Margin="10"
+              Text="This expander is open by default. Expanders are great for FAQ sections, detailed descriptions, and advanced options."
+              TextWrapping="Wrap" />
+          </Expander>
+
+          <Expander Header="Disabled Expander" IsEnabled="False">
+            <TextBlock Text="This content won't be accessible" />
+          </Expander>
         </StackPanel>
-      </Border>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,10,0,0"
+          Text="Expanders allow users to show or hide content as needed. They help reduce visual clutter while keeping information accessible."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  ListBox Control  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="ListBox Control" />
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+          <StackPanel Grid.Column="0" Margin="0,0,10,0">
+            <TextBlock Margin="0,0,0,5" Text="Single Selection" />
+            <ListBox Height="150" SelectedIndex="1">
+              <ListBoxItem Content="First Item" />
+              <ListBoxItem Content="Second Item" />
+              <ListBoxItem Content="Third Item" />
+              <ListBoxItem Content="Fourth Item" />
+              <ListBoxItem Content="Disabled Item" IsEnabled="False" />
+            </ListBox>
+          </StackPanel>
+
+          <StackPanel Grid.Column="1">
+            <TextBlock Margin="0,0,0,5" Text="Multiple Selection" />
+            <ListBox Height="150" SelectionMode="Multiple">
+              <ListBoxItem Content="First Item" IsSelected="True" />
+              <ListBoxItem Content="Second Item" />
+              <ListBoxItem Content="Third Item" IsSelected="True" />
+              <ListBoxItem Content="Fourth Item" />
+              <ListBoxItem Content="Disabled Item" IsEnabled="False" />
+            </ListBox>
+          </StackPanel>
+        </Grid>
+
+        <!--  Usage description  -->
+        <TextBlock
+          Margin="0,10,0,0"
+          Text="ListBoxes display a collection of items that users can select. They're useful for selecting options from a limited set of choices."
+          TextWrapping="Wrap" />
+      </StackPanel>
+
+      <!--  Form Showcase  -->
+      <StackPanel>
+        <TextBlock
+          Margin="0,0,0,10"
+          Classes="h3"
+          Text="Form Showcase" />
+
+        <Border
+          Padding="20"
+          Background="{DynamicResource Brush.Surface}"
+          BorderBrush="{DynamicResource Brush.Divider}"
+          BorderThickness="1"
+          CornerRadius="8">
+          <StackPanel Spacing="15">
+            <TextBlock Classes="h4" Text="Event Registration Form" />
+
+            <Grid
+              Margin="0,10"
+              ColumnDefinitions="1*,1*"
+              RowDefinitions="Auto,Auto">
+              <!--  Personal Information Section  -->
+              <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,10,0"
+                Spacing="10">
+                <TextBlock FontWeight="SemiBold" Text="Personal Information" />
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Full Name" />
+                  <TextBox Text="John Doe" />
+                </StackPanel>
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Email Address" />
+                  <TextBox Text="john.doe@example.com" />
+                </StackPanel>
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Phone Number" />
+                  <TextBox Text="+1 (555) 123-4567" />
+                </StackPanel>
+              </StackPanel>
+
+              <!--  Event Details Section  -->
+              <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                Spacing="10">
+                <TextBlock FontWeight="SemiBold" Text="Event Details" />
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Event Date" />
+                  <DatePicker SelectedDate="2025-01-15" />
+                </StackPanel>
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Session Time" />
+                  <TimePicker SelectedTime="09:00:00" />
+                </StackPanel>
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Number of Attendees" />
+                  <NumericUpDown
+                    Maximum="10"
+                    Minimum="1"
+                    Value="2" />
+                </StackPanel>
+              </StackPanel>
+
+              <!--  Preferences Section  -->
+              <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,20,10,0"
+                Spacing="10">
+                <TextBlock FontWeight="SemiBold" Text="Preferences" />
+
+                <TextBlock Margin="0,0,0,5" Text="Session Type" />
+                <StackPanel Spacing="8">
+                  <RadioButton
+                    Content="In-person session"
+                    GroupName="SessionType"
+                    IsChecked="True" />
+                  <RadioButton Content="Virtual session" GroupName="SessionType" />
+                  <RadioButton Content="Hybrid session" GroupName="SessionType" />
+                </StackPanel>
+
+                <TextBlock Margin="0,10,0,5" Text="Additional Services" />
+                <StackPanel Spacing="8">
+                  <CheckBox Content="Printed materials" IsChecked="True" />
+                  <CheckBox Content="Lunch included" IsChecked="True" />
+                  <CheckBox Content="Parking pass" />
+                  <CheckBox Content="Certificate of attendance" />
+                </StackPanel>
+              </StackPanel>
+
+              <!--  Special Requests Section  -->
+              <StackPanel
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="0,20,0,0"
+                Spacing="10">
+                <TextBlock FontWeight="SemiBold" Text="Special Requests" />
+
+                <StackPanel>
+                  <TextBlock Margin="0,0,0,5" Text="Special Accommodations" />
+                  <TextBox
+                    Height="100"
+                    Classes="multiline"
+                    Text="No special accommodations needed." />
+                </StackPanel>
+
+                <StackPanel Margin="0,10,0,0">
+                  <TextBlock Margin="0,0,0,5" Text="Dietary Restrictions" />
+                  <ComboBox SelectedIndex="0">
+                    <ComboBoxItem>No restrictions</ComboBoxItem>
+                    <ComboBoxItem>Vegetarian</ComboBoxItem>
+                    <ComboBoxItem>Vegan</ComboBoxItem>
+                    <ComboBoxItem>Gluten-free</ComboBoxItem>
+                    <ComboBoxItem>Other (please specify)</ComboBoxItem>
+                  </ComboBox>
+                </StackPanel>
+              </StackPanel>
+            </Grid>
+
+            <!--  Consent Section  -->
+            <StackPanel Margin="0,15,0,0" Spacing="10">
+              <TextBlock FontWeight="SemiBold" Text="Consent" />
+              <CheckBox Content="I agree to the terms and conditions" IsChecked="True" />
+              <CheckBox Content="I would like to receive updates about future events" />
+            </StackPanel>
+
+            <!--  Form Actions  -->
+            <StackPanel
+              Margin="0,15,0,0"
+              HorizontalAlignment="Right"
+              Orientation="Horizontal"
+              Spacing="10">
+              <Button Classes="Text BaseButton" Content="Cancel" />
+              <Button Classes="Primary BaseButton" Content="Register" />
+            </StackPanel>
+          </StackPanel>
+        </Border>
+      </StackPanel>
     </StackPanel>
-  </StackPanel>
+  </ScrollViewer>
 </UserControl>

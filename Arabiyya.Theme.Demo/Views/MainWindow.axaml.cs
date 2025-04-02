@@ -1,4 +1,5 @@
-﻿using Arabiyya.Theme.Demo.ViewModels;
+﻿using System;
+using Arabiyya.Theme.Demo.ViewModels;
 using Avalonia.Controls;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,9 +12,16 @@ namespace Arabiyya.Theme.Demo.Views
         {
             InitializeComponent();
 
+            if (Design.IsDesignMode)
+            {
+                return;
+            }
+
             var serviceProvider = (ServiceProvider)Avalonia.Application.Current!.Resources["ServiceProvider"]!;
 
-            DataContext = new MainWindowViewModel(serviceProvider!);
+            ArgumentNullException.ThrowIfNull(serviceProvider);
+
+            DataContext = new MainWindowViewModel(serviceProvider);
         }
     }
 }

@@ -23,6 +23,7 @@
   <FontWeight x:Key="FontWeightRegular">Normal</FontWeight>
   <FontWeight x:Key="FontWeightMedium">Medium</FontWeight>
   <FontWeight x:Key="FontWeightSemiBold">SemiBold</FontWeight>
+  <FontWeight x:Key="FontWeightDemiBold">DemiBold</FontWeight>
   <FontWeight x:Key="FontWeightBold">Bold</FontWeight>
   <FontWeight x:Key="FontWeightExtraBold">ExtraBold</FontWeight>
   <FontWeight x:Key="FontWeightBlack">Black</FontWeight>
