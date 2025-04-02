@@ -2,3 +2,6 @@
 	path = AvaGlass
 	url = https://github.com/Al-Madhrasathul-Arabiyyathul-Islamiyya/AvaGlass.git
 	branch = master
+[submodule "Arabiyya.Theme"]
+	path = Arabiyya.Theme
+	url = https://github.com/Al-Madhrasathul-Arabiyyathul-Islamiyya/Arabiyya.Theme.git
