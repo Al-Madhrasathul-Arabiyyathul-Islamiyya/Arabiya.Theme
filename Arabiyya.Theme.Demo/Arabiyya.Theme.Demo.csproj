@@ -12,9 +12,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
     <Content Include="Assets\logo.ico" />
+    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
